@@ -65,6 +65,7 @@ services:
       - neo4j
     environment:
       OLLAMA_BASE_URL: http://ollama:11434
+      MILVUS_URI: http://milvus:19530
 
 volumes:
   ollama:

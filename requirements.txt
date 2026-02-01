@@ -5,6 +5,7 @@ annotated-types==0.7.0
 anyio==4.7.0
 asttokens==3.0.0
 attrs==24.2.0
+beautifulsoup4
 certifi==2024.8.30
 charset-normalizer==3.4.0
 comm==0.2.2
@@ -33,6 +34,9 @@ langchain-core==0.3.25
 langchain-milvus==0.1.7
 langchain-ollama==0.2.1
 langchain-text-splitters==0.3.2
+sentence-transformers==3.3.1
+langchain-huggingface==0.1.2
+transformers==4.48.0
 langgraph==0.2.59
 langgraph-checkpoint==2.0.9
 langgraph-sdk==0.1.45
@@ -44,7 +48,7 @@ msgpack==1.1.0
 multidict==6.1.0
 mypy-extensions==1.0.0
 nest-asyncio==1.6.0
-numpy==2.2.0
+numpy==1.26.4
 ollama==0.4.4
 orjson==3.10.12
 packaging==24.2
