@@ -90,3 +90,5 @@ ujson==5.10.0
 urllib3==2.2.3
 wcwidth==0.2.13
 yarl==1.18.3
+pypdf
+docx2txt

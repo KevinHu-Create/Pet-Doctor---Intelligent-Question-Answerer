@@ -1,11 +1,9 @@
 # config.py
 import os
-WIKI_URLS = [
-    "https://en.wikipedia.org/wiki/Insulin",
-]
+DATA_DIR = os.getenv("DATA_DIR", "data")
 
-CHUNK_SIZE = 2000
-CHUNK_OVERLAP = 200
+CHUNK_SIZE =  800
+CHUNK_OVERLAP = 120
 
 HF_EMBED_MODEL = os.getenv("HF_EMBED_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
 OLLAMA_CHAT_MODEL = os.getenv("OLLAMA_CHAT_MODEL", "llama3.2")
