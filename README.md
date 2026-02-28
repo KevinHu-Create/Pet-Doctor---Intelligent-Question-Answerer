@@ -9,11 +9,11 @@ knowledge about insulin.
 - **Embedding**: HuggingFace Sentence-Transformers (`all-MiniLM-L6-v2`)
 - **Vector Database**: Milvus (Dockerized)
 - **LLM**: Ollama-hosted `llama3.2`
-- **Document Loader**: Web-based ingestion using LangChain
+- **Document Loader**: Local data documents using LangChain PDFLoader
 - **Interface**: Interactive CLI (command-line interface)
 
 ### Workflow
-1. Web documents are loaded and split into overlapping text chunks.
+1. Local documents are loaded and split into overlapping text chunks.
 2. Chunks are embedded using sentence-transformer models.
 3. Embeddings are stored in Milvus as a persistent vector collection.
 4. User queries retrieve relevant context via vector similarity search.

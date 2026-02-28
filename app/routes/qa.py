@@ -1,10 +1,8 @@
-# app.py
-from fastapi import FastAPI, HTTPException
+from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
+from app.services.rag_service import answer_question
 
-from deps import get_rag_chain
-
-app = FastAPI(title="Pet Doctor RAG API", version="1.0")
+router = APIRouter(tags=["qa"])
 
 class AskRequest(BaseModel):
     question: str
@@ -12,16 +10,11 @@ class AskRequest(BaseModel):
 class AskResponse(BaseModel):
     answer: str
 
-@app.get("/health")
-def health():
-    return {"status": "ok"}
-
-@app.post("/ask", response_model=AskResponse)
+@router.post("/ask", response_model=AskResponse)
 def ask(req: AskRequest):
     q = (req.question or "").strip()
     if not q:
         raise HTTPException(status_code=400, detail="question is empty")
 
-    chain = get_rag_chain()
-    ans = chain.invoke(q)
+    ans = answer_question(q)
     return AskResponse(answer=ans)
