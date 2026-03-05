@@ -39,7 +39,7 @@ services:
       MINIO_SECRET_KEY: minioadmin
     ports:
       - "19530:19530" # 可选：宿主机连服务时需要的端口
-      - "19091:9091"
+      - "9091:9091"   
     depends_on:
       - etcd
       - minio
