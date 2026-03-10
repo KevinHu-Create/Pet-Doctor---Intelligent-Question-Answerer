@@ -92,3 +92,5 @@ wcwidth==0.2.13
 yarl==1.18.3
 pypdf
 docx2txt
+fastapi==0.115.6
+uvicorn==0.32.1

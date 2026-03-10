@@ -59,6 +59,8 @@ services:
   
   apps:
     build: .
+    ports:
+      - "8000:8000" #宿主机 8000 映射到容器 8000，浏览器可访问 FastAPI
     depends_on:
       - ollama
       - milvus

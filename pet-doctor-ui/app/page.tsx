@@ -1,10 +1,13 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import { Send, PawPrint, Stethoscope, User, ChevronLeft, MoreHorizontal } from 'lucide-react';
 import styles from './page.module.css';
 
 // ==========================================
 // Mock Data (For simulating the conversation)
 // ==========================================
+
 const MOCK_MESSAGES = [
   {
     id: '1',
@@ -33,10 +36,95 @@ const MOCK_MESSAGES = [
   },
 ];
 
+type Message = {
+  id: string;
+  role: 'assistant' | 'user';
+  content: string;
+};
+
 // ==========================================
 // Main Page Component
 // ==========================================
 export default function PetDoctorChatUI() {
+
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: '1',
+      role: 'assistant',
+      content:
+        "Hello! I am your AI Pet Doctor Assistant. While I cannot replace a real veterinarian's physical examination, I can provide advice based on veterinary medicine data.\n\nWhat seems to be the problem with your dog?",
+    },
+  ]);
+
+  const [input, setInput] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleSend = async () => {
+    const question = input.trim();
+    if (!question || loading) return;
+
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      role: 'user',
+      content: question,
+    };
+
+    setMessages((prev) => [...prev, userMessage]);
+    setInput('');
+    setLoading(true);
+
+    try {
+      const res = await fetch('http://127.0.0.1:8000/ask', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ question }),
+      });
+
+      if (!res.ok) {
+        let errorText = 'Request failed';
+        try {
+          const errData = await res.json();
+          errorText = errData.detail || errorText;
+        } catch {
+          errorText = `HTTP ${res.status}`;
+        }
+        throw new Error(errorText);
+      }
+
+      const data: { answer: string } = await res.json();
+
+      const assistantMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        role: 'assistant',
+        content: data.answer,
+      };
+
+      setMessages((prev) => [...prev, assistantMessage]);
+    } catch (error) {
+      const assistantMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        role: 'assistant',
+        content:
+          error instanceof Error
+            ? `Sorry, request failed: ${error.message}`
+            : 'Sorry, request failed.',
+      };
+
+      setMessages((prev) => [...prev, assistantMessage]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSend();
+    }
+  };
+
   return (
     <div className={styles.page}>
       <header className={styles.header}>
@@ -65,12 +153,16 @@ export default function PetDoctorChatUI() {
             </span>
           </div>
 
-          {MOCK_MESSAGES.map((message) => (
+          {messages.map((message) => (
             <div
               key={message.id}
               className={`${styles.messageRow} ${message.role === 'user' ? styles.userRow : ''}`}
             >
-              <div className={`${styles.messageContent} ${message.role === 'user' ? styles.userMessageContent : ''}`}>
+              <div
+                className={`${styles.messageContent} ${
+                  message.role === 'user' ? styles.userMessageContent : ''
+                }`}
+              >
                 {message.role === 'assistant' ? (
                   <div className={styles.assistantAvatar}>
                     <PawPrint size={16} className={styles.brandIcon} strokeWidth={2.5} />
@@ -82,17 +174,30 @@ export default function PetDoctorChatUI() {
                 )}
 
                 <div
-                  className={`${styles.bubble} ${message.role === 'user' ? styles.userBubble : styles.assistantBubble}`}
+                  className={`${styles.bubble} ${
+                    message.role === 'user' ? styles.userBubble : styles.assistantBubble
+                  }`}
                 >
-                  <p className={styles.bubbleText}>
-                    {message.content.split('**').map((part, index) =>
-                      index % 2 === 1 ? <strong key={index}>{part}</strong> : part,
-                    )}
+                  <p className={styles.bubbleText} style={{ whiteSpace: 'pre-wrap' }}>
+                    {message.content}
                   </p>
                 </div>
               </div>
             </div>
           ))}
+
+          {loading && (
+            <div className={styles.messageRow}>
+              <div className={styles.messageContent}>
+                <div className={styles.assistantAvatar}>
+                  <PawPrint size={16} className={styles.brandIcon} strokeWidth={2.5} />
+                </div>
+                <div className={`${styles.bubble} ${styles.assistantBubble}`}>
+                  <p className={styles.bubbleText}>Thinking...</p>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </main>
 
@@ -103,11 +208,17 @@ export default function PetDoctorChatUI() {
               rows={1}
               placeholder="Describe your dog's symptoms..."
               className={styles.textarea}
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={handleKeyDown}
+              disabled={loading}
             />
 
             <button
               type="button"
               className={styles.sendButton}
+              onClick={handleSend}
+              disabled={loading}
             >
               <Send size={18} className={styles.sendIcon} strokeWidth={2.5} />
             </button>
