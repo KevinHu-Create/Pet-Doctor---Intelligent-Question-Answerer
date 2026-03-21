@@ -12,3 +12,5 @@ class User(Base):
     role = Column(String(20), nullable=False, default="user")
     is_active = Column(Boolean, default=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
+    pet_name = Column(String(50), nullable=True)  
+    pet_type = Column(String(50), nullable=True)
