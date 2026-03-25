@@ -1,0 +1,957 @@
+{
+  "source_title": "Dog Owner's Home Veterinary Handbook, 4th Edition",
+  "source_file": "data/dog/Dog-Owners-Home-Veterinary-Handbook.pdf",
+  "scope": "Chapters 1-20 only",
+  "qas": [
+    {
+      "id": "q_001",
+      "question": "When should a dog not be muzzled during first aid or handling?",
+      "chapter": "Chapter 1: Emergencies",
+      "section": "Muzzles",
+      "reference_points": [
+        "All dogs should be muzzled for frightening or painful handling when safe to do so",
+        "An open cage muzzle is preferred for injured or sick dogs because it allows easier breathing and reduces aspiration risk if the dog vomits",
+        "Do not muzzle a dog that is vomiting, coughing, having difficulty breathing, or aggressively resisting the muzzle",
+        "Never muzzle an unconscious dog"
+      ],
+      "source": {
+        "page": 2,
+        "pdf_page": 31
+      }
+    },
+    {
+      "id": "q_002",
+      "question": "How does the handbook decide whether an unconscious dog needs artificial respiration or full CPR?",
+      "chapter": "Chapter 1: Emergencies",
+      "section": "Artificial Respiration or CPR?",
+      "reference_points": [
+        "Breathing is assessed before pulse",
+        "Pulse check location is the femoral artery on the inside of the mid-thigh",
+        "If there is no pulse, the book directs the reader to start CPR"
+      ],
+      "source": {
+        "page": 8,
+        "pdf_page": 37
+      }
+    },
+    {
+      "id": "q_003",
+      "question": "What deworming schedule does the handbook recommend for young puppies with suspected roundworms?",
+      "chapter": "Chapter 2: Gastrointestinal Parasites",
+      "section": "Deworming Puppies",
+      "reference_points": [
+        "Schedule is 2, 4, 6, and 8 weeks of age",
+        "The text says this schedule is designed to kill ascarids acquired in utero, through milk, or by ingesting eggs",
+        "Pyrantel pamoate is named as an excellent choice for ascarids in 2-week-old puppies"
+      ],
+      "source": {
+        "page": 52,
+        "pdf_page": 81
+      }
+    },
+    {
+      "id": "q_004",
+      "question": "According to the handbook, what husbandry practices are most important for controlling worm reinfestation in dogs?",
+      "chapter": "Chapter 2: Gastrointestinal Parasites",
+      "section": "How to Control Worms",
+      "reference_points": [
+        "The text says reinfestation is likely unless eggs and larvae are destroyed before the dog is exposed again",
+        "Clean, dry quarters are described as essential",
+        "Daily stool removal is recommended for runs, pens, and yards"
+      ],
+      "source": {
+        "page": 53,
+        "pdf_page": 82
+      }
+    },
+    {
+      "id": "q_005",
+      "question": "What are the main clinical signs and prevention steps for Lyme disease described in the handbook?",
+      "chapter": "Chapter 3: Infectious Diseases",
+      "section": "Lyme Disease",
+      "reference_points": [
+        "The spirochete Borrelia burgdorferi is transmitted by infected ticks",
+        "Lyme disease in dogs often presents with sudden lameness and sometimes swollen painful joints",
+        "The handbook notes that ticks usually must attach for 5 to 20 hours before transmitting infection",
+        "Daily tick inspection and prompt removal can prevent many infections",
+        "Vaccination may be appropriate for dogs at risk"
+      ],
+      "source": {
+        "page": 70,
+        "pdf_page": 99
+      }
+    },
+    {
+      "id": "q_006",
+      "question": "How does the handbook distinguish core vaccines from noncore vaccines for dogs?",
+      "chapter": "Chapter 3: Infectious Diseases",
+      "section": "Core and Noncore Vaccines",
+      "reference_points": [
+        "Core vaccines are vaccines every dog should receive at some point in life",
+        "Noncore vaccines are given based on geography, lifestyle, and risk factors",
+        "The text places vaccines into core, noncore, and generally not recommended categories",
+        "It recommends working with a veterinarian on a customized schedule based on health and exposure risk",
+        "The handbook also warns that combination vaccines should be kept as minimal as practical"
+      ],
+      "source": {
+        "page": 93,
+        "pdf_page": 122
+      }
+    },
+    {
+      "id": "q_007",
+      "question": "What flea-control program does the handbook suggest once fleas have already become established on a dog and in the home?",
+      "chapter": "Chapter 4: The Skin and Coat",
+      "section": "A Suggested Flea-Control Program",
+      "reference_points": [
+        "Prevention is described as the key to success",
+        "If fleas are already established, the dog can be shampooed or dipped to immediately eliminate fleas",
+        "Thorough vacuuming and washing all bedding are part of the control program",
+        "Frontline or Advantage can be applied 24 to 48 hours later to kill newly hatching fleas",
+        "The environment and bedding must be cleaned, not just the dog",
+        "The book says all dogs, cats, and other relevant pets in the family should be treated"
+      ],
+      "source": {
+        "page": 121,
+        "pdf_page": 150
+      }
+    },
+    {
+      "id": "q_008",
+      "question": "What pattern of symptoms does the handbook describe for canine atopic dermatitis as it develops over time?",
+      "chapter": "Chapter 4: The Skin and Coat",
+      "section": "Atopic Dermatitis (Canine Atopy)",
+      "reference_points": [
+        "The book estimates atopy affects about 10 percent of dogs",
+        "It says the disease is second only to flea allergy dermatitis in frequency",
+        "Atopy often begins between 1 and 3 years of age with seasonal itching while the skin still looks normal",
+        "Early signs can include scratching, face rubbing, sneezing, watery eyes, and paw licking",
+        "As the condition progresses, dogs can develop excoriations, hair loss, crusts, and secondary skin infection",
+        "Ear canal infections may accompany atopy or be its only manifestation"
+      ],
+      "source": {
+        "page": 138,
+        "pdf_page": 167
+      }
+    },
+    {
+      "id": "q_009",
+      "question": "Which eye findings does the handbook treat as especially urgent, and why?",
+      "chapter": "Chapter 5: The Eyes",
+      "section": "Signs of Eye Ailments",
+      "reference_points": [
+        "The handbook says pain is the most serious eye sign",
+        "Irreversible damage can occur in a matter of hours",
+        "Signs of pain include excessive tearing, squinting, tenderness to touch, and light sensitivity",
+        "A dog with a painful eye should be taken to a veterinary hospital as soon as the condition is noticed",
+        "Common severe causes named include acute glaucoma, uveitis, keratitis, and corneal injuries",
+        "The examination guidance says to treat any uncertain eye change as an emergency"
+      ],
+      "source": {
+        "page": 172,
+        "pdf_page": 201
+      }
+    },
+    {
+      "id": "q_010",
+      "question": "How does the handbook recognize and manage keratoconjunctivitis sicca, or dry eye, in dogs?",
+      "chapter": "Chapter 5: The Eyes",
+      "section": "Keratoconjunctivitis Sicca (Dry Eye)",
+      "reference_points": [
+        "Classic sign is thick stringy discharge rather than simple watery tearing",
+        "Schirmer tear test is the diagnostic test named in the handbook",
+        "Normal Schirmer wetting is about 20 mm in one minute, while dry-eye dogs usually wet less than 10 mm",
+        "Cyclosporin can improve tear production in appropriate cases",
+        "Artificial tears and topical antibiotics may still be needed",
+        "The text says treatment is often life-long and symptoms commonly return if cyclosporin is interrupted"
+      ],
+      "source": {
+        "page": 187,
+        "pdf_page": 216
+      }
+    },
+    {
+      "id": "q_011",
+      "question": "What routine care does the handbook recommend to reduce the risk of ear problems in dogs?",
+      "chapter": "Chapter 6: The Ears",
+      "section": "Avoiding Ear Problems",
+      "reference_points": [
+        "Wet ear canals predispose dogs to ear infections",
+        "During bathing, cotton wadding can be placed in the ear canals to keep water out",
+        "After swimming, the ear openings should be dried gently",
+        "Grooming under the ear flaps after running in tall grass helps prevent foreign material from dropping into the canals",
+        "Routine hair plucking from the ear canals is discouraged unless there is a medical reason"
+      ],
+      "source": {
+        "page": 206,
+        "pdf_page": 235
+      }
+    },
+    {
+      "id": "q_012",
+      "question": "What signs and predisposing factors for external otitis does the handbook emphasize?",
+      "chapter": "Chapter 6: The Ears",
+      "section": "External Otitis",
+      "reference_points": [
+        "External otitis is described as an infection of the ear canal",
+        "Dropped ears, narrow ear canals, excess hair, allergies, seborrhea, foreign bodies, and ear mites can predispose dogs to infection",
+        "Improper cleaning, water entering the ears, and cotton-tipped applicators are listed as iatrogenic causes",
+        "Typical signs include head shaking, scratching, rubbing, pain, head tilt, redness, swelling, waxy or purulent discharge, bad odor, and reduced hearing"
+      ],
+      "source": {
+        "page": 212,
+        "pdf_page": 241
+      }
+    },
+    {
+      "id": "q_013",
+      "question": "How does the handbook describe the diagnosis and treatment of ear mites in dogs?",
+      "chapter": "Chapter 6: The Ears",
+      "section": "Otodectic Mange (Ear Mites)",
+      "reference_points": [
+        "Ear mites are highly contagious among dogs and cats but not to humans",
+        "Both ears are often involved, especially in puppies and young adult dogs",
+        "The canal discharge is described as dry, crumbly, dark brown wax that looks like coffee grounds",
+        "All dogs and cats in the household should be treated to prevent reinfestation",
+        "Cleaning the ears is essential before applying miticide treatment",
+        "Stopping treatment too early can allow a new crop of mites to reinfest the dog"
+      ],
+      "source": {
+        "page": 214,
+        "pdf_page": 243
+      }
+    },
+    {
+      "id": "q_014",
+      "question": "What kinds of nasal discharge does the handbook consider clinically important, and what can they suggest?",
+      "chapter": "Chapter 7: The Nose",
+      "section": "Nasal Discharge",
+      "reference_points": [
+        "Any nasal discharge that persists for several hours is considered significant",
+        "A clear watery discharge is typical of allergic or viral rhinitis",
+        "A thick discharge suggests bacterial or fungal infection",
+        "A discharge from only one nostril can indicate an oral-nasal fistula, foreign body, or tumor",
+        "Blood-streaked discharge or a nosebleed can occur with foreign bodies, tumors, chronic infections, trauma, or bleeding disorders"
+      ],
+      "source": {
+        "page": 222,
+        "pdf_page": 251
+      }
+    },
+    {
+      "id": "q_015",
+      "question": "What immediate measures does the handbook recommend for a dog with a nosebleed?",
+      "chapter": "Chapter 7: The Nose",
+      "section": "Epistaxis (Nosebleeds)",
+      "reference_points": [
+        "Keep the dog as quiet as possible",
+        "Apply an ice pack wrapped in cloth to the bridge of the nose",
+        "If the bleeding site is visible, apply steady pressure with gauze",
+        "Most nosebleeds stop more quickly when interference is kept to a minimum",
+        "If bleeding does not stop or there is no obvious cause, the dog should be taken to a veterinary clinic at once"
+      ],
+      "source": {
+        "page": 226,
+        "pdf_page": 255
+      }
+    },
+    {
+      "id": "q_016",
+      "question": "What signs make the handbook suspect a foreign body in the nose, and why should owners avoid probing blindly?",
+      "chapter": "Chapter 7: The Nose",
+      "section": "Foreign Body in the Nose",
+      "reference_points": [
+        "The classic presentation is a sudden bout of violent sneezing with pawing at the nose",
+        "Bleeding from one nostril may occur",
+        "If the object remains for hours or days, a thick discharge, often bloody, can develop from the affected nostril",
+        "A visible object near the nostril opening may be removed with tweezers",
+        "Blind probing is discouraged because it can push the object deeper and cause additional injury",
+        "Many foreign bodies require heavy sedation or general anesthesia for removal"
+      ],
+      "source": {
+        "page": 227,
+        "pdf_page": 256
+      }
+    },
+    {
+      "id": "q_017",
+      "question": "How does the handbook say an owner should examine a dog's mouth at home?",
+      "chapter": "Chapter 8: The Mouth and Throat",
+      "section": "How to Examine the Mouth",
+      "reference_points": [
+        "A thumb can be slipped behind the canine tooth while pressing upward on the roof of the mouth to open the mouth",
+        "The lower jaw is then pressed down with the opposite thumb",
+        "The tongue can be depressed with a finger to view the throat and tonsils",
+        "An alternate method is to gently squeeze behind the whiskers on top of the muzzle to prompt the mouth to open",
+        "Raising the lips allows the bite and the color of the gums to be checked"
+      ],
+      "source": {
+        "page": 231,
+        "pdf_page": 260
+      }
+    },
+    {
+      "id": "q_018",
+      "question": "How does periodontal disease progress according to the handbook?",
+      "chapter": "Chapter 8: The Mouth and Throat",
+      "section": "Periodontal Disease",
+      "reference_points": [
+        "The handbook divides periodontal disease into gingivitis and periodontitis",
+        "Gingivitis starts when bacteria and dental calculus build up along the gum line",
+        "This creates pockets that trap food and bacteria and lead to infected gums",
+        "If the process continues, infection attacks the deeper tooth-supporting structures and roots",
+        "As periodontitis advances, teeth loosen, pain develops, drooling can occur, and root abscesses may rupture into nearby structures"
+      ],
+      "source": {
+        "page": 244,
+        "pdf_page": 273
+      }
+    },
+    {
+      "id": "q_019",
+      "question": "What causes of excessive drooling does the handbook list for dogs?",
+      "chapter": "Chapter 8: The Mouth and Throat",
+      "section": "Hypersalivation (Drooling)",
+      "reference_points": [
+        "Some drooling is normal in breeds with loose pendulous lips",
+        "Excessive drooling can be triggered by fear, apprehension, nervous anxiety, or anticipation of food",
+        "Mouth pain from periodontal disease, abscessed teeth, and stomatitis is a common physical cause",
+        "Rabies, distemper, pseudorabies, heat stroke, motion sickness, tranquilizers, and poisons are also listed as causes",
+        "If a dog drools for no clear reason and otherwise appears healthy, the mouth should be checked for a foreign body"
+      ],
+      "source": {
+        "page": 252,
+        "pdf_page": 281
+      }
+    },
+    {
+      "id": "q_020",
+      "question": "How does the handbook distinguish regurgitation from vomiting in dogs?",
+      "chapter": "Chapter 9: The Digestive System",
+      "section": "Regurgitation",
+      "reference_points": [
+        "Regurgitation is described as the relatively effortless expulsion of undigested food without retching",
+        "It occurs when the esophagus is blocked or lacks normal peristaltic activity",
+        "Vomiting is the forceful expulsion of stomach contents and is preceded by drooling and retching",
+        "Vomited material is usually sour smelling, partly digested, and stained with yellow bile",
+        "A serious complication of regurgitation is aspiration pneumonia"
+      ],
+      "source": {
+        "page": 257,
+        "pdf_page": 286
+      }
+    },
+    {
+      "id": "q_021",
+      "question": "Why does the handbook treat bloat as a life-threatening emergency, and what early signs should an owner recognize?",
+      "chapter": "Chapter 9: The Digestive System",
+      "section": "Gastric Dilatation Volvulus (Bloat)",
+      "reference_points": [
+        "Bloat is described as a life-threatening emergency with a high mortality rate for gastric volvulus",
+        "The condition involves gastric dilatation, and in more severe cases the distended stomach rotates",
+        "Rotation traps gas and fluid, prevents belching and vomiting, and can cut off blood supply to the stomach",
+        "The handbook links the process to shock, arrhythmias, perforation, peritonitis, and death",
+        "Classic early signs include restlessness, pacing, salivation, retching, unproductive attempts to vomit, and abdominal enlargement"
+      ],
+      "source": {
+        "page": 263,
+        "pdf_page": 292
+      }
+    },
+    {
+      "id": "q_022",
+      "question": "When does the handbook consider home treatment of vomiting appropriate, and what steps does it recommend?",
+      "chapter": "Chapter 9: The Digestive System",
+      "section": "Home Treatment of Vomiting",
+      "reference_points": [
+        "Home treatment is appropriate only for normal healthy adult dogs with no signs other than vomiting",
+        "Puppies, old dogs, and dogs with preexisting health conditions should be treated by a veterinarian",
+        "The stomach should be rested by withholding food and water for at least 12 hours",
+        "If vomiting stops, small amounts of ice chips and then measured amounts of water or pediatric electrolyte solution can be offered",
+        "After 12 hours without vomiting, a bland diet can be reintroduced in small frequent amounts",
+        "Immediate veterinary help is needed if vomiting persists, recurs during refeeding, is accompanied by diarrhea, includes blood, or the dog becomes weak and lethargic"
+      ],
+      "source": {
+        "page": 272,
+        "pdf_page": 301
+      }
+    },
+    {
+      "id": "q_023",
+      "question": "What abnormalities are included in brachycephalic syndrome, and when do the breathing problems tend to worsen?",
+      "chapter": "Chapter 10: The Respiratory System",
+      "section": "Brachycephalic Syndrome",
+      "reference_points": [
+        "Brachycephalic syndrome is described as airway obstruction in short-muzzled broad-skulled breeds",
+        "Common signs include mouth breathing, snorting, and snoring",
+        "Breathing difficulties become more pronounced with exercise, overheating, and increasing age",
+        "The syndrome is associated with collapsed nostrils, an elongated soft palate, and eversion of the laryngeal saccules",
+        "Not all dogs with stenotic nares require surgery because some improve as the cartilage firms up"
+      ],
+      "source": {
+        "page": 313,
+        "pdf_page": 342
+      }
+    },
+    {
+      "id": "q_024",
+      "question": "What emergency approach does the handbook recommend when a dog is choking on a foreign body in the larynx?",
+      "chapter": "Chapter 10: The Respiratory System",
+      "section": "Choking (Foreign Body in the Larynx)",
+      "reference_points": [
+        "The sudden onset of forceful coughing, pawing at the mouth, and respiratory distress suggests a foreign body in the larynx",
+        "If the dog is conscious and able to breathe, the owner should go directly to the nearest veterinary clinic",
+        "If the dog collapses and cannot breathe, the mouth should be opened, the tongue pulled forward, and the object removed if it can be grasped",
+        "If the object cannot be easily removed, the handbook directs the owner to use the Heimlich maneuver rather than probing around it",
+        "Artificial respiration or CPR may be needed after the object is dislodged"
+      ],
+      "source": {
+        "page": 316,
+        "pdf_page": 345
+      }
+    },
+    {
+      "id": "q_025",
+      "question": "What signs, management steps, and prevention measures does the handbook give for kennel cough?",
+      "chapter": "Chapter 10: The Respiratory System",
+      "section": "Acute Tracheobronchitis (Kennel Cough Complex)",
+      "reference_points": [
+        "A harsh dry hacking cough is the characteristic sign of tracheobronchitis",
+        "Mild cases often occur in otherwise bright alert dogs with normal appetite and temperature",
+        "Warm dry well-ventilated quarters and humidification are recommended during treatment",
+        "Antibiotics and cough suppressants are commonly used under veterinary care",
+        "Dogs should be isolated to reduce spread",
+        "Bordetella and routine respiratory vaccines can reduce the prevalence and severity of kennel cough"
+      ],
+      "source": {
+        "page": 320,
+        "pdf_page": 349
+      }
+    },
+    {
+      "id": "q_026",
+      "question": "How does the handbook recommend checking a dog's pulse, and what resting pulse ranges are described as normal?",
+      "chapter": "Chapter 11: The Circulatory System",
+      "section": "Pulse",
+      "reference_points": [
+        "The femoral artery in the groin is described as the easiest place to feel the pulse",
+        "Another method is to feel the heartbeat just below and behind the elbow against the rib cage",
+        "Most adult dogs at rest have a pulse rate of about 60 to 160 beats per minute",
+        "Large dogs tend to be slower and toy dogs faster",
+        "Young puppies are described as having a heart rate of about 220 beats per minute"
+      ],
+      "source": {
+        "page": 330,
+        "pdf_page": 359
+      }
+    },
+    {
+      "id": "q_027",
+      "question": "What home-care principles does the handbook emphasize for dogs with congestive heart failure?",
+      "chapter": "Chapter 11: The Circulatory System",
+      "section": "Congestive Heart Failure",
+      "reference_points": [
+        "Treatment should address any underlying cause whenever possible",
+        "A low-salt diet is emphasized because many commercial foods contain too much salt",
+        "Exercise is beneficial only if it does not trigger symptoms such as tiring, coughing, or rapid breathing",
+        "Diuretics are used to manage fluid accumulation and ACE inhibitors may prolong life in some dogs",
+        "The handbook says heart disease requires close monitoring and regular veterinary rechecks"
+      ],
+      "source": {
+        "page": 340,
+        "pdf_page": 369
+      }
+    },
+    {
+      "id": "q_028",
+      "question": "What preventive strategy does the handbook recommend for heartworm disease in dogs living in or traveling through endemic areas?",
+      "chapter": "Chapter 11: The Circulatory System",
+      "section": "Heartworm Prevention",
+      "reference_points": [
+        "The book says prevention is easier and safer than treating an existing infestation",
+        "Dogs in endemic areas should be on a heartworm prevention program",
+        "In endemic regions, prevention is started at 6 to 8 weeks of age or as climate conditions dictate",
+        "In year-round mosquito regions dogs should stay on preventive drugs all year long",
+        "Dogs 7 months and older should have an antigen test before starting a prevention program",
+        "Heartworm antigen testing should continue annually even for dogs already on prevention"
+      ],
+      "source": {
+        "page": 347,
+        "pdf_page": 376
+      }
+    },
+    {
+      "id": "q_029",
+      "question": "What sequence of events does the handbook describe for a typical grand mal seizure in a dog?",
+      "chapter": "Chapter 12: The Nervous System",
+      "section": "Seizure Disorders",
+      "reference_points": [
+        "A grand mal seizure may begin with an aura of altered behavior such as restlessness, anxiety, crying out, or seeking attention or seclusion",
+        "The seizure itself usually lasts less than two minutes",
+        "Collapse with rigid extension of the legs is followed by rhythmic paddling or jerking movements",
+        "Dogs may also chomp, drool, urinate, or defecate during the seizure",
+        "A postseizure period of confusion and disorientation can last for minutes or hours"
+      ],
+      "source": {
+        "page": 367,
+        "pdf_page": 396
+      }
+    },
+    {
+      "id": "q_030",
+      "question": "What does the handbook tell owners to do and not do when a dog is having a seizure?",
+      "chapter": "Chapter 12: The Nervous System",
+      "section": "Seizure Disorders",
+      "reference_points": [
+        "If the dog is in danger, move it to a safe location",
+        "Otherwise, do not disturb the dog during or immediately after the seizure because that may trigger more seizures",
+        "Do not pull out the dog's tongue or wedge an object between the teeth",
+        "Owners should note how long the seizure lasts and contact a veterinarian after it ends",
+        "Seizures lasting more than five minutes or cluster seizures are described as emergencies requiring immediate veterinary care"
+      ],
+      "source": {
+        "page": 368,
+        "pdf_page": 397
+      }
+    },
+    {
+      "id": "q_031",
+      "question": "How does the handbook describe tick paralysis in dogs?",
+      "chapter": "Chapter 12: The Nervous System",
+      "section": "Tick Paralysis",
+      "reference_points": [
+        "Tick paralysis is caused by a toxin in tick saliva that affects the motor nerves",
+        "Signs usually appear about one week after the dog is bitten",
+        "Weakness worsens over 48 to 72 hours and can progress to collapse and inability to lift the head",
+        "Sensation remains normal even though paralysis progresses",
+        "Prompt tick removal can lead to dramatic improvement, although some dogs need supportive care"
+      ],
+      "source": {
+        "page": 372,
+        "pdf_page": 401
+      }
+    },
+    {
+      "id": "q_032",
+      "question": "What factors does the handbook say contribute to hip dysplasia in dogs?",
+      "chapter": "Chapter 13: The Musculoskeletal System",
+      "section": "Hip Dysplasia",
+      "reference_points": [
+        "Hip dysplasia is described as the most common cause of rear leg lameness in dogs",
+        "It is a polygenic trait influenced by more than one gene",
+        "Environmental factors such as diet also contribute",
+        "In the dysplastic hip, the femoral head fits loosely into a shallow poorly developed acetabulum",
+        "Rapid weight gain from a very high-calorie diet can worsen a predisposition to hip dysplasia"
+      ],
+      "source": {
+        "page": 392,
+        "pdf_page": 421
+      }
+    },
+    {
+      "id": "q_033",
+      "question": "How does the handbook characterize panosteitis in young dogs?",
+      "chapter": "Chapter 13: The Musculoskeletal System",
+      "section": "Panosteitis (Wandering Lameness)",
+      "reference_points": [
+        "Panosteitis is described as a disease of large rapidly growing puppies between about 5 and 12 months of age",
+        "A characteristic sign is shifting pain and lameness from one limb to another over weeks or months",
+        "Pressure over the shaft of an affected bone elicits pain",
+        "The condition is described as self-limiting",
+        "Symptoms usually disappear by about 20 months of age, although exercise restriction and analgesics may be needed"
+      ],
+      "source": {
+        "page": 400,
+        "pdf_page": 429
+      }
+    },
+    {
+      "id": "q_034",
+      "question": "What pattern of disease and management does the handbook describe for canine osteoarthritis?",
+      "chapter": "Chapter 13: The Musculoskeletal System",
+      "section": "Osteoarthritis (Degenerative Joint Disease)",
+      "reference_points": [
+        "The book states that osteoarthritis affects about one out of five dogs during their lifetime",
+        "It can occur in young dogs as a consequence of joint injury or inherited orthopedic disease, not only in older dogs",
+        "Common signs include lameness, stiffness, and joint pain that are often worse in the morning or after resting",
+        "Moderate exercise and weight control are emphasized as part of management",
+        "Excessive exercise is described as counterproductive for arthritic dogs"
+      ],
+      "source": {
+        "page": 401,
+        "pdf_page": 430
+      }
+    },
+    {
+      "id": "q_035",
+      "question": "What signs and risk factors for cystitis does the handbook highlight?",
+      "chapter": "Chapter 14: The Urinary System",
+      "section": "Cystitis (Bladder Infection)",
+      "reference_points": [
+        "Cystitis is described as a bacterial infection of the bladder lining",
+        "Predisposing factors include increasing age, diabetes mellitus, long-term corticosteroid use, and delayed elimination",
+        "The principal sign is frequent painful urination",
+        "The urine may be cloudy and have an abnormal odor",
+        "Females may lick the vulva and have a vaginal discharge",
+        "Urinalysis showing bacteria and white blood cells is used to confirm the diagnosis"
+      ],
+      "source": {
+        "page": 414,
+        "pdf_page": 443
+      }
+    },
+    {
+      "id": "q_036",
+      "question": "How does the handbook classify bladder and urethral stones, and why does stone composition matter?",
+      "chapter": "Chapter 14: The Urinary System",
+      "section": "Bladder and Urethral Stones",
+      "reference_points": [
+        "Bladder stones are common in dogs, while kidney stones are rare",
+        "The handbook lists struvite, uric acid, calcium oxalate, cystine, and silica stones",
+        "Struvite stones usually form in alkaline urine and often follow bladder infection",
+        "Uric acid stones are associated with acid urine and inherited urate metabolism changes in some breeds",
+        "Stone analysis is important because treatment and prevention depend on the composition",
+        "Some stone types can be dissolved with diet and medication, while others usually require surgical removal"
+      ],
+      "source": {
+        "page": 415,
+        "pdf_page": 444
+      }
+    },
+    {
+      "id": "q_037",
+      "question": "What early and advanced signs of uremia does the handbook describe in dogs with kidney failure?",
+      "chapter": "Chapter 14: The Urinary System",
+      "section": "Uremia (Kidney Failure)",
+      "reference_points": [
+        "One early sign is increased drinking and urination caused by inability to concentrate urine",
+        "As kidney function declines, toxins accumulate and produce uremia",
+        "Signs include apathy, depression, loss of appetite, weight loss, a dry haircoat, and ammonialike breath odor",
+        "Ulcers may arise in the mouth and edema or ascites can occur with nephrotic syndrome",
+        "Vomiting, diarrhea, and gastrointestinal bleeding may appear in more advanced disease",
+        "End-stage kidney failure can progress to coma"
+      ],
+      "source": {
+        "page": 423,
+        "pdf_page": 452
+      }
+    },
+    {
+      "id": "q_038",
+      "question": "What timeline and outward signs of the estrous cycle does the handbook describe for bitches?",
+      "chapter": "Chapter 15: Sex and Reproduction",
+      "section": "The Estrous (Heat) Cycle",
+      "reference_points": [
+        "Bitches usually reach sexual maturity with their first heat between about 6 and 12 months of age",
+        "Most females come into heat every five to nine months, though the cycle varies by individual",
+        "The estrous cycle is divided into four stages",
+        "The combined heat period of proestrus and estrus lasts about 21 days on average",
+        "The first outward signs of proestrus are a bloody vulvar discharge and firm swelling of the vulva",
+        "During early proestrus the female generally does not stand for breeding"
+      ],
+      "source": {
+        "page": 436,
+        "pdf_page": 465
+      }
+    },
+    {
+      "id": "q_039",
+      "question": "How does the handbook explain timing a breeding to improve the chance of conception?",
+      "chapter": "Chapter 15: Sex and Reproduction",
+      "section": "When to Breed",
+      "reference_points": [
+        "The most common cause of unsuccessful mating is bad timing",
+        "Counting calendar days alone is described as unreliable because each female has her own timetable",
+        "Fresh sperm can survive up to seven days in the female reproductive tract",
+        "Eggs need about three days of maturation before they can be fertilized",
+        "Peak female fertility is said to occur about three days after ovulation",
+        "Multiple breedings every other or every third day are recommended while the bitch remains in standing heat"
+      ],
+      "source": {
+        "page": 440,
+        "pdf_page": 469
+      }
+    },
+    {
+      "id": "q_040",
+      "question": "What warning signs and treatment principles does the handbook give for pyometra?",
+      "chapter": "Chapter 15: Sex and Reproduction",
+      "section": "Pyometra and Cystic Endometrial Hyperplasia",
+      "reference_points": [
+        "Pyometra is described as a life-threatening uterine infection that occurs most often in intact females over 6 years of age",
+        "Signs usually appear one to two months after the heat period",
+        "Affected bitches may be depressed, lethargic, anorexic, thirsty, and urinate frequently, and may also vomit or have diarrhea",
+        "Open-cervix pyometra releases pus through the cervix, while closed-cervix pyometra traps infection in an enlarged uterus",
+        "Immediate veterinary attention is required to prevent shock and death",
+        "Ovariohysterectomy together with antibiotics is presented as the treatment of choice"
+      ],
+      "source": {
+        "page": 461,
+        "pdf_page": 490
+      }
+    },
+    {
+      "id": "q_041",
+      "question": "What setup does the handbook recommend for a safe whelping area?",
+      "chapter": "Chapter 16: Pregnancy and Whelping",
+      "section": "Preparing for Whelping",
+      "reference_points": [
+        "The dam should deliver at home in familiar surroundings where she is at ease",
+        "The whelping box should be in a warm, dry, draft-free, quiet area",
+        "The box sides should be high enough to contain puppies while allowing the dam to step over them",
+        "Inside ledges are recommended to reduce the chance that the dam will roll onto the puppies",
+        "Bedding should provide traction and should not contain loose threads or deep loose material that could smother puppies",
+        "The room and box floor temperature should be monitored carefully during the first weeks after birth"
+      ],
+      "source": {
+        "page": 471,
+        "pdf_page": 500
+      }
+    },
+    {
+      "id": "q_042",
+      "question": "What early signs of impending whelping does the handbook describe?",
+      "chapter": "Chapter 16: Pregnancy and Whelping",
+      "section": "Signs of Whelping",
+      "reference_points": [
+        "The rectal temperature often drops 12 to 18 hours before labor begins",
+        "The handbook says the drop is from a normal 100 to 102.5 F range to about 99.5 F or below",
+        "The dam may lose her appetite 12 to 24 hours before whelping",
+        "Restlessness, increased activity, rummaging, digging, and scratching at bedding are listed as prelabor behaviors",
+        "Owners are told not to assume labor is far away just because a temperature drop was missed"
+      ],
+      "source": {
+        "page": 473,
+        "pdf_page": 502
+      }
+    },
+    {
+      "id": "q_043",
+      "question": "What immediate steps does the handbook recommend if a newborn puppy is not breathing and the mother does not clear it?",
+      "chapter": "Chapter 16: Pregnancy and Whelping",
+      "section": "Helping a Puppy to Breathe",
+      "reference_points": [
+        "The amniotic sac should be removed within 30 seconds so the puppy can breathe",
+        "If the mother does not do so, the sac should be torn open starting at the mouth",
+        "Secretions should be removed from the puppy's mouth and nose with a cotton swab or suction bulb",
+        "The puppy should be rubbed briskly with a soft towel",
+        "If the puppy still does not breathe, gentle mouth-to-nose breaths can be given until the chest expands",
+        "The handbook warns not to blow forcefully because that can rupture the lungs"
+      ],
+      "source": {
+        "page": 477,
+        "pdf_page": 506
+      }
+    },
+    {
+      "id": "q_044",
+      "question": "When does the handbook say a veterinarian should be called during whelping?",
+      "chapter": "Chapter 16: Pregnancy and Whelping",
+      "section": "When to Call the Veterinarian",
+      "reference_points": [
+        "Thirty to 60 minutes of active straining without a puppy being born is a warning sign",
+        "Four hours between births is concerning when more puppies are expected",
+        "Two hours of weak ineffectual labor without a birth is also listed as abnormal",
+        "Purulent or hemorrhagic vaginal discharge warrants veterinary attention",
+        "Apathy or weakness with rectal temperature above 104 F or below 97 F is another reason to call",
+        "Dark green or bloody fluid before the first puppy is born is treated as an urgent warning sign"
+      ],
+      "source": {
+        "page": 480,
+        "pdf_page": 509
+      }
+    },
+    {
+      "id": "q_045",
+      "question": "Why does the handbook consider colostrum and nursing so important for newborn puppies?",
+      "chapter": "Chapter 17: Pediatrics",
+      "section": "The Importance of Nursing",
+      "reference_points": [
+        "During the first 36 hours after whelping, the dam produces colostrum rather than ordinary milk",
+        "Colostrum is described as rich in vitamins, minerals, and protein",
+        "It also contains antibodies and other immune substances that help protect puppies from infectious disease",
+        "The section links failure of nursing and chilling to serious neonatal risk",
+        "Maintaining proper warmth in the whelping environment is emphasized as critical to survival in the first weeks"
+      ],
+      "source": {
+        "page": 491,
+        "pdf_page": 520
+      }
+    },
+    {
+      "id": "q_046",
+      "question": "How does the handbook recommend reviving a weak, chilled, or fading puppy?",
+      "chapter": "Chapter 17: Pediatrics",
+      "section": "Reviving a Weak Puppy",
+      "reference_points": [
+        "Early treatment is described as imperative because weak newborn puppies can die quickly",
+        "A chilled puppy should be warmed gradually rather than rapidly",
+        "One recommended warming method is to keep the puppy against the owner's skin under clothing",
+        "Warm glucose-electrolyte solution may be given by eyedropper or baby nurser to correct dehydration and low blood sugar",
+        "The handbook specifically says never allow a cold puppy to nurse or receive formula",
+        "Severely dehydrated or very weak puppies should be treated by a veterinarian"
+      ],
+      "source": {
+        "page": 495,
+        "pdf_page": 524
+      }
+    },
+    {
+      "id": "q_047",
+      "question": "What role does early socialization play according to the handbook's pediatrics chapter?",
+      "chapter": "Chapter 17: Pediatrics",
+      "section": "The Importance of Early Socialization",
+      "reference_points": [
+        "The first 12 weeks of life are described as crucial for personality and sociability",
+        "Poor exposure during the first three months is linked to later problems such as timidity, phobias, fear-biting, and dominance aggression",
+        "Puppies should remain with their dam and littermates until about 8 to 10 weeks of age",
+        "Between 5 and 7 weeks puppies become especially receptive to positive interactions with people",
+        "At 10 to 12 weeks and again at 16 to 20 weeks puppies are described as especially receptive to safe exploration of new environments"
+      ],
+      "source": {
+        "page": 512,
+        "pdf_page": 541
+      }
+    },
+    {
+      "id": "q_048",
+      "question": "What signs of a responsible breeder does the handbook tell a buyer to look for?",
+      "chapter": "Chapter 17: Pediatrics",
+      "section": "Selecting a Breeder",
+      "reference_points": [
+        "The handbook recommends using established registries or breed clubs to identify breeders",
+        "A responsible breeder asks questions about the buyer and the puppy's future welfare",
+        "The buyer is encouraged to insist on a veterinary exam with a 72-hour return guarantee if a health problem is found",
+        "Important paperwork includes registration documents, pedigree, health certificate, diet sheet, and immunization record",
+        "The text also notes that shelters and breed rescue groups are valid alternatives for acquiring a dog"
+      ],
+      "source": {
+        "page": 514,
+        "pdf_page": 543
+      }
+    },
+    {
+      "id": "q_049",
+      "question": "How does the handbook explain what causes cancer in dogs?",
+      "chapter": "Chapter 18: Tumors and Cancers",
+      "section": "What Causes Cancer?",
+      "reference_points": [
+        "Cancer is described as abnormal rapid cell division and tissue growth at the expense of the affected organ",
+        "The handbook says cancer often arises when genes controlling orderly cell duplication are disrupted",
+        "Inherited cancer susceptibility is described in some breeds",
+        "Environmental carcinogens such as ultraviolet light, radiation, chemicals, smoke, viruses, and parasites are also discussed",
+        "The chapter frames cancer as a complex interaction between genetics and environment"
+      ],
+      "source": {
+        "page": 526,
+        "pdf_page": 555
+      }
+    },
+    {
+      "id": "q_050",
+      "question": "What does the handbook say owners should understand about mast cell tumors in dogs?",
+      "chapter": "Chapter 18: Tumors and Cancers",
+      "section": "Mastocytomas (Mast Cell Tumors)",
+      "reference_points": [
+        "Mast cell tumors account for about 10 to 20 percent of skin tumors in dogs",
+        "About half are described as malignant",
+        "They can vary greatly in appearance and may resemble other benign masses such as lipomas",
+        "The handbook says all new lumps should be checked by a veterinarian",
+        "Mast cell tumors can release histamine and are associated with stomach and duodenal ulcers",
+        "Treatment depends on stage and may include surgery, prednisone, radiation therapy, chemotherapy, or immunotherapy"
+      ],
+      "source": {
+        "page": 533,
+        "pdf_page": 562
+      }
+    },
+    {
+      "id": "q_051",
+      "question": "What danger signs in an older dog does the handbook say warrant veterinary investigation?",
+      "chapter": "Chapter 19: Geriatrics",
+      "section": "Danger Signs in the Geriatric Dog",
+      "reference_points": [
+        "Loss of appetite or weight is listed as a warning sign",
+        "Coughing or rapid labored breathing is listed as a warning sign",
+        "Weakness or exercise intolerance is listed as a warning sign",
+        "Increased thirst or frequency of urination is listed as a warning sign",
+        "Constipation, diarrhea, abnormal discharge, fever, pulse or breathing changes, and any new growth are all reasons for veterinary evaluation"
+      ],
+      "source": {
+        "page": 546,
+        "pdf_page": 575
+      }
+    },
+    {
+      "id": "q_052",
+      "question": "What pattern of behavior changes does the handbook associate with canine cognitive dysfunction syndrome?",
+      "chapter": "Chapter 19: Geriatrics",
+      "section": "Cognitive Dysfunction Syndrome",
+      "reference_points": [
+        "Cognitive dysfunction is described as a progressive age-related decline in mental function somewhat similar to Alzheimer's disease",
+        "Disorientation is a principal symptom, including getting lost in the house or stuck in corners",
+        "Sleep and activity cycles are disrupted, with more sleeping overall but less at night and more aimless wandering",
+        "House soiling may occur because the dog signals less often or eliminates indoors",
+        "Changes in social interaction, such as reduced greeting behavior or altered need for contact, are also described",
+        "Medical causes must be ruled out before attributing these signs solely to cognitive dysfunction"
+      ],
+      "source": {
+        "page": 547,
+        "pdf_page": 576
+      }
+    },
+    {
+      "id": "q_053",
+      "question": "What precautions does the handbook give for using aspirin and other NSAID pain relievers in dogs?",
+      "chapter": "Chapter 20: Medications",
+      "section": "Analgesics",
+      "reference_points": [
+        "Buffered or enteric-coated aspirin is described as safer than regular aspirin for short-term use in dogs",
+        "Aspirin should not be used in cats",
+        "Aspirin is no longer recommended for long-term osteoarthritis control because of destructive effects on joint cartilage",
+        "Aspirin should not be given to dogs with bleeding or clotting disorders and should be stopped before surgery",
+        "The handbook warns never to combine one NSAID with another NSAID or with corticosteroids",
+        "Dogs on long-term NSAIDs should have periodic bloodwork monitoring"
+      ],
+      "source": {
+        "page": 560,
+        "pdf_page": 589
+      }
+    },
+    {
+      "id": "q_054",
+      "question": "How does the handbook recommend giving a dog a pill or tablet?",
+      "chapter": "Chapter 20: Medications",
+      "section": "Pills, Capsules, and Tablets",
+      "reference_points": [
+        "The mouth can be opened by placing a thumb behind a canine tooth and pressing upward on the roof of the mouth",
+        "The pill should be placed well back in the middle of the tongue",
+        "The mouth is then closed and the throat massaged until the dog swallows",
+        "Nose licking is given as a sign that the pill has been swallowed",
+        "The handbook says pills should not be crushed into powder unless a veterinarian specifically advises it",
+        "Some pills can be hidden in small food treats if approved for administration with food"
+      ],
+      "source": {
+        "page": 566,
+        "pdf_page": 595
+      }
+    },
+    {
+      "id": "q_055",
+      "question": "What does the handbook say about giving liquid medications to a dog safely?",
+      "chapter": "Chapter 20: Medications",
+      "section": "Liquids",
+      "reference_points": [
+        "Liquids should be administered into the cheek pouch between the molars and cheek",
+        "A medicine bottle, eyedropper, or plastic syringe without a needle can be used",
+        "The dog's lips should be sealed around the dispenser while the chin is tilted upward",
+        "The liquid should be dispensed slowly so the dog can swallow automatically",
+        "Large amounts should be given with pauses rather than forced quickly down the throat"
+      ],
+      "source": {
+        "page": 567,
+        "pdf_page": 596
+      }
+    }
+  ]
+}
