@@ -4,37 +4,30 @@ from langchain_milvus import Milvus
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.document_loaders import PyPDFLoader, Docx2txtLoader, TextLoader
 from pathlib import Path
-from config import (
-    DATA_DIR,
-    CHUNK_SIZE,
-    CHUNK_OVERLAP,
-    HF_EMBED_MODEL,
-    MILVUS_URI,
-    COLLECTION_NAME,
-)
+from app.core.settings import settings
 
 SUPPORTED_EXTS = {".pdf", ".docx", ".txt", ".md"}
 
 # Per-file chapter ranges using the handbook's printed page numbers.
 CHAPTER_MAPS = {
     "Dog-Owners-Home-Veterinary-Handbook.pdf": [
-        {"chapter": "Chapter 1: Emergencies", "startpage": 1, "endpage": 47},
-         {"chapter": "Chapter 2: Gastrointestinal Parasites", "startpage": 51, "endpage": 63},
-         {"chapter": "Chapter 3: Infectious Diseases", "startpage": 65, "endpage": 98},
+        {"chapter": "Chapter 1: Emergencies", "startpage": 1, "endpage": 50},
+         {"chapter": "Chapter 2: Gastrointestinal Parasites", "startpage": 51, "endpage": 64},
+         {"chapter": "Chapter 3: Infectious Diseases", "startpage": 65, "endpage": 100},
          {"chapter": "Chapter 4: The Skin and Coat", "startpage": 101, "endpage": 168},
          {"chapter": "Chapter 5: The Eyes", "startpage": 169, "endpage": 204},
-         {"chapter": "Chapter 6: The Ears", "startpage": 205, "endpage": 218},
-         {"chapter": "Chapter 7: The Nose", "startpage": 221, "endpage": 229},
+         {"chapter": "Chapter 6: The Ears", "startpage": 205, "endpage": 220},
+         {"chapter": "Chapter 7: The Nose", "startpage": 221, "endpage": 230},
          {"chapter": "Chapter 8: The Mouth and Throat", "startpage": 231, "endpage": 254},
-         {"chapter": "Chapter 9: The Digestive System", "startpage": 255, "endpage": 308},
-         {"chapter": "Chapter 10: The Respiratory System", "startpage": 311, "endpage": 326},
-         {"chapter": "Chapter 11: The Circulatory System", "startpage": 329, "endpage": 352},
-         {"chapter": "Chapter 12: The Nervous System", "startpage": 355, "endpage": 381},
-         {"chapter": "Chapter 13: The Musculoskeletal System", "startpage": 383, "endpage": 408},
+         {"chapter": "Chapter 9: The Digestive System", "startpage": 255, "endpage": 310},
+         {"chapter": "Chapter 10: The Respiratory System", "startpage": 311, "endpage": 328},
+         {"chapter": "Chapter 11: The Circulatory System", "startpage": 329, "endpage": 354},
+         {"chapter": "Chapter 12: The Nervous System", "startpage": 355, "endpage": 382},
+         {"chapter": "Chapter 13: The Musculoskeletal System", "startpage": 383, "endpage": 410},
          {"chapter": "Chapter 14: The Urinary System", "startpage": 411, "endpage": 426},
          {"chapter": "Chapter 15: Sex and Reproduction", "startpage": 427, "endpage": 466},
-         {"chapter": "Chapter 16: Pregnancy and Whelping", "startpage": 467, "endpage": 487},
-         {"chapter": "Chapter 17: Pediatrics", "startpage": 489, "endpage": 520},
+         {"chapter": "Chapter 16: Pregnancy and Whelping", "startpage": 467, "endpage": 488},
+         {"chapter": "Chapter 17: Pediatrics", "startpage": 489, "endpage": 524},
          {"chapter": "Chapter 18: Tumors and Cancers", "startpage": 525, "endpage": 544},
          {"chapter": "Chapter 19: Geriatrics", "startpage": 545, "endpage": 558},
          {"chapter": "Chapter 20: Medications", "startpage": 559, "endpage": 570},
@@ -240,7 +233,7 @@ def get_printed_page(path_name: str, pdf_page_number: int) -> int | None:
     if offset is None:
         return None
     printed_page = pdf_page_number - offset
-    if printed_page < 1:
+    if printed_page < 1 or printed_page > 627:
         return None
     return printed_page
 
@@ -281,11 +274,11 @@ def load_local_documents(data_dir: str):
                 printed_page = get_printed_page(path.name, pdf_page_number)
                 if printed_page is not None:
                     d.metadata["printed_page"] = printed_page
-
-                lookup_page = printed_page if printed_page is not None else pdf_page_number
-                chapter = get_label_for_page(lookup_page, chapter_map, "chapter")
-                if chapter:
-                    d.metadata["chapter"] = chapter
+                    chapter = get_label_for_page(printed_page, chapter_map, "chapter")
+                    d.metadata["chapter"] = chapter if chapter else "Unknown"
+                else:
+                    d.metadata["chapter"] = "Front Matter"
+                
 
                 # Annotation:
                 # Section metadata is intentionally not written yet. The lookup
@@ -304,18 +297,18 @@ def load_and_split(paths):
     documents = load_local_documents(paths)
 
     splitter = RecursiveCharacterTextSplitter(
-        chunk_size=CHUNK_SIZE,
-        chunk_overlap=CHUNK_OVERLAP
+        chunk_size=settings.CHUNK_SIZE,
+        chunk_overlap=settings.CHUNK_OVERLAP,
     )
     docs = splitter.split_documents(documents)
     return docs
 
 def ingest(drop_old: bool = False):
-    docs = load_and_split(DATA_DIR)
+    docs = load_and_split(settings.DATA_DIR)
     print(f"[ingest] loaded & split into {len(docs)} chunks")
 
     embeddings = HuggingFaceEmbeddings(
-        model_name=HF_EMBED_MODEL,
+        model_name=settings.HF_EMBED_MODEL,
         model_kwargs={"device": "cpu"},
         encode_kwargs={"normalize_embeddings": True},
     )
@@ -324,12 +317,15 @@ def ingest(drop_old: bool = False):
     vectorstore = Milvus.from_documents(
         documents=docs,
         embedding=embeddings,
-        connection_args={"uri": MILVUS_URI},
-        collection_name=COLLECTION_NAME,
+        connection_args={"uri": settings.MILVUS_URI},
+        collection_name=settings.COLLECTION_NAME,
         drop_old=drop_old,
     )
 
-    print(f"[ingest] saved to Milvus collection='{COLLECTION_NAME}', uri='{MILVUS_URI}'")
+    print(
+        f"[ingest] saved to Milvus collection='{settings.COLLECTION_NAME}', "
+        f"uri='{settings.MILVUS_URI}'"
+    )
     return vectorstore
 
 if __name__ == "__main__":

@@ -2,7 +2,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
-from deps import get_rag_chain
+from app.services.rag_service import answer_question
 
 app = FastAPI(title="Pet Doctor RAG API", version="1.0")
 
@@ -22,6 +22,5 @@ def ask(req: AskRequest):
     if not q:
         raise HTTPException(status_code=400, detail="question is empty")
 
-    chain = get_rag_chain()
-    ans = chain.invoke(q)
+    ans = answer_question(q)
     return AskResponse(answer=ans)

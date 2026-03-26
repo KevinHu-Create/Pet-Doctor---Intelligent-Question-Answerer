@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     HF_EMBED_MODEL: str = os.getenv("HF_EMBED_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
     OLLAMA_CHAT_MODEL: str = os.getenv("OLLAMA_CHAT_MODEL", "llama3.2")
     OLLAMA_BASE_URL: str = os.getenv("OLLAMA_BASE_URL", "http://ollama:11434")
-    MILVUS_URI: str = os.getenv("MILVUS_URI", "http://milvus:19530")
-    COLLECTION_NAME: str = os.getenv("COLLECTION_NAME", "wiki_insulin_st_minilm_v1")
+    MILVUS_URI: str = os.getenv("MILVUS_URI", "http://localhost:19530")
+    COLLECTION_NAME: str = os.getenv("COLLECTION_NAME", "dog_owner_handbook")
 
 settings = Settings()
