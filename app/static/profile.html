@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Doctor Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body class="workspace-page">
+    <div class="workspace-shell profile-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Pet Doctor</p>
+          <h1 class="topbar-title">User Profile</h1>
+        </div>
+        <div class="topbar-actions">
+          <button id="back-to-chat" type="button" class="secondary-button">
+            Back to Chat
+          </button>
+          <button id="profile-logout" type="button" class="ghost-button">
+            Log Out
+          </button>
+        </div>
+      </header>
+
+      <main class="profile-layout">
+        <section class="profile-summary-card">
+          <p class="eyebrow">Account Snapshot</p>
+          <dl class="summary-list">
+            <div>
+              <dt>Username</dt>
+              <dd id="summary-username">Loading</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd id="summary-email">Loading</dd>
+            </div>
+            <div>
+              <dt>Role</dt>
+              <dd id="summary-role">Loading</dd>
+            </div>
+            <div>
+              <dt>Pet Name</dt>
+              <dd id="summary-pet-name">Loading</dd>
+            </div>
+            <div>
+              <dt>Pet Type</dt>
+              <dd id="summary-pet-type">Loading</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="profile-card">
+          <div class="profile-head">
+            <div>
+              <h2>Manage Profile</h2>
+              <p class="muted-copy">
+                Details open in read-only mode first. Click update when you want
+                to edit.
+              </p>
+            </div>
+            <p id="profile-status" class="inline-status" data-tone="neutral">
+              Loading your account details.
+            </p>
+          </div>
+
+          <form id="profile-form" class="profile-form">
+            <label>
+              User ID
+              <input name="id" disabled />
+            </label>
+            <label>
+              Username
+              <input name="username" disabled required />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" disabled required />
+            </label>
+            <label>
+              Role
+              <input name="role" disabled />
+            </label>
+            <label>
+              Pet Name
+              <input name="pet_name" disabled />
+            </label>
+            <label>
+              Pet Type
+              <input name="pet_type" disabled />
+            </label>
+            <label>
+              New Password
+              <input
+                name="password"
+                type="password"
+                placeholder="Leave blank to keep current password"
+                disabled
+              />
+            </label>
+          </form>
+
+          <div class="profile-actions">
+            <button id="edit-profile" type="button">Update</button>
+            <button id="save-profile" type="button" class="is-hidden">
+              Save Changes
+            </button>
+            <button id="cancel-profile" type="button" class="ghost-button is-hidden">
+              Cancel
+            </button>
+            <button id="delete-profile" type="button" class="danger-button">
+              Delete Account
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/static/profile.js"></script>
+  </body>
+</html>

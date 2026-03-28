@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Doctor Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body class="workspace-page">
+    <div class="workspace-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Pet Doctor</p>
+          <h1 class="topbar-title">Consultation Chat</h1>
+        </div>
+        <div class="topbar-actions">
+          <span id="chat-health" class="status-chip">Checking API</span>
+          <button id="profile-button" type="button" class="secondary-button">
+            Profile
+          </button>
+          <button id="logout-button" type="button" class="ghost-button">
+            Log Out
+          </button>
+        </div>
+      </header>
+
+      <main class="chat-card">
+        <section class="chat-intro">
+          <div>
+            <h2 id="chat-greeting">Welcome back.</h2>
+            <p class="muted-copy">
+              Ask pet-health questions here. Your account settings stay on a
+              dedicated profile page.
+            </p>
+          </div>
+          <div class="prompt-row">
+            <button type="button" class="prompt-pill" data-prompt>
+              My dog has mild diarrhea but still seems active. What should I pay attention to?
+            </button>
+            <button type="button" class="prompt-pill" data-prompt>
+              My dog ate a chocolate bar. What should I do?
+            </button>
+          </div>
+        </section>
+
+        <section id="chat-thread" class="chat-thread" aria-live="polite"></section>
+
+        <form id="chat-form" class="composer">
+          <label class="sr-only" for="chat-input">Ask a question</label>
+          <textarea
+            id="chat-input"
+            name="question"
+            rows="3"
+            placeholder="Describe your pet's symptom or concern here."
+            required
+          ></textarea>
+          <div class="composer-actions">
+            <p id="chat-status" class="inline-status" data-tone="neutral">
+              Ready for your first question.
+            </p>
+            <button type="submit" id="send-button">Send</button>
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <script type="module" src="/static/chat.js"></script>
+  </body>
+</html>

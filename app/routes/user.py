@@ -31,6 +31,7 @@ class UserResponse(BaseModel):
     id: int
     username: str
     email: EmailStr
+    role: str
     pet_name: Optional[str] = None
     pet_type: Optional[str] = None
 

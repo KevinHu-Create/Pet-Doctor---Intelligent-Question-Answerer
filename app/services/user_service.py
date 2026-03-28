@@ -3,7 +3,15 @@ from app.db.models import User
 from app.services.security import hash_password, verify_password
 
 
-def create_user(db: Session, username: str, email: str, password: str, role="user"):
+def create_user(
+    db: Session,
+    username: str,
+    email: str,
+    password: str,
+    role="user",
+    pet_name: str | None = None,
+    pet_type: str | None = None,
+):
     existing_user = db.query(User).filter(User.username == username).first()
     if existing_user:
         raise ValueError("username already exists")
@@ -17,6 +25,8 @@ def create_user(db: Session, username: str, email: str, password: str, role="use
         email=email,
         password_hash=hash_password(password),
         role=role,
+        pet_name=pet_name,
+        pet_type=pet_type,
     )
     db.add(user)
     db.commit()

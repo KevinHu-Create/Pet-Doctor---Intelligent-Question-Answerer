@@ -25,3 +25,13 @@ app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 @app.get("/", include_in_schema=False)
 def index():
     return FileResponse(STATIC_DIR / "index.html")
+
+
+@app.get("/chat", include_in_schema=False)
+def chat_page():
+    return FileResponse(STATIC_DIR / "chat.html")
+
+
+@app.get("/profile", include_in_schema=False)
+def profile_page():
+    return FileResponse(STATIC_DIR / "profile.html")
