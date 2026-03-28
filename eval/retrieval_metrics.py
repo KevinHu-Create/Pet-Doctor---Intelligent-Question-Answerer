@@ -31,6 +31,8 @@ class QueryMetrics:
 def load_test_set(path: Path) -> list[dict]:
     with path.open("r", encoding="utf-8") as f:
         payload = json.load(f)
+    if isinstance(payload, list):
+        return payload
     return payload["qas"]
 
 

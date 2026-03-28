@@ -6,9 +6,15 @@ from langchain_core.output_parsers import StrOutputParser
 from app.deps.container import get_vectorstore, get_llm
 
 PROMPT_TEMPLATE = """
-Human: You are a Pet doctor AI assistant, and provides answers to questions by using fact based and statistical information when possible.
-Use the following pieces of information to provide a concise answer to the question enclosed in <question> tags.
-Don't say you don't know the answer unless there is completely no any relevant information in the context, if you need more information just ask the user for more reletive information.
+Human: You are a pet health assistant.
+Answer the question using only the provided context.
+
+Rules:
+- Keep the answer under 80 words.
+- Do not include statistics or numbers unless they are explicitly stated in the context.
+- Do not add facts or symptoms not supported by the context.
+- If the context is insufficient, say so briefly.
+
 <context>
 {context}
 </context>
@@ -17,16 +23,21 @@ Don't say you don't know the answer unless there is completely no any relevant i
 {question}
 </question>
 
-The response should be specific and use statistics or numbers when possible.
-
-Assistant:"""
+Assistant:
+"""
 
 def format_docs(docs):
+    print("\n=== RETRIEVED DOCS ===")
+    for i, doc in enumerate(docs):
+        print(f"\n--- doc {i} ---")
+        print(doc.page_content[:300])  # 防止太长
+    print("=== END DOCS ===\n")
+
     return "\n\n".join(doc.page_content for doc in docs)
 
 @lru_cache
 def get_rag_chain():
-    retriever = get_vectorstore().as_retriever(search_kwargs={"k": 4})
+    retriever = get_vectorstore().as_retriever(search_kwargs={"k": 2})
 
     prompt = PromptTemplate(
         template=PROMPT_TEMPLATE,

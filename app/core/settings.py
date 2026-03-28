@@ -8,11 +8,16 @@ class Settings(BaseSettings):
     database_url: str = "sqlite:///./users.db"
     DATA_DIR: Path = os.getenv("DATA_DIR", PROJECT_ROOT / "data")
     CHUNK_SIZE: int = int(os.getenv("CHUNK_SIZE", "800"))
-    CHUNK_OVERLAP: int = int(os.getenv("CHUNK_OVERLAP", "120"))
+    CHUNK_OVERLAP: int = int(os.getenv("CHUNK_OVERLAP", "150"))
 
+    HF_CACHE_DIR: Path = Path(
+        os.getenv("HF_CACHE_DIR", Path.home() / ".cache" / "huggingface")
+    )
+    HF_HUB_ETAG_TIMEOUT: int = int(os.getenv("HF_HUB_ETAG_TIMEOUT", "60"))
+    HF_HUB_DOWNLOAD_TIMEOUT: int = int(os.getenv("HF_HUB_DOWNLOAD_TIMEOUT", "120"))
     HF_EMBED_MODEL: str = os.getenv("HF_EMBED_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
     OLLAMA_CHAT_MODEL: str = os.getenv("OLLAMA_CHAT_MODEL", "llama3.2")
-    OLLAMA_BASE_URL: str = os.getenv("OLLAMA_BASE_URL", "http://ollama:11434")
+    OLLAMA_BASE_URL: str = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
     MILVUS_URI: str = os.getenv("MILVUS_URI", "http://localhost:19530")
     COLLECTION_NAME: str = os.getenv("COLLECTION_NAME", "dog_owner_handbook")
 

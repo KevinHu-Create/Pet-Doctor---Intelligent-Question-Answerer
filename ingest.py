@@ -1,10 +1,25 @@
+import os
+from pathlib import Path
+
+from app.core.settings import settings
+
+os.environ.setdefault("HF_HOME", str(settings.HF_CACHE_DIR))
+os.environ.setdefault("HF_HUB_CACHE", str(settings.HF_CACHE_DIR / "hub"))
+os.environ.setdefault(
+    "SENTENCE_TRANSFORMERS_HOME",
+    str(settings.HF_CACHE_DIR / "sentence_transformers"),
+)
+os.environ.setdefault("HF_HUB_ETAG_TIMEOUT", str(settings.HF_HUB_ETAG_TIMEOUT))
+os.environ.setdefault(
+    "HF_HUB_DOWNLOAD_TIMEOUT",
+    str(settings.HF_HUB_DOWNLOAD_TIMEOUT),
+)
+
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_milvus import Milvus
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.document_loaders import PyPDFLoader, Docx2txtLoader, TextLoader
-from pathlib import Path
-from app.core.settings import settings
 
 SUPPORTED_EXTS = {".pdf", ".docx", ".txt", ".md"}
 
@@ -309,6 +324,7 @@ def ingest(drop_old: bool = False):
 
     embeddings = HuggingFaceEmbeddings(
         model_name=settings.HF_EMBED_MODEL,
+        cache_folder=str(settings.HF_CACHE_DIR / "sentence_transformers"),
         model_kwargs={"device": "cpu"},
         encode_kwargs={"normalize_embeddings": True},
     )

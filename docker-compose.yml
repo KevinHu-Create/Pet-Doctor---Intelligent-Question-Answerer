@@ -1,11 +1,4 @@
 services:
-  ollama:
-    image: ollama/ollama:latest
-    ports:
-      - "11434:11434"
-    volumes:
-      - ollama:/root/.ollama
-  
   #Milvus 不是一个镜像就结束了，需要etcd+minio+milvus三个服务协同工作
   etcd:
     image: quay.io/coreos/etcd:v3.5.5
@@ -59,16 +52,17 @@ services:
   
   apps:
     build: .
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
     depends_on:
-      - ollama
       - milvus
       - neo4j
     environment:
-      OLLAMA_BASE_URL: http://ollama:11434
-      MILVUS_URI: http://milvus:19530
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      MILVUS_URI: ${MILVUS_URI:-http://milvus:19530}
 
 volumes:
-  ollama:
   etcd:
   minio:
   milvus:

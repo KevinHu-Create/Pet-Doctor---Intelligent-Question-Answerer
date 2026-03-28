@@ -1,16 +1,15 @@
 # Pet-Doctor---Intelligent-Question-Answerer
-## Pet Doctor – Intelligent Question Answerer (CLI Prototype)
+## Pet Doctor – Intelligent Question Answerer
 
 This project implements a Retrieval-Augmented Generation (RAG) pipeline for
-domain-specific question answering, currently demonstrated with medical
-knowledge about insulin.
+domain-specific pet health question answering.
 
 ### Architecture
 - **Embedding**: HuggingFace Sentence-Transformers (`all-MiniLM-L6-v2`)
-- **Vector Database**: Milvus (Dockerized)
-- **LLM**: Ollama-hosted `llama3.2`
+- **Vector Database**: Milvus (Dockerized with MinIO + etcd)
+- **LLM**: Local Ollama-hosted `llama3.2`
 - **Document Loader**: Local data documents using LangChain PDFLoader
-- **Interface**: Interactive CLI (command-line interface)
+- **Interface**: FastAPI service
 
 ### Workflow
 1. Local documents are loaded and split into overlapping text chunks.
@@ -20,12 +19,13 @@ knowledge about insulin.
 5. Retrieved context is injected into a prompt for LLM-based answer generation.
 
 ### Key Features
-- Fully containerized backend services (Milvus, MinIO, etcd, Ollama)
+- Dockerized vector database services
 - Decoupled ingestion and query pipelines
 - Configurable embedding and collection settings
-- CLI-based interaction for fast debugging and verification
+- Local Ollama integration for answer generation
+- Evaluation scripts for retrieval and RAG quality checks
 
 ### Current Status
 - ✅ End-to-end RAG pipeline verified
 - ✅ Successful ingestion and retrieval from Milvus
-- 🔜 Planned upgrade to API-based service (FastAPI)
+- ✅ FastAPI service is the primary application entrypoint
