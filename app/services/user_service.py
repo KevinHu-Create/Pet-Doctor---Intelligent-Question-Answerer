@@ -4,6 +4,14 @@ from app.services.security import hash_password, verify_password
 
 
 def create_user(db: Session, username: str, email: str, password: str, role="user"):
+    existing_user = db.query(User).filter(User.username == username).first()
+    if existing_user:
+        raise ValueError("username already exists")
+
+    existing_email = db.query(User).filter(User.email == email).first()
+    if existing_email:
+        raise ValueError("email already exists")
+
     user = User(
         username=username,
         email=email,

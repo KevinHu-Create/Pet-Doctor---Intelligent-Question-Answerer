@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Doctor Console</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Pet Doctor</p>
+          <h1>Intelligent Question Answerer Control Panel</h1>
+          <p class="hero-text">
+            A single-page frontend for chatting with the RAG assistant and
+            managing user records from the same FastAPI service.
+          </p>
+        </div>
+        <div class="hero-status">
+          <span class="status-dot"></span>
+          <span id="api-status-text">Ready to connect</span>
+        </div>
+      </header>
+
+      <main class="dashboard">
+        <section class="panel panel-wide">
+          <div class="panel-heading">
+            <h2>Ask Pet Doctor</h2>
+            <p>Send a pet-health question to the `/ask` endpoint.</p>
+          </div>
+          <form id="ask-form" class="stack">
+            <label for="question">Question</label>
+            <textarea
+              id="question"
+              name="question"
+              rows="5"
+              placeholder="My dog keeps scratching after walks. What should I watch for?"
+              required
+            ></textarea>
+            <div class="actions">
+              <button type="submit">Get Answer</button>
+              <button type="button" class="ghost" data-fill-question>
+                Load Sample
+              </button>
+            </div>
+          </form>
+          <div class="response-box">
+            <h3>Answer</h3>
+            <pre id="ask-result">No answer yet.</pre>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>Auth</h2>
+            <p>Register and log in with existing backend endpoints.</p>
+          </div>
+
+          <form id="register-form" class="stack">
+            <h3>Register</h3>
+            <input name="username" placeholder="Username" required />
+            <input name="email" type="email" placeholder="Email" required />
+            <input
+              name="password"
+              type="password"
+              placeholder="Password"
+              required
+            />
+            <input name="role" placeholder="Role (default: user)" />
+            <button type="submit">Register User</button>
+          </form>
+
+          <form id="login-form" class="stack section-divider">
+            <h3>Login</h3>
+            <input name="username" placeholder="Username" required />
+            <input
+              name="password"
+              type="password"
+              placeholder="Password"
+              required
+            />
+            <button type="submit">Login</button>
+          </form>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>User Directory</h2>
+            <p>Inspect and maintain records in the `users` table.</p>
+          </div>
+
+          <div class="actions compact">
+            <button id="list-users-btn" type="button">List Users</button>
+          </div>
+
+          <form id="get-user-form" class="stack section-divider">
+            <h3>Get User</h3>
+            <input name="user_id" type="number" min="1" placeholder="User ID" required />
+            <button type="submit">Fetch User</button>
+          </form>
+
+          <form id="create-user-form" class="stack section-divider">
+            <h3>Create User</h3>
+            <input name="username" placeholder="Username" required />
+            <input name="email" type="email" placeholder="Email" required />
+            <input
+              name="password"
+              type="password"
+              placeholder="Password"
+              required
+            />
+            <input name="pet_name" placeholder="Pet Name" />
+            <input name="pet_type" placeholder="Pet Type" />
+            <button type="submit">Create Record</button>
+          </form>
+
+          <form id="update-user-form" class="stack section-divider">
+            <h3>Update User</h3>
+            <input name="user_id" type="number" min="1" placeholder="User ID" required />
+            <input name="username" placeholder="New Username" />
+            <input name="email" type="email" placeholder="New Email" />
+            <input name="password" type="password" placeholder="New Password" />
+            <input name="pet_name" placeholder="Pet Name" />
+            <input name="pet_type" placeholder="Pet Type" />
+            <button type="submit">Update Record</button>
+          </form>
+
+          <form id="delete-user-form" class="stack section-divider">
+            <h3>Delete User</h3>
+            <input name="user_id" type="number" min="1" placeholder="User ID" required />
+            <button type="submit" class="danger">Delete User</button>
+          </form>
+        </section>
+
+        <section class="panel panel-wide">
+          <div class="panel-heading">
+            <h2>Live Response</h2>
+            <p>All button actions stream their API response here.</p>
+          </div>
+          <pre id="api-result" class="result-console">Waiting for an action.</pre>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
