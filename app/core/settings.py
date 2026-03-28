@@ -6,6 +6,11 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 class Settings(BaseSettings):
     database_url: str = "sqlite:///./users.db"
+    admin_database_url: str = "sqlite:///./admins.db"
+    session_secret_key: str = os.getenv("SESSION_SECRET_KEY", "pet-doctor-dev-secret")
+    admin_seed_username: str = os.getenv("ADMIN_SEED_USERNAME", "admin")
+    admin_seed_email: str = os.getenv("ADMIN_SEED_EMAIL", "admin@petdoctor.com")
+    admin_seed_password: str = os.getenv("ADMIN_SEED_PASSWORD", "admin123456")
     DATA_DIR: Path = os.getenv("DATA_DIR", PROJECT_ROOT / "data")
     CHUNK_SIZE: int = int(os.getenv("CHUNK_SIZE", "800"))
     CHUNK_OVERLAP: int = int(os.getenv("CHUNK_OVERLAP", "150"))

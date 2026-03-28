@@ -29,3 +29,16 @@ domain-specific pet health question answering.
 - ✅ End-to-end RAG pipeline verified
 - ✅ Successful ingestion and retrieval from Milvus
 - ✅ FastAPI service is the primary application entrypoint
+
+### Authentication
+- Public registration creates regular `user` accounts only.
+- `admin` accounts are stored in a dedicated admin database (`admins.db`) instead of being created from the registration page.
+- The app now uses server-side session cookies for authentication and serves a dedicated admin console at `/admin`.
+
+### Default Admin Seed
+- `ADMIN_SEED_USERNAME=admin`
+- `ADMIN_SEED_EMAIL=admin@petdoctor.com`
+- `ADMIN_SEED_PASSWORD=admin123456`
+- `SESSION_SECRET_KEY=pet-doctor-dev-secret`
+
+Change these environment variables before production use.

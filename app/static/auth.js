@@ -1,5 +1,6 @@
 import {
   apiRequest,
+  homePathForRole,
   redirectIfAuthenticated,
   saveSession,
   serializeForm,
@@ -7,12 +8,16 @@ import {
   setStatus,
 } from "/static/shared.js";
 
-if (!redirectIfAuthenticated("/chat")) {
+const alreadyAuthenticated = await redirectIfAuthenticated();
+
+if (!alreadyAuthenticated) {
   const authStatus = document.getElementById("auth-status");
   const loginForm = document.getElementById("login-form");
   const registerForm = document.getElementById("register-form");
+  const adminForm = document.getElementById("admin-form");
   const loginSubmit = document.getElementById("login-submit");
   const registerSubmit = document.getElementById("register-submit");
+  const adminSubmit = document.getElementById("admin-submit");
   const tabButtons = [...document.querySelectorAll("[data-auth-tab]")];
 
   function setTab(mode) {
@@ -22,6 +27,7 @@ if (!redirectIfAuthenticated("/chat")) {
 
     loginForm.classList.toggle("is-hidden", mode !== "login");
     registerForm.classList.toggle("is-hidden", mode !== "register");
+    adminForm.classList.toggle("is-hidden", mode !== "admin");
   }
 
   tabButtons.forEach((button) => {
@@ -42,7 +48,7 @@ if (!redirectIfAuthenticated("/chat")) {
       });
       saveSession(data.user);
       setStatus(authStatus, "Login successful. Opening workspace.", "success");
-      window.location.href = "/chat";
+      window.location.href = homePathForRole(data.user.role);
     } catch (error) {
       setStatus(authStatus, error.message, "error");
     } finally {
@@ -64,11 +70,33 @@ if (!redirectIfAuthenticated("/chat")) {
       });
       saveSession(data.user);
       setStatus(authStatus, "Account created. Entering workspace.", "success");
-      window.location.href = "/chat";
+      window.location.href = homePathForRole(data.user.role);
     } catch (error) {
       setStatus(authStatus, error.message, "error");
     } finally {
       setButtonBusy(registerSubmit, false, "Creating...");
+    }
+  });
+
+  adminForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const payload = serializeForm(adminForm);
+
+    setButtonBusy(adminSubmit, true, "Authorizing...");
+    setStatus(authStatus, "Checking administrator credentials.", "neutral");
+
+    try {
+      const data = await apiRequest("/admin/login", {
+        method: "POST",
+        body: JSON.stringify(payload),
+      });
+      saveSession(data.user);
+      setStatus(authStatus, "Admin login successful. Opening console.", "success");
+      window.location.href = homePathForRole(data.user.role);
+    } catch (error) {
+      setStatus(authStatus, error.message, "error");
+    } finally {
+      setButtonBusy(adminSubmit, false, "Authorizing...");
     }
   });
 }

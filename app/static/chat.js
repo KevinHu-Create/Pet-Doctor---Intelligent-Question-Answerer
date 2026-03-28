@@ -7,7 +7,7 @@ import {
   setStatus,
 } from "/static/shared.js";
 
-const session = requireSession();
+const session = await requireSession("user");
 
 if (session) {
   const profileButton = document.getElementById("profile-button");
@@ -79,8 +79,10 @@ if (session) {
   });
 
   logoutButton.addEventListener("click", () => {
-    clearSession();
-    window.location.href = "/";
+    apiRequest("/logout", { method: "POST" }).finally(() => {
+      clearSession();
+      window.location.href = "/";
+    });
   });
 
   chatInput.addEventListener("keydown", (event) => {

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Doctor Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body class="workspace-page">
+    <div class="workspace-shell profile-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Pet Doctor</p>
+          <h1 class="topbar-title">Admin Console</h1>
+        </div>
+        <div class="topbar-actions">
+          <span id="admin-badge" class="status-chip">Administrator</span>
+          <button id="admin-refresh" type="button" class="secondary-button">
+            Refresh Users
+          </button>
+          <button id="admin-logout" type="button" class="ghost-button">
+            Log Out
+          </button>
+        </div>
+      </header>
+
+      <main class="admin-layout">
+        <section class="profile-summary-card">
+          <p class="eyebrow">Access</p>
+          <dl class="summary-list">
+            <div>
+              <dt>Role</dt>
+              <dd>Admin</dd>
+            </div>
+            <div>
+              <dt>Scope</dt>
+              <dd>Built-in admin database</dd>
+            </div>
+            <div>
+              <dt>Capability</dt>
+              <dd>View and manage registered users</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="profile-card">
+          <div class="profile-head">
+            <div>
+              <h2>User Management</h2>
+              <p class="muted-copy">
+                Public registration only creates regular users. This console is reserved
+                for accounts stored in the admin database.
+              </p>
+            </div>
+            <p id="admin-status" class="inline-status" data-tone="neutral">
+              Loading user records.
+            </p>
+          </div>
+
+          <div class="admin-metrics">
+            <article class="metric-card">
+              <span>Total Users</span>
+              <strong id="user-count">0</strong>
+            </article>
+            <article class="metric-card">
+              <span>Active Users</span>
+              <strong id="active-count">0</strong>
+            </article>
+          </div>
+
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Username</th>
+                  <th>Email</th>
+                  <th>Pet</th>
+                  <th>Role</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="admin-users-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/static/admin.js"></script>
+  </body>
+</html>

@@ -7,7 +7,7 @@ import {
   updateSessionUser,
 } from "/static/shared.js";
 
-const session = requireSession();
+const session = await requireSession("user");
 
 if (session) {
   const backToChat = document.getElementById("back-to-chat");
@@ -90,8 +90,10 @@ if (session) {
   });
 
   logoutButton.addEventListener("click", () => {
-    clearSession();
-    window.location.href = "/";
+    apiRequest("/logout", { method: "POST" }).finally(() => {
+      clearSession();
+      window.location.href = "/";
+    });
   });
 
   editButton.addEventListener("click", () => {

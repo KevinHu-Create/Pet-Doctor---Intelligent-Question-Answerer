@@ -17,10 +17,6 @@
       <section class="auth-hero">
         <p class="eyebrow">Pet Doctor</p>
         <h1>Your pocket dog health expert</h1>
-        <p class="auth-copy">
-          This flow now starts with authentication, then routes users into a
-          dedicated chat experience. Profile updates live on a separate page.
-        </p>
         <div class="hero-badges">
           <span class="pill">FastAPI</span>
           <span class="pill">Milvus Retrieval</span>
@@ -35,6 +31,9 @@
           </button>
           <button type="button" class="tab-button" data-auth-tab="register">
             Register
+          </button>
+          <button type="button" class="tab-button" data-auth-tab="admin">
+            Admin Login
           </button>
         </div>
 
@@ -86,6 +85,27 @@
             <input name="pet_type" placeholder="Optional pet type" />
           </label>
           <button type="submit" id="register-submit">Create Account</button>
+        </form>
+
+        <form id="admin-form" class="auth-form is-hidden">
+          <label>
+            Admin Username
+            <input name="username" placeholder="Admin username" required />
+          </label>
+          <label>
+            Password
+            <input
+              name="password"
+              type="password"
+              placeholder="Admin password"
+              required
+            />
+          </label>
+          <p class="muted-copy">
+            Administrator accounts are provisioned from the built-in admin database,
+            not from the public registration page.
+          </p>
+          <button type="submit" id="admin-submit">Enter Admin Console</button>
         </form>
       </section>
     </main>

@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 
 from app.db.database import get_db
 from app.db.models import User
+from app.deps.auth import require_account_owner_or_admin, require_current_admin
 from app.services.security import hash_password
 
 router = APIRouter(prefix="/users", tags=["users"])
@@ -32,6 +33,7 @@ class UserResponse(BaseModel):
     username: str
     email: EmailStr
     role: str
+    is_active: bool
     pet_name: Optional[str] = None
     pet_type: Optional[str] = None
 
@@ -39,13 +41,20 @@ class UserResponse(BaseModel):
 
 
 @router.get("/", response_model=list[UserResponse])
-def list_users(db: Session = Depends(get_db)):
+def list_users(
+    db: Session = Depends(get_db),
+    _: object = Depends(require_current_admin),
+):
     users = db.query(User).all()
     return users
 
 
 @router.get("/{user_id}", response_model=UserResponse)
-def get_user(user_id: int, db: Session = Depends(get_db)):
+def get_user(
+    user_id: int,
+    db: Session = Depends(get_db),
+    _: User | object = Depends(require_account_owner_or_admin),
+):
     user = db.query(User).filter(User.id == user_id).first()
 
     if not user:
@@ -55,7 +64,11 @@ def get_user(user_id: int, db: Session = Depends(get_db)):
 
 
 @router.post("/", response_model=UserResponse, status_code=201)
-def create_user(user: UserCreate, db: Session = Depends(get_db)):
+def create_user(
+    user: UserCreate,
+    db: Session = Depends(get_db),
+    _: object = Depends(require_current_admin),
+):
     existing_user_by_email = db.query(User).filter(User.email == user.email).first()
     if existing_user_by_email:
         raise HTTPException(status_code=400, detail="email already exists")
@@ -81,7 +94,12 @@ def create_user(user: UserCreate, db: Session = Depends(get_db)):
 
 
 @router.put("/{user_id}", response_model=UserResponse)
-def update_user(user_id: int, update: UserUpdate, db: Session = Depends(get_db)):
+def update_user(
+    user_id: int,
+    update: UserUpdate,
+    db: Session = Depends(get_db),
+    _: User | object = Depends(require_account_owner_or_admin),
+):
     user = db.query(User).filter(User.id == user_id).first()
 
     if not user:
@@ -128,7 +146,11 @@ def update_user(user_id: int, update: UserUpdate, db: Session = Depends(get_db))
     return user
 
 @router.delete("/{user_id}")
-def delete_user(user_id: int, db: Session = Depends(get_db)):
+def delete_user(
+    user_id: int,
+    db: Session = Depends(get_db),
+    _: User | object = Depends(require_account_owner_or_admin),
+):
     user = db.query(User).filter(User.id == user_id).first()
 
     if not user:

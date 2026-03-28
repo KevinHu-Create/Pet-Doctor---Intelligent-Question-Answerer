@@ -6,7 +6,7 @@ export function apiRequest(path, options = {}) {
     ...(options.headers || {}),
   };
 
-  return fetch(path, { ...options, headers }).then(async (response) => {
+  return fetch(path, { credentials: "same-origin", ...options, headers }).then(async (response) => {
     const rawText = await response.text();
     let data = {};
 
@@ -62,22 +62,44 @@ export function updateSessionUser(user) {
   saveSession(user);
 }
 
-export function redirectIfAuthenticated(path = "/chat") {
-  const session = loadSession();
-  if (session?.user?.id) {
-    window.location.href = path;
-    return true;
-  }
-  return false;
+export function homePathForRole(role) {
+  return role === "admin" ? "/admin" : "/chat";
 }
 
-export function requireSession() {
-  const session = loadSession();
-  if (!session?.user?.id) {
+export async function syncSession() {
+  try {
+    const data = await apiRequest("/me");
+    saveSession(data.user);
+    return data.user;
+  } catch {
+    clearSession();
+    return null;
+  }
+}
+
+export async function redirectIfAuthenticated() {
+  const user = await syncSession();
+  if (!user?.id) {
+    return false;
+  }
+
+  window.location.href = homePathForRole(user.role);
+  return true;
+}
+
+export async function requireSession(expectedRole = null) {
+  const user = (await syncSession()) || loadSession()?.user;
+  if (!user?.id) {
     window.location.href = "/";
     return null;
   }
-  return session;
+
+  if (expectedRole && user.role !== expectedRole) {
+    window.location.href = homePathForRole(user.role);
+    return null;
+  }
+
+  return { user };
 }
 
 export function setStatus(node, message, tone = "neutral") {

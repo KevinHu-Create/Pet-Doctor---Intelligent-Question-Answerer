@@ -241,7 +241,7 @@ textarea {
 
 .auth-tabs {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
   padding: 8px;
   border-radius: 20px;
@@ -401,6 +401,86 @@ textarea {
   gap: 20px;
 }
 
+.admin-layout {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 20px;
+}
+
+.admin-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.metric-card {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+  border-radius: 24px;
+  background: rgba(255, 250, 243, 0.86);
+  border: 1px solid rgba(28, 40, 45, 0.08);
+}
+
+.metric-card span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.metric-card strong {
+  font-size: 2rem;
+}
+
+.admin-table-wrap {
+  overflow-x: auto;
+  border-radius: 24px;
+  border: 1px solid rgba(28, 40, 45, 0.08);
+  background: rgba(255, 250, 243, 0.7);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(28, 40, 45, 0.08);
+}
+
+.admin-table th {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.admin-delete {
+  padding: 10px 14px;
+}
+
+.table-role {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(33, 95, 89, 0.1);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.table-empty {
+  text-align: center !important;
+  color: var(--muted);
+ }
+
 .summary-list {
   display: grid;
   gap: 16px;
@@ -439,7 +519,8 @@ textarea {
 
 @media (max-width: 960px) {
   .auth-layout,
-  .profile-layout {
+  .profile-layout,
+  .admin-layout {
     grid-template-columns: 1fr;
   }
 
@@ -481,8 +562,18 @@ textarea {
     width: 100%;
   }
 
+  .auth-tabs,
+  .admin-metrics {
+    grid-template-columns: 1fr;
+  }
+
   .chat-thread {
     min-height: 360px;
     padding: 14px;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 12px;
   }
 }
