@@ -1,6 +1,7 @@
 import os
 from functools import lru_cache
 
+from app.core.device import get_torch_device
 from app.core.settings import settings
 
 os.environ.setdefault("HF_HOME", str(settings.HF_CACHE_DIR))
@@ -14,17 +15,19 @@ os.environ.setdefault(
     "HF_HUB_DOWNLOAD_TIMEOUT",
     str(settings.HF_HUB_DOWNLOAD_TIMEOUT),
 )
+os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
 
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_milvus import Milvus
 from langchain_ollama import ChatOllama
+from sentence_transformers import CrossEncoder
 
 @lru_cache
 def get_embeddings():
     return HuggingFaceEmbeddings(
         model_name=settings.HF_EMBED_MODEL,
         cache_folder=str(settings.HF_CACHE_DIR / "sentence_transformers"),
-        model_kwargs={"device": "cpu"},
+        model_kwargs={"device": get_torch_device()},
         encode_kwargs={"normalize_embeddings": True},
     )
 
@@ -34,6 +37,14 @@ def get_vectorstore():
         embedding_function=get_embeddings(),
         connection_args={"uri": settings.MILVUS_URI},
         collection_name=settings.COLLECTION_NAME,
+    )
+
+@lru_cache
+def get_reranker():
+    return CrossEncoder(
+        settings.RAG_RERANK_MODEL,
+        device=get_torch_device(),
+        cache_dir=str(settings.HF_CACHE_DIR / "sentence_transformers"),
     )
 
 @lru_cache

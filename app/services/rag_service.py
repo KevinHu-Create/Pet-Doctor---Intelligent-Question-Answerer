@@ -1,9 +1,10 @@
 from functools import lru_cache
-from langchain_core.runnables import RunnablePassthrough
+from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-from app.deps.container import get_vectorstore, get_llm
+from app.deps.container import get_llm
+from app.services.retrieval_service import retrieve_documents
 
 PROMPT_TEMPLATE = """
 Human: You are a pet health assistant.
@@ -14,6 +15,7 @@ Rules:
 - Do not include statistics or numbers unless they are explicitly stated in the context.
 - Do not add facts or symptoms not supported by the context.
 - If the context is insufficient, say so briefly.
+- Do not mention the handbook or the source of the information in your answer, do not say see page.
 
 <context>
 {context}
@@ -37,7 +39,7 @@ def format_docs(docs):
 
 @lru_cache
 def get_rag_chain():
-    retriever = get_vectorstore().as_retriever(search_kwargs={"k": 2})
+    context_pipeline = RunnableLambda(retrieve_documents) | RunnableLambda(format_docs)
 
     prompt = PromptTemplate(
         template=PROMPT_TEMPLATE,
@@ -45,7 +47,7 @@ def get_rag_chain():
     )
 
     chain = (
-        {"context": retriever | format_docs, "question": RunnablePassthrough()}
+        {"context": context_pipeline, "question": RunnablePassthrough()}
         | prompt
         | get_llm()
         | StrOutputParser()

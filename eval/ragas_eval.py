@@ -37,8 +37,9 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from app.deps.container import get_llm, get_vectorstore
+from app.deps.container import get_llm
 from app.services.rag_service import PROMPT_TEMPLATE
+from app.services.retrieval_service import retrieve_documents
 
 
 TEST_SET_PATH = PROJECT_ROOT / "eval" / "test_set.json"
@@ -60,8 +61,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--k",
         type=int,
-        default=2,
-        help="Top-k documents to retrieve for each question.",
+        default=4,
+        help="Top-n documents to keep after reranking for each question.",
     )
     parser.add_argument(
         "--judge-model",
@@ -114,8 +115,6 @@ def generate_response(question: str, retrieved_contexts: list[str]) -> str:
 
 
 def prepare_ragas_dataset(test_dataset: Dataset, k: int) -> Dataset:
-    vectorstore = get_vectorstore()
-
     rows = {
         "question_id": [],
         "user_input": [],
@@ -133,7 +132,7 @@ def prepare_ragas_dataset(test_dataset: Dataset, k: int) -> Dataset:
         unit="sample",
     ):
         question = sample["question"]
-        docs = vectorstore.similarity_search(question, k=k)
+        docs = retrieve_documents(question, top_n=k)
         retrieved_contexts = [doc.page_content for doc in docs]
         response = generate_response(question, retrieved_contexts)
 

@@ -20,7 +20,13 @@ class Settings(BaseSettings):
     )
     HF_HUB_ETAG_TIMEOUT: int = int(os.getenv("HF_HUB_ETAG_TIMEOUT", "60"))
     HF_HUB_DOWNLOAD_TIMEOUT: int = int(os.getenv("HF_HUB_DOWNLOAD_TIMEOUT", "120"))
-    HF_EMBED_MODEL: str = os.getenv("HF_EMBED_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
+    HF_EMBED_MODEL: str = os.getenv("HF_EMBED_MODEL", "BAAI/bge-m3")
+    TORCH_DEVICE: str = os.getenv("TORCH_DEVICE", "auto")
+    RAG_DENSE_TOP_K: int = int(os.getenv("RAG_DENSE_TOP_K", "12"))
+    RAG_RERANK_TOP_N: int = int(os.getenv("RAG_RERANK_TOP_N", "4"))
+    RAG_RERANK_MODEL: str = os.getenv(
+        "RAG_RERANK_MODEL", "BAAI/bge-reranker-v2-m3"
+    )
     OLLAMA_CHAT_MODEL: str = os.getenv("OLLAMA_CHAT_MODEL", "llama3.2")
     OLLAMA_BASE_URL: str = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
     MILVUS_URI: str = os.getenv("MILVUS_URI", "http://localhost:19530")

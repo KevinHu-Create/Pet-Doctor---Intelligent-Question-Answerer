@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 
+from app.core.device import get_torch_device
 from app.core.settings import settings
 
 os.environ.setdefault("HF_HOME", str(settings.HF_CACHE_DIR))
@@ -325,7 +326,7 @@ def ingest(drop_old: bool = False):
     embeddings = HuggingFaceEmbeddings(
         model_name=settings.HF_EMBED_MODEL,
         cache_folder=str(settings.HF_CACHE_DIR / "sentence_transformers"),
-        model_kwargs={"device": "cpu"},
+        model_kwargs={"device": get_torch_device()},
         encode_kwargs={"normalize_embeddings": True},
     )
 

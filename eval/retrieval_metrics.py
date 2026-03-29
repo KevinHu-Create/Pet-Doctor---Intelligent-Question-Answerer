@@ -10,7 +10,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from app.deps.container import get_vectorstore
+from app.services.retrieval_service import retrieve_documents
 
 
 TEST_SET_PATH = PROJECT_ROOT / "eval" / "test_set.json"
@@ -53,11 +53,11 @@ def compute_f1(precision: float, recall: float) -> float:
     return 2 * precision * recall / (precision + recall)
 
 
-def evaluate_query(vectorstore, question_row: dict, k: int) -> QueryMetrics:
+def evaluate_query(question_row: dict, k: int) -> QueryMetrics:
     question = question_row["question"]
     gold_chapter = question_row["chapter"]
 
-    docs = vectorstore.similarity_search(question, k=k)
+    docs = retrieve_documents(question, top_n=k)
     retrieved_chapters = [doc.metadata.get("chapter", "") for doc in docs]
     hits = sum(1 for chapter in retrieved_chapters if chapter == gold_chapter)
 
@@ -78,9 +78,8 @@ def evaluate_query(vectorstore, question_row: dict, k: int) -> QueryMetrics:
 
 
 def evaluate_retrieval(k: int, test_set_path: Path) -> tuple[dict, list[QueryMetrics]]:
-    vectorstore = get_vectorstore()
     qas = load_test_set(test_set_path)
-    results = [evaluate_query(vectorstore, question_row, k) for question_row in qas]
+    results = [evaluate_query(question_row, k) for question_row in qas]
 
     summary = {
         "num_questions": len(results),
@@ -120,7 +119,7 @@ def parse_args() -> argparse.Namespace:
         "--k",
         type=int,
         default=4,
-        help="Top-k documents to retrieve for each question.",
+        help="Top-n documents to keep after reranking for each question.",
     )
     parser.add_argument(
         "--test-set",
