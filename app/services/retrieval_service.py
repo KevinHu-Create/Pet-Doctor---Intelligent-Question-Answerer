@@ -1,7 +1,13 @@
+import logging
+from typing import Sequence
+
 from langchain_core.documents import Document
 
 from app.core.settings import settings
 from app.deps.container import get_reranker, get_vectorstore
+from app.pipeline.query_rewrite import rewrite_query_for_retrieval
+
+logger = logging.getLogger(__name__)
 
 
 def rerank_documents(
@@ -35,9 +41,29 @@ def retrieve_documents(
     question: str,
     dense_top_k: int = settings.RAG_DENSE_TOP_K,
     top_n: int = settings.RAG_RERANK_TOP_N,
+    conversation_context: Sequence[str] | None = None,
 ) -> list[Document]:
     if dense_top_k <= 0 or top_n <= 0:
         return []
 
-    docs = get_vectorstore().similarity_search(question, k=dense_top_k)
-    return rerank_documents(question, docs, top_n=top_n)
+    rewrite_result = rewrite_query_for_retrieval(
+        question,
+        conversation_context=conversation_context,
+    )
+    retrieval_query = rewrite_result.retrieval_query or question
+
+    if rewrite_result.rewrite_needed or rewrite_result.rewrite_applied:
+        logger.info(
+            "Query rewrite rewrite_needed=%s rule_score=%s reasons=%s history_available=%s llm_used=%s rewrite_applied=%s original=%r retrieval=%r",
+            rewrite_result.rewrite_needed,
+            rewrite_result.rule_score,
+            ",".join(rewrite_result.reasons),
+            rewrite_result.history_available,
+            rewrite_result.llm_used,
+            rewrite_result.rewrite_applied,
+            rewrite_result.original_query,
+            retrieval_query,
+        )
+
+    docs = get_vectorstore().similarity_search(retrieval_query, k=dense_top_k)
+    return rerank_documents(retrieval_query, docs, top_n=top_n)

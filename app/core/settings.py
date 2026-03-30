@@ -4,6 +4,10 @@ from pydantic_settings import BaseSettings
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
+
+def _get_bool_env(name: str, default: str) -> bool:
+    return os.getenv(name, default).strip().lower() in {"1", "true", "yes", "on"}
+
 class Settings(BaseSettings):
     database_url: str = "sqlite:///./users.db"
     admin_database_url: str = "sqlite:///./admins.db"
@@ -26,6 +30,10 @@ class Settings(BaseSettings):
     RAG_RERANK_TOP_N: int = int(os.getenv("RAG_RERANK_TOP_N", "4"))
     RAG_RERANK_MODEL: str = os.getenv(
         "RAG_RERANK_MODEL", "BAAI/bge-reranker-v2-m3"
+    )
+    QUERY_REWRITE_ENABLED: bool = _get_bool_env("QUERY_REWRITE_ENABLED", "true")
+    QUERY_REWRITE_RULE_THRESHOLD: int = int(
+        os.getenv("QUERY_REWRITE_RULE_THRESHOLD", "2")
     )
     OLLAMA_CHAT_MODEL: str = os.getenv("OLLAMA_CHAT_MODEL", "llama3.2")
     OLLAMA_BASE_URL: str = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
