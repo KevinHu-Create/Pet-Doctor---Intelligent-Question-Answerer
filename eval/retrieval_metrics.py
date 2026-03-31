@@ -10,7 +10,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from app.services.retrieval_service import retrieve_documents
+from app.services.rerank_service import retrieve_documents
 
 
 TEST_SET_PATH = PROJECT_ROOT / "eval" / "test_set.json"

@@ -196,9 +196,17 @@ Rewritten query:
 
 
 @dataclass(slots=True)
+class QueryRewriteDecision:
+    original_query: str
+    rewrite_needed: bool
+    rule_score: int
+    reasons: list[str] = field(default_factory=list)
+
+
+@dataclass(slots=True)
 class QueryRewriteResult:
     original_query: str
-    retrieval_query: str
+    rewrite_query: str
     rewrite_needed: bool
     rule_score: int
     reasons: list[str] = field(default_factory=list)
@@ -344,14 +352,31 @@ def score_query_rewrite_need(query: str) -> tuple[int, list[str]]:
     return score, reasons
 
 
+def inspect_query_rewrite(query: str) -> QueryRewriteDecision:
+    original_query = _normalize_query(query)
+    if not original_query:
+        return QueryRewriteDecision(
+            original_query="",
+            rewrite_needed=False,
+            rule_score=0,
+        )
+
+    rule_score, reasons = score_query_rewrite_need(original_query)
+    return QueryRewriteDecision(
+        original_query=original_query,
+        rewrite_needed=rule_score >= settings.QUERY_REWRITE_RULE_THRESHOLD,
+        rule_score=rule_score,
+        reasons=reasons,
+    )
+
+
 def _format_history(conversation_context: Sequence[str] | None) -> str:
     cleaned = _clean_conversation_context(conversation_context)
     if not cleaned:
         return "(none)"
 
-    recent_turns = cleaned[-4:]
     return "\n".join(
-        f"{idx}. {turn}" for idx, turn in enumerate(recent_turns, start=1)
+        f"{idx}. {turn}" for idx, turn in enumerate(cleaned, start=1)
     )
 
 
@@ -454,17 +479,20 @@ def _try_llm_rewrite(
 def rewrite_query_for_retrieval(
     query: str,
     conversation_context: Sequence[str] | None = None,
+    rewrite_decision: QueryRewriteDecision | None = None,
 ) -> QueryRewriteResult:
-    original_query = _normalize_query(query)
+    decision = rewrite_decision or inspect_query_rewrite(query)
+    original_query = decision.original_query
     cleaned_history = _clean_conversation_context(conversation_context)
     history_available = bool(cleaned_history)
-    rule_score, reasons = score_query_rewrite_need(original_query)
-    rewrite_needed = rule_score >= settings.QUERY_REWRITE_RULE_THRESHOLD
+    rule_score = decision.rule_score
+    reasons = list(decision.reasons)
+    rewrite_needed = decision.rewrite_needed
 
     if not original_query:
         return QueryRewriteResult(
             original_query="",
-            retrieval_query="",
+            rewrite_query="",
             rewrite_needed=False,
             rule_score=0,
             history_available=history_available,
@@ -473,22 +501,22 @@ def rewrite_query_for_retrieval(
     if not settings.QUERY_REWRITE_ENABLED or not rewrite_needed or not history_available:
         return QueryRewriteResult(
             original_query=original_query,
-            retrieval_query=original_query,
+            rewrite_query=original_query,
             rewrite_needed=rewrite_needed,
             rule_score=rule_score,
             reasons=reasons,
             history_available=history_available,
         )
 
-    retrieval_query = _try_llm_rewrite(
+    rewrite_query = _try_llm_rewrite(
         original_query,
         conversation_context=cleaned_history,
     )
-    rewrite_applied = retrieval_query.casefold() != original_query.casefold()
+    rewrite_applied = rewrite_query.casefold() != original_query.casefold()
 
     return QueryRewriteResult(
         original_query=original_query,
-        retrieval_query=retrieval_query,
+        rewrite_query=rewrite_query,
         rewrite_needed=rewrite_needed,
         rule_score=rule_score,
         reasons=reasons,

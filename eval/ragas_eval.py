@@ -39,7 +39,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from app.deps.container import get_llm
 from app.services.rag_service import PROMPT_TEMPLATE
-from app.services.retrieval_service import retrieve_documents
+from app.services.rerank_service import retrieve_documents
 
 
 TEST_SET_PATH = PROJECT_ROOT / "eval" / "test_set.json"

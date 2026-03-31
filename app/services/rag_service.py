@@ -1,12 +1,12 @@
 from functools import lru_cache
-from typing import Any, Sequence
+from typing import Any
 
 from langchain_core.runnables import RunnableLambda
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
 from app.deps.container import get_llm
-from app.services.retrieval_service import retrieve_documents
+from app.services.rerank_service import retrieve_documents
 
 PROMPT_TEMPLATE = """
 Human: You are a pet health assistant.
@@ -42,19 +42,14 @@ def format_docs(docs):
 
 def _normalize_chain_input(payload: Any) -> dict[str, Any]:
     if isinstance(payload, str):
-        return {"question": payload, "conversation_context": []}
+        return {"question": payload.strip(), "rewrite_query": payload.strip()}
 
     if isinstance(payload, dict):
         question = str(payload.get("question", "")).strip()
-        raw_context = payload.get("conversation_context") or []
-        if isinstance(raw_context, str):
-            raw_context = [raw_context]
-        conversation_context = [
-            str(item).strip() for item in raw_context if str(item).strip()
-        ]
+        rewrite_query = str(payload.get("rewrite_query", question)).strip()
         return {
             "question": question,
-            "conversation_context": conversation_context,
+            "rewrite_query": rewrite_query or question,
         }
 
     raise TypeError(f"Unsupported RAG chain input type: {type(payload)!r}")
@@ -62,10 +57,7 @@ def _normalize_chain_input(payload: Any) -> dict[str, Any]:
 
 def _retrieve_docs_for_chain(payload: Any):
     normalized = _normalize_chain_input(payload)
-    return retrieve_documents(
-        normalized["question"],
-        conversation_context=normalized["conversation_context"],
-    )
+    return retrieve_documents(normalized["rewrite_query"])
 
 
 def _question_for_chain(payload: Any) -> str:
@@ -91,12 +83,12 @@ def get_rag_chain():
 
 def answer_question(
     question: str,
-    conversation_context: Sequence[str] | None = None,
+    rewrite_query: str | None = None,
 ) -> str:
     chain = get_rag_chain()
     return chain.invoke(
         {
-            "question": question,
-            "conversation_context": list(conversation_context or []),
+            "question": str(question or "").strip(),
+            "rewrite_query": str(rewrite_query or question or "").strip(),
         }
     )

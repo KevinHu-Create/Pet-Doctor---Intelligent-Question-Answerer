@@ -96,6 +96,7 @@ docx2txt
 fastapi==0.115.6
 uvicorn==0.32.1
 email-validator==2.2.0
+itsdangerous==2.2.0
 ragas
 openai
 langchain-openai

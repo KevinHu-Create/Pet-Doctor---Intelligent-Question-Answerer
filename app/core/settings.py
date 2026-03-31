@@ -35,6 +35,9 @@ class Settings(BaseSettings):
     QUERY_REWRITE_RULE_THRESHOLD: int = int(
         os.getenv("QUERY_REWRITE_RULE_THRESHOLD", "2")
     )
+    HISTORY_RECENT_TURNS_LIMIT: int = int(
+        os.getenv("HISTORY_RECENT_TURNS_LIMIT", "10")
+    )
     OLLAMA_CHAT_MODEL: str = os.getenv("OLLAMA_CHAT_MODEL", "llama3.2")
     OLLAMA_BASE_URL: str = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
     MILVUS_URI: str = os.getenv("MILVUS_URI", "http://localhost:19530")
