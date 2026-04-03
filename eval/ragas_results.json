@@ -6,10 +6,10 @@
     "embedding_model": "text-embedding-3-small"
   },
   "metrics": {
-    "faithfulness": 0.9093670470943198,
-    "answer_relevancy": 0.7531090943400945,
-    "context_precision": 0.9161616161265574,
-    "context_recall": 0.7672727272727273
+    "faithfulness": 0.9125108225108225,
+    "answer_relevancy": 0.751614811306265,
+    "context_precision": 0.9196969696604294,
+    "context_recall": 0.7678787878787877
   },
   "samples": [
     {
@@ -21,13 +21,13 @@
         "• Avoid using a muzzle except for short periods, such as when moving the\ndog from the scene of the accident into a car, or from a car into the vet-\nerinary clinic. Muzzling can interfere with breathing in some situations.\nANAPHYLACTIC SHOCK\nAnaphylactic shock is an immediate, serious allergic reaction. It occurs when\na dog is exposed to an allergen to which he has been sensitized. Sensitivity\noccurs through prior contact.\nThe most common drug allergen that causes anaphylactic shock is peni-\ncillin. The venom in the stings of bees and wasps can also occasionally pro-\nduce anaphylactic shock. Some dogs have been known to experience shock\nafter a vaccination, but this is not common.\nEMERGENCIES • 13\nA dog receiving emer-\ngency treatment for \nanaphylactic shock, in\nthis case following a rou-",
         "To avoid aggravating the shock:\n• Calm the dog and speak soothingly.\n• Allow the dog to assume the most comfortable position in which\nbreathing is easiest. An animal will naturally adopt the position of least\npain.\n• When possible, splint or support any broken bones before moving the\ndog (see Broken Bones, page 15).\n• All dogs who are unconscious or found lying down after an accident\nmust be considered to have spinal cord injuries and should be handled\naccordingly (see Spinal Cord Injuries, page 375).\n• Transport large dogs on a flat surface or in a hammock stretcher. Carry\nsmall dogs in a blanket with the injured parts protected.\n• Avoid using a muzzle except for short periods, such as when moving the\ndog from the scene of the accident into a car, or from a car into the vet-"
       ],
-      "response": "Dogs should not be muzzled if they are vomiting, coughing, having difficulty breathing, or aggressively resisting the muzzle. They also shouldn't be muzzled if they're unconscious or in pain.",
+      "response": "A dog should not be muzzled if they are vomiting, coughing, having difficulty breathing, or aggressively resisting the muzzle. Additionally, an unconscious dog should never be muzzled and in some cases of severe injury, frightened, or in pain, it's best to seek help from a professional rather than attempting to restrain them.",
       "reference": "All dogs should be muzzled for frightening or painful handling when safe to do so An open cage muzzle is preferred for injured or sick dogs because it allows easier breathing and reduces aspiration risk if the dog vomits Do not muzzle a dog that is vomiting, coughing, having difficulty breathing, or aggressively resisting the muzzle Never muzzle an unconscious dog",
       "chapter": "Chapter 1: Emergencies",
       "section": "Muzzles",
-      "faithfulness": 0.8333333333333334,
-      "answer_relevancy": 0.8351298401906545,
-      "context_precision": 0.999999999975,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.843148234224554,
+      "context_precision": 0.9999999999666667,
       "context_recall": 0.75
     },
     {
@@ -39,13 +39,13 @@
         "an unconscious dog. Heart massage (chest compressions) is used when no\nheartbeat can be felt or heard. When chest compressions are combined with\nartificial respiration, it is called cardiopulmonary resuscitation (CPR).\nBecause cessation of breathing is soon followed by heart stoppage and vice\nversa, CPR is required in most life-threatening situations.\nWhile CPR can be performed by one person, it is easier and more often\nsuccessful when done by two. One person does the artificial respiration while\nthe other does the chest compressions.\nTo determine which basic life-support technique will be required in an\nunconscious dog, see the chart on the next page. The following emergencies\nmay require artificial respiration or CPR:\n• Shock\n• Poisoning\n• Prolonged seizure\n• Coma\n• Head injury",
         "occurs in the late stages of kidney or liver disease.\nCommon poisons that may cause coma are ethylene glycol (antifreeze),\nbarbiturates, kerosene, turpentine, arsenic, cyanide, organophosphates,\nplants, chocolate, and lead. A dog found in a coma in a closed car or in an air-\ntight space may have smothered or developed carbon monoxide poisoning\n(see Drowning and Suffocation, page 20).\nTreatment: First determine the level of consciousness and whether the dog\nis alive. If the dog shows no signs of life, begin CPR (as described on page 9).\nAn unconscious dog can choke on her vomitus, so pull out the tongue and\nclear the airway with your fingers. If the dog has a foreign body, such as a piece\nof meat, obstructing the airway, treat as described for Choking, page 316. Wrap"
       ],
-      "response": "According to the provided context, the handbook uses a chart (not shown) to determine which basic life-support technique is required for an unconscious dog. The chart would likely indicate specific situations that require either artificial respiration or CPR.",
+      "response": "The handbook recommends checking a chart to determine which basic life-support technique is required in an unconscious dog. The chart will guide you on what level of consciousness and vital signs to check, allowing you to decide between artificial respiration and CPR.",
       "reference": "Breathing is assessed before pulse Pulse check location is the femoral artery on the inside of the mid-thigh If there is no pulse, the book directs the reader to start CPR",
       "chapter": "Chapter 1: Emergencies",
       "section": "Artificial Respiration and Heart Massage",
-      "faithfulness": 0.6666666666666666,
-      "answer_relevancy": 0.8163181173864127,
-      "context_precision": 0.999999999975,
+      "faithfulness": 0.3333333333333333,
+      "answer_relevancy": 0.7867193233713295,
+      "context_precision": 0.9999999999666667,
       "context_recall": 1.0
     },
     {
@@ -57,11 +57,11 @@
         "Most dips must be repeated one or more times at intervals of 7 to 10 days to\nrid the dog of the parasite in question. Consult the label for recommended fre-\nquency. Do not exceed this frequency. Many dips should not be used on young\npuppies. Make sure to read the label. Do not used dips approved for dogs on\nany other pets.\nDISINFECTING THE PREMISES\nThe goal here is to prevent reinfestation by ridding the environment of\ninsects, eggs, larvae, and other intermediate stages of the parasite. This is\naccomplished by physically cleaning and then applying insecticides.\nIndoor Control\nTo eliminate all sources of reinfestation, it is essential to treat all animals in\nthe household. Destroy infected bedding or thoroughly clean it with insecti-",
         "It is a good practice to deworm expectant mothers during the last two weeks\nof gestation and during lactation. This reduces environmental exposure to\nroundworm eggs (a human health hazard) and helps control roundworm\ninfection in puppies.\nPanacur (febendazole) is a deworming agent that is effective against round-\nworms, hookworms, and whipworms. It is safe to use during pregnancy.\nStrongid (pyrantel pamoate) is another safe dewormer but doesn’t have as\nbroad a spectrum of efficacy as fenbendazole.\nPREGNANCY AND WHELPING • 469\n19_067857 ch16.qxp  7/6/07  10:45 PM  Page 469"
       ],
-      "response": "The context does not provide information about a specific deworming schedule recommended by a handbook for young puppies with suspected roundworms. It only discusses general guidelines and medication options for deworming young puppies against ascarids, hookworms, and other parasites.",
+      "response": "The context is insufficient to determine a specific deworming schedule for young puppies with suspected roundworms. It only discusses ascarid infestations and provides information on heartworm prevention, but not specifically on deworming schedules for suspected roundworms.",
       "reference": "Schedule is 2, 4, 6, and 8 weeks of age The text says this schedule is designed to kill ascarids acquired in utero, through milk, or by ingesting eggs Pyrantel pamoate is named as an excellent choice for ascarids in 2-week-old puppies",
       "chapter": "Chapter 2: Gastrointestinal Parasites",
       "section": "Deworming Puppies",
-      "faithfulness": 0.8,
+      "faithfulness": 0.75,
       "answer_relevancy": 0.0,
       "context_precision": 0.99999999995,
       "context_recall": 1.0
@@ -75,12 +75,12 @@
         "Most dips must be repeated one or more times at intervals of 7 to 10 days to\nrid the dog of the parasite in question. Consult the label for recommended fre-\nquency. Do not exceed this frequency. Many dips should not be used on young\npuppies. Make sure to read the label. Do not used dips approved for dogs on\nany other pets.\nDISINFECTING THE PREMISES\nThe goal here is to prevent reinfestation by ridding the environment of\ninsects, eggs, larvae, and other intermediate stages of the parasite. This is\naccomplished by physically cleaning and then applying insecticides.\nIndoor Control\nTo eliminate all sources of reinfestation, it is essential to treat all animals in\nthe household. Destroy infected bedding or thoroughly clean it with insecti-",
         "Many intestinal parasites spend their larval stages in other animals and\ndevelop into adults only when the dog eats one of these animals. Preventing\ndogs from roaming and hunting will reduce their exposure to parasites, as well\nas toxic substances and poisons. Be sure to thoroughly cook all fresh meat\nbefore feeding it to your dog.\nHeartworm preventives, such as Interceptor, also prevent and control\nascarids, hookworms, and whipworms. Heartgard Plus controls ascarids and\nhookworms but not whipworms. These agents are given in low dosages. The\nbeneficial effect lasts only as long as you give the medication.\nAscarids (Roundworms)\nAscarids are the most frequent worm parasite in dogs and cats. There are two\nspecies that commonly infect dogs: Toxocara canis and Toxascaris leonina."
       ],
-      "response": "To control worm reinfestation in dogs, it's essential to maintain good sanitation and cleanliness. This includes destroying eggs and larvae before they can reinfest the dog, as well as preventing injury to dogs. Additionally, removing intermediate hosts such as fleas, lice, cockroaches, and rodents from the environment is crucial. Regular cleaning of the premises and treating all animals in the household are also necessary steps.",
+      "response": "To control worm reinfestation in dogs, it's essential to maintain good sanitation and destroy eggs and larvae before they reinfest the dog. This means keeping clean, dry quarters, and preventing injury to dogs. Additionally, getting rid of intermediate hosts such as fleas, lice, cockroaches, beetles, water bugs, and rodents is crucial.",
       "reference": "The text says reinfestation is likely unless eggs and larvae are destroyed before the dog is exposed again Clean, dry quarters are described as essential Daily stool removal is recommended for runs, pens, and yards",
       "chapter": "Chapter 2: Gastrointestinal Parasites",
       "section": "How to Control Worms",
-      "faithfulness": 0.8333333333333334,
-      "answer_relevancy": 0.7806740558285152,
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.7806780676099799,
       "context_precision": 0.9999999999666667,
       "context_recall": 0.6666666666666666
     },
@@ -93,12 +93,12 @@
         "Lyme disease, 71\nnasal polyps/tumors, 229\nneurological evaluation, 356\nosteoarthritis diagnosis, 402\nurinary tract disorder, 413–414\nyards, 53, 56, 58, 123, 126, 131–134\nyeast, food poisoning, 34\nyeast infections, 209, 213\nyeast stomatitis (thrush), 235\nzinc, poisoning, 38\nzinc phosphide, 30–31\nzinc-responsive dermatosis, 115, 148\nzoonotic diseases, salmonella, 68–69\nzygomatic gland, 253\n628 •G ENERAL INDEX\n31_067857 bindex.qxp  7/6/07  11:10 PM  Page 628",
         "Treatment: Acutely ill dogs must be hospitalized for intensive veterinary\nmanagement. Dehydration is a serious concern, as is damage from toxins,\nespecially to the kidneys. It is important to maintain strict sanitary precau-\ntions when handling infected stool.\nPrevention: In humans, outbreaks of severe E. coli have occurred after eat-\ning undercooked ground beef or contaminated vegetables. Good hygiene is\nimportant here as well.\nLYME DISEASE\nLyme disease is caused by the spirochete bacteria Borrelia burgdorferi. The\nspirochete is acquired through the bite of an infected tick. Lyme disease is\nnow regarded as the most common tick-borne illness in the United States.\nThis disease was first recognized in 1975, following an outbreak of what"
       ],
-      "response": "The main clinical signs of Lyme disease include sudden lameness, swollen and painful joints, fever, weakness, lethargy, loss of appetite, weight loss, kidney problems, and chronic or recurring lameness. Prevention steps include daily tick inspections with removal, using tick collars like Preventic, reducing ticks on the premises, and preventing ticks from attaching for at least 5 hours.",
+      "response": "The main clinical signs of Lyme disease in dogs include sudden onset of lameness, joint swelling and pain, fever, weakness, lethargy, loss of appetite, and weight loss. Prevention steps include daily tick inspections and removal, using tick collars or controlling ticks on the premises, and administering antibiotics for 2-4 weeks if diagnosed with infection.",
       "reference": "The spirochete Borrelia burgdorferi is transmitted by infected ticks Lyme disease in dogs often presents with sudden lameness and sometimes swollen painful joints The handbook notes that ticks usually must attach for 5 to 20 hours before transmitting infection Daily tick inspection and prompt removal can prevent many infections Vaccination may be appropriate for dogs at risk",
       "chapter": "Chapter 3: Infectious Diseases",
       "section": "Lyme Disease",
-      "faithfulness": 1.0,
-      "answer_relevancy": 0.8834187592816167,
+      "faithfulness": 0.9,
+      "answer_relevancy": 0.7626355088325266,
       "context_precision": 0.9166666666361111,
       "context_recall": 1.0
     },
@@ -111,14 +111,14 @@
         "every year. This interval for booster shots may be extended even longer with\nthe newer vaccines and updated research data on the duration of immunity.\nOn the other side of the scale, evidence also suggests that vaccines for\nparainfluenza, bordetella bronchiseptica and leptospirosis fail to protect for\nthe full 12 months. These vaccines might need to be given twice a year, rather\nthan annually, especially to dogs who are at increased risk.\nThe best way to manage vaccinations is to work with your veterinarian to\ndevelop a customized vaccination schedule for your dog, based on your own\ndog’s health and risk factors.\nCORE AND NONCORE VACCINES\nThe veterinary community has divided vaccines into two main categories,\nwith a smaller third category. Core vaccines are vaccines that every dog",
         "be vaccinated against them as soon as they are old enough to build immunity.\nThese diseases are distemper, infectious hepatitis, parvovirus, parainfluenza,\nand rabies. Leptospirosis, giardia, coronavirus, bordetella, bronchiseptica, and\nLyme disease vaccinations are optional, depending on the occurrence of these\ndiseases in your area and your dog’s individual risk factors.\nThe American Animal Hospital Association (AAHA) has drawn up\nguidelines categorizing vaccines as core, noncore, or not recommended, and\nthese categories will be indicated for all the vaccines described in this section.\nWhile these guidelines suggest that puppies as young as 6 weeks may be vacci-\nnated, most veterinarians and breeders wait until 7 or 8 weeks of age. Also,"
       ],
-      "response": "The veterinary community divides vaccines into three categories: Core, Noncore, and other vaccines that are not recommended for any dogs. Core vaccines include distemper, infectious hepatitis, parvovirus, parainfluenza, and rabies, which every dog should have at some time in their life due to the risk of these diseases. Noncore vaccines include leptospirosis, among others, whose occurrence varies by geographic location and lifestyle, making them optional for individual dogs based on their health and risk factors.",
+      "response": "According to the text, core vaccines are divided into several diseases (distemper, infectious hepatitis, parvovirus, rabies), while noncore vaccines include leptospirosis and other optional vaccinations that may be given depending on geographic location and lifestyle factors.",
       "reference": "Core vaccines are vaccines every dog should receive at some point in life Noncore vaccines are given based on geography, lifestyle, and risk factors The text places vaccines into core, noncore, and generally not recommended categories It recommends working with a veterinarian on a customized schedule based on health and exposure risk The handbook also warns that combination vaccines should be kept as minimal as practical",
       "chapter": "Chapter 3: Infectious Diseases",
       "section": "Core and Noncore Vaccines",
-      "faithfulness": 0.8571428571428571,
-      "answer_relevancy": 0.5991268369475324,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7418769266556154,
       "context_precision": 0.999999999975,
-      "context_recall": 0.8
+      "context_recall": 1.0
     },
     {
       "question_id": "q_007",
@@ -129,12 +129,12 @@
         "saliva can be confirmed with an intradermal skin test.\nTreatment: The majority of dogs with flea allergy dermatitis can be cured\nby eliminating fleas on the dog and controlling fleas in the environment. All\npets in the household, even those who are not affected, must be treated simul-\ntaneously to eliminate fleas. Antihistamines and/or corticosteroids may be\nrequired for two to three days to control itching. A medicated bath may also\nhelp to make your dog more comfort-\nable. Pyoderma requires topical and\noral antibiotics. Seek veterinary\nattention for these problems.\nPrevention: The monthly applica-\ntion of a flea-control product, such as\nFrontline Plus or Advantage, will kill\nadult fleas before they bite the dog.\nProgram inhibits reinfestation by pre-\nventing fleas from reproducing. The",
         "adult fleas before they bite the dog.\nProgram inhibits reinfestation by pre-\nventing fleas from reproducing. The\ncombination of Program with\nFrontline or Advantage should even-\ntually eliminate fleas, but for a more\nrapid response it may be necessary to\ntreat the environment as described in\nEliminating Fleas on the Premises, page\n122.\nTHE SKIN AND COAT • 137\nHair loss over the rump, thighs, and\nbelly due to excessive itching, scratch-\ning, and rubbing caused by flea bites.\n07_067857 ch04.qxp  7/6/07  11:17 PM  Page 137"
       ],
-      "response": "The handbook suggests using Program or Sentinel, Advantage, Advantix, or Frontline Plus to kill existing fleas and prevent them from coming back. These products can be used alone or combined with other treatments for more rapid results. Thoroughly vacuuming the environment, washing dog bedding, and shampooing or dipping the dog can also help eliminate fleas.",
+      "response": "The handbook suggests shampooing or dipping the dog to immediately eliminate existing fleas, followed by thoroughly vacuuming the environment and washing all dog bedding. Twenty-four to forty-eight hours later, applying Frontline or Advantage can kill new fleas hatching from eggs on the premises, helping to prevent reinfestation.",
       "reference": "Prevention is described as the key to success If fleas are already established, the dog can be shampooed or dipped to immediately eliminate fleas Thorough vacuuming and washing all bedding are part of the control program Frontline or Advantage can be applied 24 to 48 hours later to kill newly hatching fleas The environment and bedding must be cleaned, not just the dog The book says all dogs, cats, and other relevant pets in the family should be treated",
       "chapter": "Chapter 4: The Skin and Coat",
       "section": "A Suggested Flea-Control Program",
-      "faithfulness": 0.7142857142857143,
-      "answer_relevancy": 0.8087964040799805,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8308076640856016,
       "context_precision": 0.999999999975,
       "context_recall": 1.0
     },
@@ -147,14 +147,14 @@
         "becomes thick and darkly pigmented.\nA secondary dry or greasy seborrhea\nwith flaky skin often develops in con-\njunction with the skin infection.\nEar canal infections may accom-\npany these signs, or may be the sole\nmanifestation of atopy. The ear flaps\nare red and inflamed, and the canals\nare filled with a brown wax that even-\ntually causes bacterial or yeast otitis\n(see Ear Allergies, page 209).\nCanine atopy, especially when com-\nplicated by pyoderma, can be difficult\nto distinguish from flea allergy dermati-\ntis, scabies, demodectic mange, food\nallergies, and other skin diseases. The\ndiagnosis can be suspected based on\nthe history, location of skin lesions,\nand seasonal pattern of occurrence.\nSkin scrapings, bacterial and fungal\ncultures, skin biopsy, and a trial",
         "the history, location of skin lesions,\nand seasonal pattern of occurrence.\nSkin scrapings, bacterial and fungal\ncultures, skin biopsy, and a trial\nhypoallergenic test diet should be con-\nsidered before embarking on an\ninvolved course of treatment for atopy.\nIt is important to treat and eliminate\nfleas. The majority of dogs with canine atopy are allergic to fleas and may have\nan associated flea allergy dermatitis complicating the picture.\nThe preferred method of diagnosing canine atopy is through intradermal\nskin testing, which means injecting small amounts of many known allergens\nand observing the skin reaction. This can be time consuming and expensive,\nbecause it requires many trips to the veterinarian. To be accurate, all support-"
       ],
-      "response": "The handbook describes an itch-scratch-itch cycle that develops with deep scratches in the skin, hair loss, scabs, crusts, and secondary bacterial skin infection. This progression leads to misery in dogs whose condition does not remain limited to the initial stages of itching and face-rubbing.",
+      "response": "The pattern of symptoms described is an itch-scratch-itch cycle that develops with deep scratches in the skin, hair loss, scabs, crusts, and secondary bacterial skin infection. This progression often starts after the initial stage with itching, sneezing, runny nose, and face-rubbing, but can lead to a more severe condition.",
       "reference": "The book estimates atopy affects about 10 percent of dogs It says the disease is second only to flea allergy dermatitis in frequency Atopy often begins between 1 and 3 years of age with seasonal itching while the skin still looks normal Early signs can include scratching, face rubbing, sneezing, watery eyes, and paw licking As the condition progresses, dogs can develop excoriations, hair loss, crusts, and secondary skin infection Ear canal infections may accompany atopy or be its only manifestation",
       "chapter": "Chapter 4: The Skin and Coat",
       "section": "Atopic Dermatitis (Canine Atopy)",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.6450281899268374,
-      "context_precision": 0.999999999975,
-      "context_recall": 1.0
+      "answer_relevancy": 0.5195425070612202,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 0.8333333333333334
     },
     {
       "question_id": "q_009",
@@ -165,12 +165,12 @@
         "Nodular Panniculitis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 168\nChapter 5: THE EYES. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 169\nHow Dogs See . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 171\nWhat to Do if Your Dog Has an Eye Problem. . . . . . . . . . . . . . . . . . 172\nSigns of Eye Ailments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 172\nHow to Examine the Eye. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 173\nHow to Apply Eye Medicines . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 174\nThe Eyeball . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 175",
         "or hair loss are discussed in\nEyelids, page 177.\n• Bulging or sunken eye. A\nbulging eye occurs with glau-\ncoma, tumors and abscesses\nbehind the globe, and with an\neye out of its socket. A sunken\neye occurs with dehydration,\nweight loss, eye pain, and\ntetanus. Some breeds, such as\nPugs, have eyes that normally\nbulge somewhat.\nHOW TO EXAMINE THE EYE\nAn eye examination can be per-\nformed easily and does not require any\ntechnical expertise. It will provide\nyou with the type of information you\nneed to determine if this is an emer-\ngency. When in doubt, consider any\nchange in the eye to be an emergency.\nThe examination is best done in a dark room using a single light source,\nsuch as a flashlight. A magnifying glass will help you see fine details on the"
       ],
-      "response": "According to the handbook, bulging or sunken eyes are treated as emergencies due to potential serious underlying conditions such as glaucoma, tumors, abscesses, dehydration, weight loss, eye pain, and tetanus. A sunken eye is particularly concerning if accompanied by symptoms like dehydration, weight loss, or eye pain.",
+      "response": "According to the handbook, bulging or sunken eyes are considered emergency situations due to associated conditions such as glaucoma, tumors, abscesses, dehydration, weight loss, eye pain, and tetanus. The specific breeds mentioned, like Pugs, have eyes that normally bulge, but even for them, changes in eye shape can be an emergency if caused by underlying issues.",
       "reference": "The handbook says pain is the most serious eye sign Irreversible damage can occur in a matter of hours Signs of pain include excessive tearing, squinting, tenderness to touch, and light sensitivity A dog with a painful eye should be taken to a veterinary hospital as soon as the condition is noticed Common severe causes named include acute glaucoma, uveitis, keratitis, and corneal injuries The examination guidance says to treat any uncertain eye change as an emergency",
       "chapter": "Chapter 5: The Eyes",
       "section": "Signs of Eye Ailments",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.5421767965420049,
+      "answer_relevancy": 0.6729314991010472,
       "context_precision": 0.249999999975,
       "context_recall": 0.5
     },
@@ -183,13 +183,13 @@
         "see how much of the strip is wetted. Normally the strip should be wet to a dis-\ntance of 20mm. In dogs with dry eye, the strip wets less than 10mm (often less\nthan 5mm).\nTreatment: For many years, the frequent application of artificial tears was\nthe only treatment available for dry eye. But FDA approval of ophthalmic\ncyclosporin has revolutionized treatment and greatly improved results.\nCyclosporin is an immunosuppressive drug that reverses immune-mediated\ndestruction of the lacrimal glands.\nCyclosporin ointment is applied to the surface of the involved eye. The\nfrequency of application must be determined by your veterinarian. The effect\nis not immediate. Artificial tears and topical antibiotics should be continued",
         "secretions may crust the eyelids.\nTreatment: Any underlying cause of conjunctivitis should be corrected.\nDogs with recurrent or persistent conjunctivitis should be tested for kerato-\nconjunctivitis sicca.\nSerous conjunctivitis can be treated at home. Flush the eye three or four\ntimes a day with an over-the-counter sterile saline eyewash or artificial tears.\nNotify your veterinarian if the eye appears to be getting worse.\nMild cases of follicular conjunctivitis respond to antibiotic and corticos-\nteroid eye ointments prescribed by your veterinarian. In resistant cases, the\nfollicles may need to be destroyed by chemical cauterization.\nPurulent conjunctivitis requires veterinary examination and treatment. It\nis important to remove mucus and pus from the eyes, as well as pus and crusts"
       ],
-      "response": "The handbook recommends that dogs with keratoconjunctivitis sicca be treated with FDA-approved ophthalmic cyclosporin. The drug is applied as an ointment to the affected eye, and its frequency of application must be determined by a veterinarian. Artificial tears and antibiotics are also continued, but not immediately; their effect may take time to manifest. Surgery can be considered if the Schirmer tear test shows inadequate tear production.",
+      "response": "Keratoconjunctivitis sicca (dry eye) is recognized by a reduced Schirmer tear test result, where less than 15mm of the strip wets per minute. Management involves administering tetracycline to the dog's daily food and considering surgery if the condition persists. Cyclosporin ointment is also used as an immunosuppressive treatment, which reverses immune-mediated destruction of lacrimal glands, improving results for many dogs with dry eye.",
       "reference": "Classic sign is thick stringy discharge rather than simple watery tearing Schirmer tear test is the diagnostic test named in the handbook Normal Schirmer wetting is about 20 mm in one minute, while dry-eye dogs usually wet less than 10 mm Cyclosporin can improve tear production in appropriate cases Artificial tears and topical antibiotics may still be needed The text says treatment is often life-long and symptoms commonly return if cyclosporin is interrupted",
       "chapter": "Chapter 5: The Eyes",
       "section": "Keratoconjunctivitis Sicca (Dry Eye)",
-      "faithfulness": 0.7142857142857143,
-      "answer_relevancy": 0.7924192448016054,
-      "context_precision": 0.8333333332916666,
+      "faithfulness": 0.8571428571428571,
+      "answer_relevancy": 0.7489492853842102,
+      "context_precision": 0.999999999975,
       "context_recall": 1.0
     },
     {
@@ -201,12 +201,12 @@
         "scope. If a preparation is inserted into an ear canal with a perforated eardrum,\nit will enter the middle ear and damage structures essential to hearing.\nANTIBIOTICS FOR THE EAR\nEar medications should be instilled once or twice daily, or as directed by your\nveterinarian. Antibiotics commonly prescribed to treat external ear infec-\ntions include Panolog (neomycin, nystatin, cortisone), Liquichlor (chloram-\nphenicol), Tresderm (neomycin, thiabendazole, cortisone), and Gentocin\nOtic (gentamicin). Gentamicin can cause ototoxicty or hearing loss, espe-\ncially if your dog has a ruptured ear drum. Only use this medication under\n208 •D OG OWNER’S HOME VETERINARY HANDBOOK\n09_067857 ch06.qxp  7/6/07  10:37 PM  Page 208",
         "Also found in the middle ear is the opening of the auditory tube. The audi-\ntory tube connects the middle ear cavity to the nasopharynx. The purpose of\nthe auditory tube is to equalize air pressure on each side of the eardrum.\nBasic Ear Care\nAVOIDING EAR PROBLEMS\nEar problems are the second most common reason dog owners take their dog\nto the veterinarian, according to a survey by Veterinary Pet Insurance.\nWet ear canals can predispose a dog to ear infections. When bathing your\ndog, keep water out of her ears by inserting cotton wadding into the ear\ncanals. Similarly, it is important to dry your dog’s ears after she has been swim-\nming. If water gets into an ear, wipe the opening gently with a cotton ball. If\nyou know from prior visits to your veterinarian that your dog’s eardrums are"
       ],
-      "response": "The handbook recommends inspecting and cleaning the ears, including beneath the ear flaps, at least once a month, especially after running in tall grass or weeds. They also suggest drying the ears after swimming and avoiding excessive cleaning, which can interfere with local immune defense mechanisms.",
+      "response": "The handbook recommends inspecting and cleaning the ears, teeth, and nails regularly. To prevent ear problems, keep water out of your dog's ears when bathing by inserting cotton wadding into the ear canals. Also, dry your dog's ears after swimming, and wipe the opening gently with a cotton ball if necessary.",
       "reference": "Wet ear canals predispose dogs to ear infections During bathing, cotton wadding can be placed in the ear canals to keep water out After swimming, the ear openings should be dried gently Grooming under the ear flaps after running in tall grass helps prevent foreign material from dropping into the canals Routine hair plucking from the ear canals is discouraged unless there is a medical reason",
       "chapter": "Chapter 6: The Ears",
       "section": "Avoiding Ear Problems",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.7520951579988538,
+      "answer_relevancy": 0.7630464822811456,
       "context_precision": 0.9166666666361111,
       "context_recall": 1.0
     },
@@ -219,12 +219,12 @@
         "oughly cleansing and flushing the\near, as described for external otitis\n216 •D OG OWNER’S HOME VETERINARY HANDBOOK\nHorner’s syndrome can be caused by\notitis media. This dog shows the pro-\ntruding third eyelid and drooping upper\neyelid characteristic of Horner’s.\n09_067857 ch06.qxp  7/6/07  10:37 PM  Page 216",
         "Index of Signs and Symptoms\nexercise, 22, 549–550\nexercise restrictions. See also specific conditions\nand diseases\narthritis, 402, 406\nchronic bronchitis, 324\nelderly dogs, 549–550\nheart disease, 340\nhip displasia, 396\nobese dogs, 309\npregnancy, 469\nexocrine pancreatic insufficiency, 299–300\nexternal otitis, 212–214\nexternal parasites, 123–134\neyelashes, 101, 169–170\neyelashes, extra (distichiasis), 179–180\neyelid irritation, 172\neyelids, 169–170, 172\neyelid tumors, 182\neyes\nailment signs, 172–173\nanatomy, 169–171\nanterior uveitis (soft eye), 199\nbandaging, 50\nblepharitis (inflamed eyelids), 177\nblepharospasm (severe squinting), 177\nblindness, 38, 196–197\nbulging eyeball, 173, 175–176\nburns, 179\ncataracts, 197–198\nchalazions, 179\nchemosis (allergic blepharitis), 178"
       ],
-      "response": "The handbook emphasizes head-shaking, scratching, and rubbing at the affected ear, as well as tilting or carrying the head down on the painful side. It also highlights that breeds with long, dropped ears are more prone to infection due to poor air circulation, which allows bacterial growth. Additionally, narrow or stenotic ear canals in certain breeds and excessive hair blocking air circulation contribute to predisposition for external otitis.",
+      "response": "The handbook emphasizes that external otitis is an infection of the ear canal, commonly occurring in breeds with long, dropped ears due to poor air circulation. Narrow or stenotic ear canals also contribute to its development, as well as excessive hair blocking air circulation. Additionally, some breeds may be predisposed because they have a lot of hair on their ears, which blocks airflow.",
       "reference": "External otitis is described as an infection of the ear canal Dropped ears, narrow ear canals, excess hair, allergies, seborrhea, foreign bodies, and ear mites can predispose dogs to infection Improper cleaning, water entering the ears, and cotton-tipped applicators are listed as iatrogenic causes Typical signs include head shaking, scratching, rubbing, pain, head tilt, redness, swelling, waxy or purulent discharge, bad odor, and reduced hearing",
       "chapter": "Chapter 6: The Ears",
       "section": "External Otitis",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.5971809655403708,
+      "answer_relevancy": 0.8122167795870829,
       "context_precision": 0.99999999995,
       "context_recall": 0.75
     },
@@ -237,12 +237,12 @@
         "decrease swelling and inflammation. Some dogs may need oral antibiotics as\nwell for severe infections.\nBacterial infections that continue to progress produce thickening and nar-\nrowing of the ear canal and chronic pain. These ears are difficult to clean and\ntreat. As a last resort, your veterinarian may advise a surgical procedure called\nan ear resection that reestablishes air circulation and promotes drainage.\nOTODECTIC MANGE (EAR MITES)\nOtodectic mites are tiny insects that live in the ear canals and feed by pierc-\ning the skin. They are highly contagious to cats and dogs, but not to humans.\nEar mites are the most common cause of ear symptoms in puppies and young\nadult dogs. Suspect ear mites when both of the dog’s ears are involved.",
         "problem does not disappear in three weeks, look for a continuing source of\ninfestation.\nThe diagnosis is made by examining skin scrapings under a microscope. In\nsome cases the mites may not be identified. If the dog’s symptoms strongly\nsuggest scabies, your veterinarian may decide to begin treatment as a diagnos-\ntic test. A positive response to the treatment confirms the diagnosis of scabies.\nTreatment: Scabies must be treated under veterinary supervision. Clip the\nhair away from scabies-affected areas on medium- and longhaired dogs and\nbathe the entire animal using a benzoyl peroxide shampoo (such as OxyDex\nor Pyoben). The shampoo loosens scales and makes it possible for an insecti-\ncide dip to penetrate the hair pores.\n126 •D OG OWNER’S HOME VETERINARY HANDBOOK"
       ],
-      "response": "The handbook describes the diagnosis of ear mites by examining skin scrapings under a microscope. Treatment involves using ivermectin as an off-label medication for tough cases, treating all household pets, and completing a four-week course of pyrethrin-based treatment to prevent reinfestation. If a source of infection is found after three weeks, treatment should continue.",
+      "response": "The handbook describes the diagnosis as making by examining skin scrapings under a microscope, which may not identify the mites. Treatment involves treating all household pets with approved medications and shampoos, and using ivermectin for tough cases. The entire course of treatment must be completed to prevent reinfestation.",
       "reference": "Ear mites are highly contagious among dogs and cats but not to humans Both ears are often involved, especially in puppies and young adult dogs The canal discharge is described as dry, crumbly, dark brown wax that looks like coffee grounds All dogs and cats in the household should be treated to prevent reinfestation Cleaning the ears is essential before applying miticide treatment Stopping treatment too early can allow a new crop of mites to reinfest the dog",
       "chapter": "Chapter 6: The Ears",
       "section": "Otodectic Mange (Ear Mites)",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.8494181696898709,
+      "answer_relevancy": 0.6123868219596442,
       "context_precision": 0.9999999999666667,
       "context_recall": 0.8333333333333334
     },
@@ -255,13 +255,13 @@
         "drome, parasites (especially whipworms), or cancer. The dog needs to see a\nveterinarian.\nABNORMAL DISCHARGES\nAbnormal discharges are those that contain pus or blood. They may have an\noffensive odor. Discharges from the eyes, ears, nose, mouth, penis, or vagina\nsuggest infection. In older dogs, cancer must also be considered. If you see any\nsuch discharges, take your dog to the veterinarian.\nGERIATRICS • 553\n22_067857 ch19.qxp  7/6/07  11:06 PM  Page 553",
         "tooth (usually a canine tooth) can rupture into the nasal cavity. The tooth\nfalls out and the space it once occupied opens a passage through the hard\npalate that allows food to pass from the mouth into the nose.\nThe signs of oral-nasal fistula are a unilateral nasal discharge accompanied\nby sneezing, especially after eating.\nTreatment: The problem is treated surgically by taking a flap of mucous\nmembrane from the inside of the mouth and suturing it across the defect.\nLong-term antibiotics may be needed to clear up any infections.\nPrevention: Proper dental care and prompt attention to any dental prob-\nlems while they are still minor will help prevent oral-nasal fistula caused by\ntooth decay.\nALLERGIC RHINITIS\nAn allergic nasal discharge occurs in dogs with canine atopy (see page 138)."
       ],
-      "response": "The handbook considers any nasal discharge that persists for several hours to be clinically important. This type of discharge is typically clear, watery, and may accompany sneezing or indicate an irritant in the nasal passages. It could be indicative of allergic or viral rhinitis, bacterial or fungal infection, or postnasal drip.",
+      "response": "According to the handbook, any nasal discharge that persists for several hours is significant. This type of discharge is not accompanied by sneezing or relaxation, and may indicate problems such as parasites, cancer, or an oral-nasal fistula. Additionally, a unilateral nasal discharge accompanied by sneezing, especially after eating, can also be a sign of an oral-nasal fistula that requires surgical treatment.",
       "reference": "Any nasal discharge that persists for several hours is considered significant A clear watery discharge is typical of allergic or viral rhinitis A thick discharge suggests bacterial or fungal infection A discharge from only one nostril can indicate an oral-nasal fistula, foreign body, or tumor Blood-streaked discharge or a nosebleed can occur with foreign bodies, tumors, chronic infections, trauma, or bleeding disorders",
       "chapter": "Chapter 7: The Nose",
       "section": "Nasal Discharge",
-      "faithfulness": 0.5555555555555556,
-      "answer_relevancy": 0.8741474150613441,
-      "context_precision": 0.6388888888675925,
+      "faithfulness": 0.6,
+      "answer_relevancy": 0.8230307133814012,
+      "context_precision": 0.5833333333041666,
       "context_recall": 1.0
     },
     {
@@ -273,12 +273,12 @@
         "topical antibiotics, such as triple antibiotic ointment.\nThe Nasal Cavity\nEPISTAXIS (NOSEBLEEDS)\nNosebleeds are caused by foreign bodies, trauma, infections, tumors, or para-\nsites that erode the nasal mucous membranes. Some are caused by lacerations\nof the nostrils or puncture wounds from objects such as thorns or barbed wire.\nNosebleeds are often accompanied by bouts of sneezing that aggravate the\nbleeding.\nA spontaneous nosebleed may be a manifestation of a generalized clotting\ndisorder such as hemophilia or von Willebrand’s disease. Vitamin K defi-\nciency is another cause of spontaneous bleeding. It occurs most often with\npoisoning by rodenticide anticoagulants.\nTreatment: Keep the dog as quiet as possible. Apply an ice pack wrapped",
         "contact and take him as quickly as possible to the nearest veterinary clinic. If\nyou can’t get to the vet very quickly, give the dog water or milk (30 ml per 6\n34 •D OG OWNER’S HOME VETERINARY HANDBOOK\n04_067857 ch01.qxp  7/9/07  5:36 PM  Page 34"
       ],
-      "response": "The handbook recommends keeping the dog as quiet as possible. To treat a nasal cavity issue or nosebleed, an ice pack wrapped in cloth is applied to the bridge of the nose. If bleeding doesn't stop, steady pressure is applied with a gauze square.",
+      "response": "The handbook recommends keeping the dog as quiet as possible. If applicable, apply an ice pack wrapped in cloth to the bridge of the nose and apply steady pressure with a gauze square if the nostril is bleeding and the site is visible.",
       "reference": "Keep the dog as quiet as possible Apply an ice pack wrapped in cloth to the bridge of the nose If the bleeding site is visible, apply steady pressure with gauze Most nosebleeds stop more quickly when interference is kept to a minimum If bleeding does not stop or there is no obvious cause, the dog should be taken to a veterinary clinic at once",
       "chapter": "Chapter 7: The Nose",
       "section": "Epistaxis (Nosebleeds)",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.7302590232162591,
+      "answer_relevancy": 0.8310645935991141,
       "context_precision": 0.8333333332916666,
       "context_recall": 1.0
     },
@@ -291,12 +291,12 @@
         "between the teeth or wedged across the roof of the mouth. Pieces of string can\nbecome wrapped around the teeth and tongue.\nA common place for a penetrating foreign body is beneath the tongue. On\nlifting the tongue, you may see a grapelike swelling or a draining tract. This\nmeans the foreign body has been present for some time.\nIn areas where cockle and sand burrs are prevalent, many small spines can\nbecome embedded in the tongue and gums as the dog grooms burrs from her\ncoat and feet.\nThe signs of a foreign body are pawing at the mouth, rubbing the mouth\nalong the floor, drooling, gagging, licking the lips repeatedly, and holding the\nmouth open. When a foreign object has been present for a day or longer, the\nprincipal signs may be lethargy, bad breath, and refusal to eat.",
         "FOREIGN BODY IN THE THROAT (GAGGING)\nDogs gag on small rubber balls and other objects that can lodge in the back of\nthe throat. Bones that lodge sideways in the throat are another cause of gag-\nging. The signs of a foreign body in the throat are sudden anxiety, pawing furi-\nously at the mouth, drooling, gagging, and attempting to vomit.\nForeign bodies in the throat should be distinguished from objects in the lar-\nynx. Objects in the larynx cause coughing, choking, and respiratory distress.\nTreatment: Soothe and quiet the dog. Proceed directly to the nearest vet-\nerinary clinic. If the dog is coughing and choking—or has fainted—the object\nhas moved from the throat into the larynx and is blocking the airway.\nAdminister emergency treatment as described for Choking (page 316).\nSalivary Glands"
       ],
-      "response": "The signs that may indicate a foreign body in the nose include sudden bouts of violent sneezing, pawing at the nose, occasional bleeding from one nostril, thick discharge (often bloody) from the involved nostril, lethargy, bad breath, and refusal to eat. Owners should avoid probing blindly because it can push the object further into the nasal cavity.",
+      "response": "The signs that suggest a foreign body in the nose are violent sneezing accompanied by pawing at the nose, occasional bleeding from one nostril, and a thick discharge (often bloody) from the involved nostril. If the foreign body is not removed promptly, it may migrate deeper into the nasal cavity. Owners should avoid probing blindly as this can push the object further in or even cause more damage.",
       "reference": "The classic presentation is a sudden bout of violent sneezing with pawing at the nose Bleeding from one nostril may occur If the object remains for hours or days, a thick discharge, often bloody, can develop from the affected nostril A visible object near the nostril opening may be removed with tweezers Blind probing is discouraged because it can push the object deeper and cause additional injury Many foreign bodies require heavy sedation or general anesthesia for removal",
       "chapter": "Chapter 7: The Nose",
       "section": "Foreign Body in the Nose",
-      "faithfulness": 0.625,
-      "answer_relevancy": 0.6844153468446302,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6838339591331187,
       "context_precision": 0.9999999999,
       "context_recall": 0.8333333333333334
     },
@@ -309,12 +309,12 @@
         "mouth. Food is prevented from entering the respiratory tree by the epiglottis,\na flaplike valve that closes over the larynx as the dog swallows.\nHow to Examine the Mouth\nMost mouth problems can be identified by inspecting the lips, gums, teeth,\nand throat. To open the mouth, slip a thumb into the space behind the canine\ntooth and press upward on the roof of the mouth. As the mouth begins to\nopen, press down on the lower jaw with the opposite thumb. To see the throat\nand tonsils, depress the tongue with a finger.\n8\n231\n11_067857 ch08.qxp  7/6/07  10:38 PM  Page 231",
         "Another method is to gently squeeze in from the top of the dog’s muzzle,\nright behind the whiskers, with your thumb and forefinger. As the mouth\nopens, separate the top and bottom jaws with your fingers.\nTo examine the dog’s bite (also known as occlusion), close the mouth and\nraise the upper lip while drawing down on the lower lip with your thumb. The\nbite is determined by seeing how the upper and lower incisor teeth come\ntogether (see Malocclusion, page 242).\nRaising the lips also exposes the mucous membranes of the gums. The\nappearance of the gums gives an indication of anemia and the state of circula-\ntion. This is easiest to evaluate in dogs with pink gums (as opposed to pig-\nmented gums).\nSigns of Mouth and Throat Disease"
       ],
-      "response": "To examine a dog's mouth, owners can gently squeeze in from the top of the dog's muzzle, right behind the whiskers, with their thumb and forefinger. As the mouth opens, they can separate the top and bottom jaws with their fingers. This method exposes the mucous membranes of the gums, making it easy to evaluate the state of circulation, especially in dogs with pink gums.",
+      "response": "To examine a dog's mouth, slip a thumb into the space behind the canine tooth and press upward on the roof of the mouth. As the mouth begins to open, press down on the lower jaw with the opposite thumb. Another method is to gently squeeze in from the top of the dog's muzzle, right behind the whiskers, with your thumb and forefinger, then separate the top and bottom jaws with your fingers as the mouth opens.",
       "reference": "A thumb can be slipped behind the canine tooth while pressing upward on the roof of the mouth to open the mouth The lower jaw is then pressed down with the opposite thumb The tongue can be depressed with a finger to view the throat and tonsils An alternate method is to gently squeeze behind the whiskers on top of the muzzle to prompt the mouth to open Raising the lips allows the bite and the color of the gums to be checked",
       "chapter": "Chapter 8: The Mouth and Throat",
       "section": "How to Examine the Mouth",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.8533980500074507,
+      "answer_relevancy": 0.8179289650533293,
       "context_precision": 0.8055555555287036,
       "context_recall": 1.0
     },
@@ -327,14 +327,14 @@
         "Malocclusion (Incorrect Bite) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 242\nUnstable Jaw . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 244\nPeriodontal Disease . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 244\nCavities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 247\nAbscessed Roots . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 247\nBroken Teeth. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 248\nEnamel Hypoplasia or Damage . . . . . . . . . . . . . . . . . . . . . . . . . . . . 248\nTaking Care of Your Dog’s Teeth. . . . . . . . . . . . . . . . . . . . . . . . . . . . 249",
         "If diet is a contributing factor, the diet must be corrected as well.\nPERIODONTAL DISEASE\nPeriodontal disease is one of the most common problems seen in veterinary\npractice. It occurs in two forms: The first is gingivitis, a reversible inflamma-\ntion of the gums. The second is periodontitis, an inflammation of the deeper\nstructures supporting the teeth.\nGingivitis\nGingivitis develops when bacteria build up between the teeth and gums, lead-\ning to irritation, inflammation, and bleeding. The edges of healthy gums fit\ntightly around the teeth. In a dog with gingivitis, rough dental calculus builds\nup in an irregular fashion along the gum line, producing points at which the\ngum is forced away from the teeth. This creates small pockets that trap food"
       ],
-      "response": "Periodontal disease progresses as a gradual process starting in early adulthood, leading to advanced gum disease and tooth decay if left unchecked.",
+      "response": "Periodontal disease progresses gradually and can lead to advanced gum disease and tooth decay if left unchecked. However, it is considered a preventable condition with routine dental care. If infected gums and teeth cause mouth pain, poor eating, and weight loss, dental treatment can relieve suffering and improve health.",
       "reference": "The handbook divides periodontal disease into gingivitis and periodontitis Gingivitis starts when bacteria and dental calculus build up along the gum line This creates pockets that trap food and bacteria and lead to infected gums If the process continues, infection attacks the deeper tooth-supporting structures and roots As periodontitis advances, teeth loosen, pain develops, drooling can occur, and root abscesses may rupture into nearby structures",
       "chapter": "Chapter 8: The Mouth and Throat",
       "section": "Periodontal Disease",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.8667848757328984,
+      "answer_relevancy": 0.6039347546248646,
       "context_precision": 0.9166666666361111,
-      "context_recall": 0.8
+      "context_recall": 1.0
     },
     {
       "question_id": "q_019",
@@ -345,12 +345,12 @@
         "grass, that irritate the lining of the stomach. Another cause of vomiting is\novereating—dogs who eat more than their daily amount of food, perhaps\nbecause they have gotten into the dog food bag. Also, puppies who gobble\ntheir food and exercise immediately after are likely to vomit. This after-meal\nvomiting is frequently caused by feeding a group of puppies from a common\nfood pan. Since they are all competing for food, each one eats as much as he\n270 •D OG OWNER’S HOME VETERINARY HANDBOOK\n12_067857 ch09.qxp  7/6/07  10:40 PM  Page 270",
         "Hounds have the highest incidence among midsize dogs. Small dogs are rarely\naffected, with the exception of Dachshunds, who are also deep-chested.\nBloat develops suddenly, usually in a healthy, active dog. The dog may\nhave just eaten a large meal, exercised vigorously before or after eating, or\ndrank a large amount of water immediately after eating. There is no evidence\nthat the protein or soy content in the diet contributes to bloat; research has\nshown that the majority of gas associated with bloat is due to swallowed air.\nSigns of Bloat\nThe classic signs of bloat are restlessness and pacing, salivation, retching,\nunproductive attempts to vomit, and enlargement of the abdomen. The dog\n264 •D OG OWNER’S HOME VETERINARY HANDBOOK\nIn a dog with volvulus,\nthe stomach (shown here"
       ],
-      "response": "The handbook lists excessive drooling caused by psychological events such as fear, apprehension, and nervous anxiety, as well as anticipation of food treats. It also mentions that tranquilizers cause drooling and that a foreign body in the mouth can be a cause. Additionally, motion sickness is listed as another common cause of excessive drooling.",
+      "response": "The handbook lists the following causes of excessive drooling in dogs: nervous anxiety, anticipation of food treats, mouth pain caused by periodontal disease, abscessed teeth, and stomatitis, rabies, distemper, pseudorabies, heat stroke, motion sickness, tranquilizers, poisons, and foreign bodies in the mouth.",
       "reference": "Some drooling is normal in breeds with loose pendulous lips Excessive drooling can be triggered by fear, apprehension, nervous anxiety, or anticipation of food Mouth pain from periodontal disease, abscessed teeth, and stomatitis is a common physical cause Rabies, distemper, pseudorabies, heat stroke, motion sickness, tranquilizers, and poisons are also listed as causes If a dog drools for no clear reason and otherwise appears healthy, the mouth should be checked for a foreign body",
       "chapter": "Chapter 8: The Mouth and Throat",
       "section": "Hypersalivation (Drooling)",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.8888304353982035,
+      "answer_relevancy": 0.8614091695723455,
       "context_precision": 0.99999999995,
       "context_recall": 1.0
     },
@@ -363,11 +363,11 @@
         "The material vomited is usually sour smelling, partly digested, and stained\nwith yellow bile.\nThe sudden onset of regurgitation in a previously healthy dog is almost cer-\ntainly due to a foreign body caught in the esophagus. Constant drooling indi-\ncates that the dog cannot swallow saliva.\nChronic regurgitation (the kind that comes and goes but seems to be get-\nting worse) suggests a partial obstruction caused by megaesophagus, stricture,\nor tumor.\nA serious complication of regurgitation is aspiration pneumonia, in which\nthe lungs become infected as a result of food being aspirated into them. When\nregurgitated food ends up in the lungs, aspiration pneumonia is the result.\nAnother potentially serious complication is nasal cavity infection. This",
         "264 •D OG OWNER’S HOME VETERINARY HANDBOOK\nIn a dog with volvulus,\nthe stomach (shown here\nin its normal position)\nrotates. The arrows show\nthe direction of the\nrotation.\nThe twists at the gastro-\nesophageal junction and\nduodenum trap gas and\nfluids in the stomach. The\ndog is unable to belch or\nvomit.\n12_067857 ch09.qxp  7/6/07  10:40 PM  Page 264"
       ],
-      "response": "The handbook distinguishes regurgitation from vomiting by describing that vomiting begins with a simultaneous contraction of the stomach and abdominal muscles, an abrupt increase in intra-abdominal pressure, and the dog extends its neck to make harsh gagging sounds. Regurgitation is described as a passive act, without these specific physical signs or symptoms.",
+      "response": "The handbook distinguishes regurgitation from vomiting by suggesting that regurgitation is a passive act, whereas vomiting involves a simultaneous contraction of stomach and abdominal muscles.",
       "reference": "Regurgitation is described as the relatively effortless expulsion of undigested food without retching It occurs when the esophagus is blocked or lacks normal peristaltic activity Vomiting is the forceful expulsion of stomach contents and is preceded by drooling and retching Vomited material is usually sour smelling, partly digested, and stained with yellow bile A serious complication of regurgitation is aspiration pneumonia",
       "chapter": "Chapter 9: The Digestive System",
       "section": "Regurgitation",
-      "faithfulness": 0.8333333333333334,
+      "faithfulness": 1.0,
       "answer_relevancy": 0.9095092845484416,
       "context_precision": 0.8333333332916666,
       "context_recall": 0.6
@@ -381,7 +381,7 @@
         "may whine or groan when you press on his belly. Thumping the abdomen pro-\nduces a hollow sound.\nUnfortunately, not all cases of bloat present with typical signs. In early\nbloat the dog may not appear distended, but the abdomen usually feels slightly\ntight. The dog appears lethargic, obviously uncomfortable, walks in a stiff-\nlegged fashion, hangs his head, but may not look extremely anxious or dis-\ntressed. Early on it is not possible to distinguish dilatation from volvulus.\nLate signs (those of impending shock) include pale gums and tongue,\ndelayed capillary refill time, rapid heart rate, weak pulse, rapid and labored\nbreathing, weakness, and collapse.\nIf the dog is able to belch or vomit, quite likely the problem is not due to a",
         "Hounds have the highest incidence among midsize dogs. Small dogs are rarely\naffected, with the exception of Dachshunds, who are also deep-chested.\nBloat develops suddenly, usually in a healthy, active dog. The dog may\nhave just eaten a large meal, exercised vigorously before or after eating, or\ndrank a large amount of water immediately after eating. There is no evidence\nthat the protein or soy content in the diet contributes to bloat; research has\nshown that the majority of gas associated with bloat is due to swallowed air.\nSigns of Bloat\nThe classic signs of bloat are restlessness and pacing, salivation, retching,\nunproductive attempts to vomit, and enlargement of the abdomen. The dog\n264 •D OG OWNER’S HOME VETERINARY HANDBOOK\nIn a dog with volvulus,\nthe stomach (shown here"
       ],
-      "response": "Bloat is treated as a life-threatening emergency because it can cause rapid deterioration leading to shock. Early signs include restlessness, salivation, retching, unproductive attempts to vomit, and enlargement of the abdomen, which may not be immediately noticeable. If the dog is able to belch or vomit, it's likely not due to bloat, but rather other conditions such as gastritis or food poisoning.",
+      "response": "Bloat is treated as a life-threatening emergency because it can lead to gastric volvulus, which significantly increases mortality rates. Early recognition of signs such as restlessness, salivation, retching, unproductive vomiting attempts, abdominal enlargement, and the dog may whine or groan when pressed on his belly are crucial. If the dog is able to belch or vomit, it's likely not due to a life-threatening condition.",
       "reference": "Bloat is described as a life-threatening emergency with a high mortality rate for gastric volvulus The condition involves gastric dilatation, and in more severe cases the distended stomach rotates Rotation traps gas and fluid, prevents belching and vomiting, and can cut off blood supply to the stomach The handbook links the process to shock, arrhythmias, perforation, peritonitis, and death Classic early signs include restlessness, pacing, salivation, retching, unproductive attempts to vomit, and abdominal enlargement",
       "chapter": "Chapter 9: The Digestive System",
       "section": "Gastric Dilatation Volvulus (Bloat)",
@@ -399,14 +399,14 @@
         "NSAIDs, cortisone, butazolidine, and some antibiotics) produce gastric irrita-\ntion. Common poisons that may cause vomiting are antifreeze, fertilizers, plant\ntoxins, and crabgrass killers. If poisoning is suspected, contact your veterinarian.\nA dog with acute gastritis vomits shortly after eating. Later the dog appears\nlethargic and sits with his head hanging over the water bowl. The dog’s tem-\nperature remains normal unless he is suffering from acute infectious enteritis,\na disease that also causes diarrhea.\nTreatment: Acute nonspecific gastritis is self-limiting and usually resolves\nin 24 to 48 hours if the stomach is rested and protected from excess acid.\nFollow the instructions in Home Treatment of Vomiting (page 272).\nCHRONIC GASTRITIS",
         "Increase the volume over the next two days and gradually return the dog to\nhis customary diet.\nStop all food and water and obtain immediate veterinary assistance when:\n• Vomiting persists despite the fact that the dog has received no food or\nwater for several hours.\n• Vomiting recurs during attempts to reintroduce food and water.\n• Vomiting is accompanied by diarrhea.\n• The dog vomits fresh blood or material that looks like coffee grounds\n(partially digested blood).\n• The dog becomes weak and lethargic or shows other signs of systemic\nillness.\n272 •D OG OWNER’S HOME VETERINARY HANDBOOK\n12_067857 ch09.qxp  7/6/07  10:40 PM  Page 272"
       ],
-      "response": "Home treatment is considered appropriate for normal, healthy adult dogs who show no signs other than vomiting. The recommended initial step is to withhold food and water for a minimum of 12 hours. If the vomiting stops with stomach rest, offer ice chips every three to four hours. If the vomiting has stopped, offer 1⁄4 to 1⁄2 cup of water every two to three hours.",
+      "response": "Home treatment is considered appropriate for normal, healthy adult dogs who show only vomiting and are not dehydrated. The recommended initial step is to rest the stomach by withholding food and water for 12 hours if vomiting stops. Allow a few ice chips every three to four hours, then offer a small amount of water (1⁄4 to 1⁄2 cup) every two to three hours if the vomiting has stopped.",
       "reference": "Home treatment is appropriate only for normal healthy adult dogs with no signs other than vomiting Puppies, old dogs, and dogs with preexisting health conditions should be treated by a veterinarian The stomach should be rested by withholding food and water for at least 12 hours If vomiting stops, small amounts of ice chips and then measured amounts of water or pediatric electrolyte solution can be offered After 12 hours without vomiting, a bland diet can be reintroduced in small frequent amounts Immediate veterinary help is needed if vomiting persists, recurs during refeeding, is accompanied by diarrhea, includes blood, or the dog becomes weak and lethargic",
       "chapter": "Chapter 9: The Digestive System",
       "section": "Home Treatment of Vomiting",
-      "faithfulness": 1.0,
+      "faithfulness": 0.5,
       "answer_relevancy": 0.6595124177417927,
-      "context_precision": 0.999999999975,
-      "context_recall": 1.0
+      "context_precision": 0.9166666666361111,
+      "context_recall": 0.8333333333333334
     },
     {
       "question_id": "q_023",
@@ -417,12 +417,12 @@
         "Stridor (Croupy Breathing) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 312\nWheezing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 312\nShallow Breathing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 313\nBrachycephalic Syndrome . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 313\nThe Larynx (Voice Box) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 314\nLaryngitis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 315\nLaryngeal Edema . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 315\nChoking (Foreign Body in the Larynx). . . . . . . . . . . . . . . . . . . . . . . 316",
         "various degrees of respiratory obstruction, which can seriously compromise\nthe puppy’s health and development.\nCollapsed nostrils are a congenital problem often accompanied by other\nmanifestations of the brachycephalic syndrome described on page 313.\nTHE NOSE • 223\nCollapsed nostrils is a\ncommon problem in\nshort-nosed breeds, such\nas these Pugs. These dogs\nsnort, sniffle, and have a\nfoamy nasal discharge.\n10_067857 ch07.qxp  7/6/07  10:37 PM  Page 223"
       ],
-      "response": "Brachycephalic syndrome is characterized by airway obstruction, manifested by mouth breathing, snorting, and snoring. The breathing problems tend to worsen with exercise or overheating, and they get worse as the dog grows older.",
+      "response": "Brachycephalic syndrome includes airway obstruction, manifested by mouth breathing, snorting, and snoring. Breathing problems tend to worsen as the dog grows older, particularly during exercise or in overheated conditions. These difficulties become more pronounced over time due to the broad skull and short muzzle of affected breeds.",
       "reference": "Brachycephalic syndrome is described as airway obstruction in short-muzzled broad-skulled breeds Common signs include mouth breathing, snorting, and snoring Breathing difficulties become more pronounced with exercise, overheating, and increasing age The syndrome is associated with collapsed nostrils, an elongated soft palate, and eversion of the laryngeal saccules Not all dogs with stenotic nares require surgery because some improve as the cartilage firms up",
       "chapter": "Chapter 10: The Respiratory System",
       "section": "Brachycephalic Syndrome",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.7463390439101502,
+      "answer_relevancy": 0.7118051423555324,
       "context_precision": 0.8333333332916666,
       "context_recall": 0.6
     },
@@ -435,12 +435,12 @@
         "The sudden onset of gasping and struggling to breathe in a healthy dog sug-\ngests a foreign object lodged in the throat (see Choking, page 316).\nTreatment: The immediate need is to reestablish breathing with fresh air.\nIf breathing is shallow or absent, begin artificial respiration (see page 8). As\nsoon as possible, transport your dog to the nearest veterinary facility for ven-\ntilation support.\nCarbon monoxide poisoning is frequently associated with smoke inhalation\nand burns of the mouth and throat. Carbon monoxide binds with hemoglobin\nand blocks the delivery of oxygen to the tissues. Even though the dog is breath-\ning deeply, oxygen transport will be compromised for several hours. Breathing\n20 •D OG OWNER’S HOME VETERINARY HANDBOOK\n04_067857 ch01.qxp  7/9/07  5:36 PM  Page 20",
         "foreign body and proceed to step 5. If you are unable to dislodge the\nobject, proceed to step 3.\n3. Artificial respiration. Give five mouth-to-nose respirations. Even a\nsmall volume of air getting past the obstruction is beneficial. Proceed to\nstep 4.\n4. Chest thumps. Deliver a sharp blow with the heel of your hand to the\ndog’s back between the shoulder blades. Repeat the finger sweeps. If the\nobject is still not dislodged, repeat steps 1 through 4 until the object is\ndislodged.\n316 •D OG OWNER’S HOME VETERINARY HANDBOOK\n13_067857 ch10.qxp  7/6/07  10:40 PM  Page 316"
       ],
-      "response": "When a dog is choking on a foreign body in the larynx, the immediate need is to reestablish breathing with fresh air. If breathing is shallow or absent, begin artificial respiration. As soon as possible, transport your dog to the nearest veterinary facility for ventilation support.",
+      "response": "If the dog collapses and is unable to breathe, place her on her side with the airway clear and provide ventilation support as soon as possible, then transport to the nearest veterinary facility.",
       "reference": "The sudden onset of forceful coughing, pawing at the mouth, and respiratory distress suggests a foreign body in the larynx If the dog is conscious and able to breathe, the owner should go directly to the nearest veterinary clinic If the dog collapses and cannot breathe, the mouth should be opened, the tongue pulled forward, and the object removed if it can be grasped If the object cannot be easily removed, the handbook directs the owner to use the Heimlich maneuver rather than probing around it Artificial respiration or CPR may be needed after the object is dislodged",
       "chapter": "Chapter 10: The Respiratory System",
       "section": "Choking (Foreign Body in the Larynx)",
-      "faithfulness": 1.0,
-      "answer_relevancy": 0.8403224457920341,
+      "faithfulness": 0.6666666666666666,
+      "answer_relevancy": 0.6083070223611913,
       "context_precision": 0.999999999975,
       "context_recall": 0.4
     },
@@ -453,12 +453,12 @@
         "that lower their resistance to infection. In puppies, kennel cough can be\naccompanied by nasal congestion. These puppies require frequent care to\nloosen thick secretions, improve breathing, and prevent pneumonia. This is\nalso true for toy breeds.\nA severe form of tracheobronchitis that can lead to pneumonia is character-\nized by low-grade fluctuating fever, loss of appetite, and depression. These dogs\nhave a moist productive cough, nasal discharge, exercise intolerance, wheez-\ning, and rapid breathing. This form of kennel cough requires hospitalization.\nTreatment: Kennel cough should be treated by a veterinarian. Isolate dogs\nto prevent spreading the disease. The quarters should be warm, dry, and well-\nventilated. Humidification is beneficial. A cool mist vaporizer offers some",
         "secretions. Using a humidifier can also be helpful.\nTrachea and Bronchi\nACUTE TRACHEOBRONCHITIS (KENNEL COUGH COMPLEX)\nThe kennel cough complex is a group of highly contagious respiratory diseases\nin dogs. The name comes from the fact that the infection tends to spread rap-\nidly, especially among dogs in boarding kennels or dogs who have been to\nplaces where large numbers of dogs congregate, including dog shows and dog\nparks. Several viruses and bacteria, alone or in combination, can cause the\ndisease. The organisms most frequently involved are canine parainfluenza\nvirus and the bacteria Bordetella bronchiseptica (both are discussed in chapter\n3). Canine adenovirus types CA V-1 and CA V-2, as well as canine herpesvirus,\ncanine distemper, and mycoplasma, are other causes of kennel cough."
       ],
-      "response": "The handbook suggests that kennel cough is characterized by a harsh, dry cough, which may persist for many weeks. To manage symptoms, isolate dogs to prevent spreading the disease, provide warm, dry, and well-ventilated quarters with humidification. Dogs requiring hospitalization show signs of low-grade fluctuating fever, loss of appetite, depression, moist productive cough, nasal discharge, exercise intolerance, wheezing, and rapid breathing. Prevention measures include vaccinating with parainfluenza, bordetella, and CA V-2 vaccines.",
+      "response": "The characteristic sign of kennel cough is a harsh, dry cough that persists for many weeks. Management involves treating with a veterinarian, isolating dogs to prevent spreading, and using humidification, such as a cool mist vaporizer or humidifier. Prevention measures include vaccinating against parainfluenza, bordetella, and CA V-2 viruses through routine immunizations.",
       "reference": "A harsh dry hacking cough is the characteristic sign of tracheobronchitis Mild cases often occur in otherwise bright alert dogs with normal appetite and temperature Warm dry well-ventilated quarters and humidification are recommended during treatment Antibiotics and cough suppressants are commonly used under veterinary care Dogs should be isolated to reduce spread Bordetella and routine respiratory vaccines can reduce the prevalence and severity of kennel cough",
       "chapter": "Chapter 10: The Respiratory System",
       "section": "Acute Tracheobronchitis (Kennel Cough Complex)",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.7811403601837507,
+      "answer_relevancy": 0.8355273312693794,
       "context_precision": 0.8333333332916666,
       "context_recall": 0.6666666666666666
     },
@@ -471,13 +471,13 @@
         "Hold the thermometer in place for three minutes. Then remove it, wipe it\nclean, and read the temperature by the height of the silver column of mercury\non the thermometer scale. Clean the thermometer with alcohol to prevent\nthe transfer of diseases.\nIf you’re using a digital thermometer, insert it the same way and follow the\nmanufacturer’s directions.\nIf the thermometer breaks off—this usually happens because the dog sits\ndown—do not attempt to find and extract the broken end. Instead, notify\nyour veterinarian immediately.\nNormal Heart Rate\nAdult dog: 60 to 160 beats per minute\nToy breeds: Up to 180 beats per minute\nNewborn puppy: 160 to 200 beats per minute at birth; 220 beats per\nminute at 2 weeks of age\nTo learn how to take your dog\n’s pulse, see Pulse, page 8.\nNormal Respiratory Rate",
         "The heartbeat should be strong, steady, and regular. A slight alteration in\nrhythm as the dog breathes in and out is normal. An exceedingly fast pulse\ncan indicate anxiety, fever, anemia, blood loss, dehydration, shock, infection,\nheat stroke, or heart (and lung) disease. A slow pulse can indicate heart dis-\nease, pressure on the brain, or an advanced morbid condition causing collapse\nof the circulation.\nAn erratic, irregular or disordered pulse indicates a cardiac arrhythmia.\nMany arrhythmias are associated with a sudden drop in blood pressure as the\narrhythmia begins. The corresponding decrease in blood flow to the muscles\nand brain is accompanied by sudden weakness or collapse, often giving the\nimpression of a fainting spell."
       ],
-      "response": "According to the handbook, to check your dog's pulse, you should feel the heartbeat just below and behind the elbow joint. The recommended normal resting pulse range for an adult dog is 60 to 160 beats per minute.",
+      "response": "To check your dog's pulse, see Pulse, page 8. Normal heart rate for adult dogs is between 60 to 160 beats per minute.",
       "reference": "The femoral artery in the groin is described as the easiest place to feel the pulse Another method is to feel the heartbeat just below and behind the elbow against the rib cage Most adult dogs at rest have a pulse rate of about 60 to 160 beats per minute Large dogs tend to be slower and toy dogs faster Young puppies are described as having a heart rate of about 220 beats per minute",
       "chapter": "Chapter 11: The Circulatory System",
       "section": "Pulse",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.8761805376203166,
-      "context_precision": 0.7499999999625,
+      "answer_relevancy": 0.7711135974366102,
+      "context_precision": 0.9999999999,
       "context_recall": 0.6
     },
     {
@@ -489,14 +489,14 @@
         "sible. Heartworms, bacterial endocarditis, and some forms of congenital heart\ndisease are potentially curable if they are treated before the heart is damaged.\nTreatment of congestive heart failure involves feeding the dog a low-salt\ndiet, restricting exercise, and giving appropriate medications to increase heart\nfunction and prevent cardiac arrhythmias.\nMost commercial diets contain excessive amounts of salt. Your veterinar-\nian may prescribe a low-salt prescription diet such as Hill’s h/d, Purina CV , or\nRoyal Canin EC. In dogs with mild symptoms, salt restriction may be the only\ntreatment required.\nExercise is beneficial, but only for dogs who are not symptomatic. If symp-\ntoms such as easy tiring, coughing, or rapid breathing appear with exercise, do",
         "monitor for 24 hours if the abnormality is infrequent.\nTreatment: This may include various drugs to regulate the heart rate or\nrhythm. Some dogs benefit from having a pacemaker implanted.\nCongestive Heart Failure\nCongestive heart failure is the inability of the heart to provide adequate circu-\nlation to meet the body’s needs. It is the end result of a weakened heart mus-\ncle. The health of the liver, kidneys, lungs, and other organs is impaired by\nthe circulatory failure, resulting in a problem involving multiple organs.\nA diseased heart can compensate for many months or years without signs\nof failure. When failure does occur, it may appear suddenly and unexpect-\nedly—sometimes immediately after strenuous exercise, when the heart is\nunable to keep up with the body’s demands."
       ],
-      "response": "The handbook emphasizes feeding a low-salt diet, restricting exercise, and giving medications to increase heart function and prevent cardiac arrhythmias. It also suggests monitoring symptoms such as easy tiring, coughing, or rapid breathing that appear during exercise. Additionally, it recommends identifying breeds with a known predisposition for congenital heart defects and avoiding activities that elicit these symptoms.",
+      "response": "The handbook emphasizes two main home-care principles for dogs with congestive heart failure: \n\n1. Restricting exercise, especially if symptoms such as easy tiring, coughing, or rapid breathing appear.\n2. Monitoring the dog's salt intake and potentially switching to a low-salt diet prescribed by a veterinarian.",
       "reference": "Treatment should address any underlying cause whenever possible A low-salt diet is emphasized because many commercial foods contain too much salt Exercise is beneficial only if it does not trigger symptoms such as tiring, coughing, or rapid breathing Diuretics are used to manage fluid accumulation and ACE inhibitors may prolong life in some dogs The handbook says heart disease requires close monitoring and regular veterinary rechecks",
       "chapter": "Chapter 11: The Circulatory System",
       "section": "Congestive Heart Failure",
-      "faithfulness": 1.0,
-      "answer_relevancy": 0.6959262219721871,
-      "context_precision": 0.3333333333,
-      "context_recall": 0.6
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.9285614122637222,
+      "context_precision": 0.5833333333041666,
+      "context_recall": 0.4
     },
     {
       "question_id": "q_028",
@@ -507,12 +507,12 @@
         "from Texas to New Jersey and along the Mississippi River and its major tribu-\ntaries. Other areas of the United States have lower incidence rates (5 percent\nor less) of canine heartworm disease, while some regions have environmental,\nmosquito, and dog population factors that combine for a higher incidence of\nheartworm infection. The infection rate in male dogs is as much as four times\nthat of female dogs, and dogs housed outdoors are four to five times more\nlikely to be infected than indoor dogs.\nAlthough there are differences in frequency of infection for various groups\nof dogs, all dogs in endemic regions should be considered at risk and placed on\nprevention programs.\nTHE CIRCULATORY SYSTEM • 341\n14_067857 ch11.qxp  7/6/07  10:42 PM  Page 341",
         "vena cava. Blood and urine samples are obtained to check for anemia and\nassess kidney and liver function.\nTREATING HEARTWORM DISEASE\nWhen and how to treat depends on the number of heartworms, their location,\nany medical complications (such as congestive heart failure or liver or kidney\ndisease), the age and condition of the dog, and the presence of circulating\nmicrofilariae. After a thorough medical examination, your veterinarian will dis-\ncuss these options and recommend a treatment program based on the findings.\nFor dogs with uncomplicated heartworm disease, the objectives are to\neliminate all adult worms, kill the microfilariae (if present), and initiate pre-\nventive measures. At the same time, it is important to avoid complications"
       ],
-      "response": "The recommended preventive strategy is to keep your dog indoors in the late afternoon and evening when mosquitoes are feeding, as this can reduce the risk of being bitten. This approach cannot be 100 percent effective, but it can provide reasonable protection for dogs.",
+      "response": "The recommended preventive strategy is to start a prevention program at 6-8 weeks of age in endemic areas, or as soon thereafter as climate conditions dictate. In areas with a year-round mosquito problem, such as the Deep South, dogs should be kept on preventives all year round, starting one month before the mosquito season and continuing after the first frost.",
       "reference": "The book says prevention is easier and safer than treating an existing infestation Dogs in endemic areas should be on a heartworm prevention program In endemic regions, prevention is started at 6 to 8 weeks of age or as climate conditions dictate In year-round mosquito regions dogs should stay on preventive drugs all year long Dogs 7 months and older should have an antigen test before starting a prevention program Heartworm antigen testing should continue annually even for dogs already on prevention",
       "chapter": "Chapter 11: The Circulatory System",
       "section": "Heartworm Prevention",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.6830444158619023,
+      "answer_relevancy": 0.8300782557278913,
       "context_precision": 0.999999999975,
       "context_recall": 0.5
     },
@@ -525,12 +525,12 @@
         "Grand mal A type of seizure that is typical of epilepsy. It usually involves\nloss of consciousness and falling down.\nHackles Hairs on the neck and back; they are raised when the dog is expe-\nriencing fright or anger.\nHaw A visible third eyelid at the inner corner of the eye.\nhCG Human chorionic gonadotropin, used to induce ovulation.\nHead-pressing Pressing the head against the wall or furniture without\napparent purpose.\nHeat See estrus.\nHematocrit The percentage of red blood cells in whole blood.\nHematoma A collection of clotted blood beneath the skin at the site of an\ninjury.\nHematuria The passage of blood in the urine, recognized by red-colored\nurine or blood clots in the urine. Microscopic hematuria is the presence of red\ncells on microscopic exam.",
         "defecate. As the dog regains consciousness there is a postseizure state charac-\nterized by disorientation and confusion. The dog may stumble into walls and\nappear blind. The postseizure state can persist for minutes or hours. Grand\nmal seizures are typical of epilepsy.\nA focal motor or partial seizure is one in which the jerking or twitching is\nlimited (at least initially) to a particular part of the body. A focal seizure usu-\nally indicates a specific brain lesion, such as a scar, tumor, or abscess.\nSeizures are commonly associated with brain injury, encephalitis, heat\nstroke, brain abscess, brain tumor, stroke, poisoning, kidney failure, or liver\nfailure. Seizures associated with a concussion frequently occur weeks or months"
       ],
-      "response": "A typical grand mal seizure in a dog is preceded by an aura, during which the dog may exhibit restless and anxious behavior. The actual seizure lasts less than two minutes, characterized by collapse with rigid extension of the legs. Following this, the dog becomes unconscious, stops breathing for 10-30 seconds, then experiences rhythmic jerking of the legs (resembling running or paddling).",
+      "response": "A typical grand mal seizure in a dog is preceded by an aura, characterized by restlessness and anxiety. The actual seizure lasts less than two minutes, followed by a period of unconsciousness, where the dog may stop breathing for 10-30 seconds. After regaining consciousness, there's a postseizure state marked by disorientation and confusion.",
       "reference": "A grand mal seizure may begin with an aura of altered behavior such as restlessness, anxiety, crying out, or seeking attention or seclusion The seizure itself usually lasts less than two minutes Collapse with rigid extension of the legs is followed by rhythmic paddling or jerking movements Dogs may also chomp, drool, urinate, or defecate during the seizure A postseizure period of confusion and disorientation can last for minutes or hours",
       "chapter": "Chapter 12: The Nervous System",
       "section": "Seizure Disorders",
-      "faithfulness": 0.75,
-      "answer_relevancy": 0.8187321715401055,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7795275240400737,
       "context_precision": 0.9166666666361111,
       "context_recall": 1.0
     },
@@ -543,13 +543,13 @@
         "nation, weakness, abdominal pain, and diarrhea. In contrast, most epileptic\nseizures are brief, seldom lasting more than two minutes, and are followed by\na quiet period in which the dog appears dazed but otherwise normal. If your\ndog is having a seizure, see the treatment section under Epilepsy, page 369.\nCONTACT POISONS\nIf your dog’s coat or skin comes in contact with a poisonous substance or toxic\nchemical, flush the site with large amounts of water for 30 minutes. Wear rub-\nber or plastic gloves and give the dog a complete bath in lukewarm water.\nEven if the substance is not irritating to the skin, it must be removed.\nOtherwise the dog may lick it off and swallow it.\nDRUG POISONS\nUnintentional overdose with veterinary medications and accidental ingestion",
         "will ask you to keep a log of the frequency of seizures and to provide a descrip-\ntion of the dog’s behavior before, during, and after each seizure.\nA typical epileptic seizure has three phases: an aura, a generalized grand\nmal seizure, and a postseizure state—as described in the previous section. All\nthree phases may not be seen, because many seizures occur while the dog is\nresting or asleep. Furthermore, in some cases the seizure is atypical. Instead of\na classic grand mal convulsion, the dog exhibits strange behavior such as fren-\nzied barking, licking or chewing at herself, staring into space, or snapping at\ninvisible objects. This is called a psychomotor seizure and is believed to arise\nfrom a center lower in the brain (not the cerebrum)."
       ],
-      "response": "According to the handbook, if a dog is having a seizure:\n\nDo: Move the dog to a safe site if in danger. Wait for the seizure to pass without disturbing the dog.\n\nDon't: Pull out the dog's tongue or wedge something between her teeth. Do not disturb the dog during or after the seizure as it may trigger further seizures.",
+      "response": "According to the handbook, if your dog is having a seizure, move her to a safe location first if she's in danger. Otherwise, don't disturb her during or after the seizure. Do not pull out the dog's tongue or wedge something between her teeth, as this is an old wives' tale that can trigger further seizures.",
       "reference": "If the dog is in danger, move it to a safe location Otherwise, do not disturb the dog during or immediately after the seizure because that may trigger more seizures Do not pull out the dog's tongue or wedge an object between the teeth Owners should note how long the seizure lasts and contact a veterinarian after it ends Seizures lasting more than five minutes or cluster seizures are described as emergencies requiring immediate veterinary care",
       "chapter": "Chapter 12: The Nervous System",
       "section": "Seizure Disorders",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.781066280827775,
-      "context_precision": 0.99999999995,
+      "answer_relevancy": 0.7703383221635409,
+      "context_precision": 0.9166666666361111,
       "context_recall": 1.0
     },
     {
@@ -561,12 +561,12 @@
         "of the tick-borne diseases respond to doxycycline or tetracycline. Some dogs\nwill have permanent joint damage.\n406 •D OG OWNER’S HOME VETERINARY HANDBOOK\n16_067857 ch13.qxp  7/17/07  11:02 PM  Page 406",
         "more severe illness than H. canis. The geographic distribution of the disease in\nthe United States is limited to Oklahoma, Louisiana, and the Texas Gulf Coast.\nIn this case, your dog must ingest the tick—perhaps when trying to remove\nit—to become infected. Illness is most likely to occur in immunosuppressed\ndogs and pups younger than four months of age. Signs of illness include diar-\nrhea (often bloody), muscle and bone pain with reluctance to move, eye and\nnasal discharges, and severe loss of weight and body condition.\n86 •D OG OWNER’S HOME VETERINARY HANDBOOK\n06_067857 ch03.qxp  7/9/07  5:37 PM  Page 86"
       ],
-      "response": "The handbook describes tick paralysis as a disease that attacks the motor nerves, causing weakness and paralysis. The saliva of a variety of ticks contains a toxin that affects these nerves. Signs appear about one week after being bitten by the tick, with progressive weakness over 48 to 72 hours. Sensation remains intact during this process.",
+      "response": "According to the handbook, tick paralysis is a disease that attacks the motor nerves, causing weakness and paralysis but leaving the sensory nerves intact. The saliva of a variety of ticks contains a toxin that affects the motor nerves, producing weakness and paralysis. Signs appear about one week after a dog has been bitten by the tick, with progressive worsening over 48 to 72 hours.",
       "reference": "Tick paralysis is caused by a toxin in tick saliva that affects the motor nerves Signs usually appear about one week after the dog is bitten Weakness worsens over 48 to 72 hours and can progress to collapse and inability to lift the head Sensation remains normal even though paralysis progresses Prompt tick removal can lead to dramatic improvement, although some dogs need supportive care",
       "chapter": "Chapter 12: The Nervous System",
       "section": "Tick Paralysis",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.8576705781044253,
+      "answer_relevancy": 0.8085920756548637,
       "context_precision": 0.99999999995,
       "context_recall": 1.0
     },
@@ -579,12 +579,12 @@
         "sition to hip dysplasia, because the rapid weight gain places increased stress on\n392 •D OG OWNER’S HOME VETERINARY HANDBOOK\nHip dysplasia, showing progressive increase in the joint space and increasing\njoint wear.\n16_067857 ch13.qxp  7/17/07  11:02 PM  Page 392",
         "Inherited Orthopedic Diseases\nInherited bone and joint diseases have a genetic basis, despite the fact that\nonly a certain number of offspring will be affected. If, after a careful veterinary\nexamination, one of these conditions is diagnosed in your dog, do not breed\nthe animal.\nHIP DYSPLASIA\nHip dysplasia is the most common cause of rear leg lameness in dogs. The\nhighest incidence occurs in large-breed dogs, including St. Bernards,\nNewfoundlands, Rottweilers, Chesapeake Bay Retrievers, Golden Retrievers,\nGerman Shepherd Dogs, Labrador Retrievers, and many others. Smaller\nbreeds are also affected, but are less likely to show symptoms.\nHip dysplasia is a polygenic trait. That is, more than one gene controls the\ninheritance. Environmental factors such as diet are also involved. The hip is a"
       ],
-      "response": "The handbook states that being overweight supports the genetic potential for hip dysplasia, as well as an imbalance of calcium and phosphorus in the diet. Inappropriate exercise during rapid bone growth, such as jumping from heights or standing on back legs, can also contribute to hip dysplasia. Additionally, a very high-calorie diet can exacerbate the condition by placing increased stress on the joints.",
+      "response": "The handbook states that genetic potential, being overweight, an imbalance of calcium and phosphorus in a dog's diet, improper exercise during rapid bone growth, and environmental factors such as excessive weight gain due to high-calorie diets all contribute to hip dysplasia in dogs.",
       "reference": "Hip dysplasia is described as the most common cause of rear leg lameness in dogs It is a polygenic trait influenced by more than one gene Environmental factors such as diet also contribute In the dysplastic hip, the femoral head fits loosely into a shallow poorly developed acetabulum Rapid weight gain from a very high-calorie diet can worsen a predisposition to hip dysplasia",
       "chapter": "Chapter 13: The Musculoskeletal System",
       "section": "Hip Dysplasia",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.9258243161372725,
+      "answer_relevancy": 0.9117984399800594,
       "context_precision": 0.9166666666361111,
       "context_recall": 1.0
     },
@@ -597,12 +597,12 @@
         "may resemble those of panosteitis (see this page), another disease that causes\nlameness in growing puppies. The typical presentation is gradual lameness\nthat seems to stem from the shoulder, elbow, stifle, or hock in a young dog of\none of the large breeds. Lameness often gets worse with exercise. Symptoms\nmay appear following a traumatic episode such as jumping down stairs. Pain is\npresent on flexing and extending the joint. X-rays may show fragmentation of\njoint cartilage or a loose piece of cartilage in the joint. The diagnosis may not\nbe made definitively until the dog is 18 months of age.\nTreatment: Medical treatment involves restricting activity and prescribing\nanalgesics and chondroprotectants, as described for the treatment of degener-",
         "analgesics and chondroprotectants, as described for the treatment of degener-\native joint disease, page 401. Preparations that contain polysulfated gly-\ncosaminoglycan (such as Adequan) may be of benefit in limiting further\ncartilage degeneration and relieving pain and inflammation.\nIn most cases surgery will be required to scrape away defective cartilage and\nremove any joint mice. The best results are obtained in the shoulder and\nelbow joints. The results are less favorable for the hock, which is a small joint,\nand for the stifle, which is a more complex joint. In the hock and stifle,\ndegenerative joint disease is likely to occur over time.\nPANOSTEITIS (WANDERING LAMENESS)\nPanosteitis is a disease of large, rapidly growing puppies between 5 and 12"
       ],
-      "response": "The handbook characterizes panosteitis as a disease that causes \"wandering leg lameness\" in young dogs, characterized by intermittent pain and lameness shifting from one limb to another over several weeks or months. The condition is often compared to degenerative joint disease, but distinguished due to its unique presentation.",
+      "response": "The handbook describes panosteitis as a disease that causes intermittent lameness in one or more legs unrelated to trauma, with the characteristic sign being pain and lameness shifting from one limb to another over several weeks or months.",
       "reference": "Panosteitis is described as a disease of large rapidly growing puppies between about 5 and 12 months of age A characteristic sign is shifting pain and lameness from one limb to another over weeks or months Pressure over the shaft of an affected bone elicits pain The condition is described as self-limiting Symptoms usually disappear by about 20 months of age, although exercise restriction and analgesics may be needed",
       "chapter": "Chapter 13: The Musculoskeletal System",
       "section": "Panosteitis (Wandering Lameness)",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.9201707750847525,
+      "answer_relevancy": 0.7951643944530482,
       "context_precision": 0.999999999975,
       "context_recall": 0.6
     },
@@ -615,13 +615,13 @@
         "ointments, eye application, 174–175\nold dogs. See elderly dogs; geriatrics\nonions, poison, 34\nopen fontanel, 357\nopen fractures, 15–16\noral glucocortricoids (corticosteroids), 269,\n403–404\noral hygiene, 249–250\noral-nasal fistula, 222, 227, 246, 248\noral papillomas, 236\norchitis, 465–466\norganophosphates, 31, 132\nOrthopedic Foundation for Animals (OFA),\n254, 395, 397, 399–400, 430\nosteoarthritis (degenerative joint disease),\n385, 401–406, 549–550, 561\nosteochondritis dissecans, 399, 400\nosteochondromas, 539\nosteochondrosis, 400–401\nosteodystrophy, hypertrophic, 408–409\nosteoma, 539\nosteomyelitis (bone infection), 386–387\nosteosarcoma, 528, 536, 538–539\nOTC (over the counter) medications, 26–27,\n571–572\notitis, allergic, 210\notitis, ceruminous, 213\notitis, external, 212–214",
         "appetite, and lymphadenopathy are accompanying features.\nNonerosive arthritis tends to occur in midsize and large-breed dogs at\nabout 5 to 6 years of age. The cause is unknown. Signs are intermittent fever,\nloss of appetite, joint swelling, and a lameness that often shifts from limb to\nlimb. A form of nonerosive arthritis occurs with systemic lupus erythematosus.\nThe diagnosis of immune-mediated arthritis is made by joint X-rays and spe-\ncific laboratory tests. Synovial fluid analysis helps distinguish immune-mediated\narthritis from infectious arthritis and osteoarthritis.\nTreatment: Immune-mediated arthritis responds to anti-inflammatory\nand immunosuppressive drugs, including corticosteroids and chemotherapy\nagents. Treatment must be continued for eight weeks or longer. Your veteri-"
       ],
-      "response": "The handbook describes degenerative joint disease as incurable, but treatment can improve a dog's life through physical therapy, weight control, analgesics and corticosteroids to relieve pain, chondroprotective agents to repair joint cartilage, and acupuncture. Alternative or additional therapies include acupuncture and physical therapy. For severe cases, surgical fusion may be an option. Treatment should be used at the same time for optimal results.",
+      "response": "The handbook describes degenerative joint disease, also known as osteoarthritis, as a common condition that affects dogs, particularly large-breed and heavy dogs. Treatment involves physical therapy, weight control, use of analgesics and corticosteroids to relieve pain and improve function, chondroprotective agents to repair joint cartilage, and acupuncture. In severe cases, surgical fusion may be necessary. All treatments should be used at the same time.",
       "reference": "The book states that osteoarthritis affects about one out of five dogs during their lifetime It can occur in young dogs as a consequence of joint injury or inherited orthopedic disease, not only in older dogs Common signs include lameness, stiffness, and joint pain that are often worse in the morning or after resting Moderate exercise and weight control are emphasized as part of management Excessive exercise is described as counterproductive for arthritic dogs",
       "chapter": "Chapter 13: The Musculoskeletal System",
       "section": "Osteoarthritis (Degenerative Joint Disease)",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.7664487206762244,
-      "context_precision": 0.9999999999666667,
+      "answer_relevancy": 0.7601914531022899,
+      "context_precision": 0.99999999995,
       "context_recall": 0.6
     },
     {
@@ -633,12 +633,12 @@
         "erythema multiforme, 116, 167–168\nesophagus, 255–261\ndysphagia (difficult swallowing), 258\nenlarged (megaesophagus), 258–259\nforeign body in, 259–260\ngrowths/tumors, 261\ninflamed (esophagitis), 260\nregurgitation, 257\nstricture, 260–261\nestrogen\ncomplications of administration, 352, 455\ndeficiency (hypoestrogenism), 114, 146,\n417, 451, 540\nexcess (hyperestrogenism), 114, 145–146,\n540, 542\nestrous (heat cycle), 436–440, 449–452\nabnormal, 143, 145, 449–452\nestrus (standing heat), 438–439\nethanol poisoning, 34\neuthanasia, 557–558\neversion of the cartilage, third eyelid, 183\neversion of the laryngeal saccules, 314\nexcessive urination (polyuria), 413. See also\nIndex of Signs and Symptoms\nexercise, 22, 549–550\nexercise restrictions. See also specific conditions\nand diseases\narthritis, 402, 406",
         "ranula, 253\nrat (mouse) poisons, 27–28\nrattlesnakes, poisoning, 40–41\nraw foods, homemade diet, 306–307\nRBC data, complete blood count, 578\nrecessive genes, 429\nrecombinant vaccines, 92\nrectal polyps, 293\nrectal prolapse, 288–289\nrectal thermometers, 17–18, 573\nrectovaginal fistula, 289\nrectum, 255–256, 282–283\nrecurrent stomatitis, 235\nred blood cells, 351–352\nred bugs. See chiggers\nred eye (conjunctivitis), 184–185\nregurgitation, 257. See also Index of Signs\nand Symptoms\nrenal dysplasia, 421\nrenal pelvis, 411\nrenal secondary hyperparathyroidism,\n407–408\nrespiration rate, 489, 554, 574\nrespiratory system, 311–327\nrestraints, emergency care, 2–7\nretina, 170–171\nretinal diseases, 201, 202–204, 551\nretrobulbar abscess, 176, 254\nretrobulbar hematomas, 176\nretrograde ejaculation, 446"
       ],
-      "response": "The handbook highlights frequent, painful urination as a principal sign of cystitis. Additionally, it mentions that dogs who go long periods of time without eliminating have a greater risk of developing bladder infections, which can lead to cystitis.",
+      "response": "The handbook highlights frequent, painful urination as the principal sign of cystitis. Additionally, it notes that dogs who go long periods without eliminating are at a greater risk of developing bladder infections.",
       "reference": "Cystitis is described as a bacterial infection of the bladder lining Predisposing factors include increasing age, diabetes mellitus, long-term corticosteroid use, and delayed elimination The principal sign is frequent painful urination The urine may be cloudy and have an abnormal odor Females may lick the vulva and have a vaginal discharge Urinalysis showing bacteria and white blood cells is used to confirm the diagnosis",
       "chapter": "Chapter 14: The Urinary System",
       "section": "Cystitis (Bladder Infection)",
-      "faithfulness": 0.6666666666666666,
-      "answer_relevancy": 0.6979726267046115,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.5769890784256466,
       "context_precision": 0.9999999999,
       "context_recall": 0.6666666666666666
     },
@@ -651,14 +651,14 @@
         "isting bladder infection.\nStones that are large or numerous can sometimes be palpated through the\nabdomen. In most cases the diagnosis is made by X-ray. A contrast dye study\nmay be needed for definitive diagnosis. Stones not visible on an abdominal \nX-ray can often be seen by ultrasonography or IVP . A urinalysis is routinely\nobtained.\nStones that pass spontaneously and those that are removed surgically\nshould be analyzed, if possible, since the composition of the stone influences\nthe treatment of any remaining and future stones.\nTreatment: Bladder infection, if present, is treated as described for Cystitis\n(page 414). In many cases the stones can be dissolved over weeks or months\nby feeding the dog a special diet. Struvite stones dissolve in an acid urine,",
         "damage to the urinary tract. Crystals suggest stone formation. Bacteria can\nindicate infection, in which case the sample may also be cultured to look for\nbacterial infections.\n580 •D OG OWNER’S HOME VETERINARY HANDBOOK\n26_067857 appc.qxp  7/6/07  11:07 PM  Page 580"
       ],
-      "response": "The handbook classifies bladder and urethral stones as obstructive problems. The composition of the stone matters because it influences treatment for any remaining and future stones. Specifically, struvite stones dissolve in an acid urine environment. Stone analysis can help determine the best course of action, such as a special diet to dissolve the stones or surgical removal.",
+      "response": "Bladder and urethral stones are classified based on their composition. Stones that dissolve in an acid urine (struvites) require a special diet to dissolve over weeks or months. In contrast, struvite stones do not dissolve and may damage the urinary tract. The composition of the stone influences treatment, so analyzing the stone can help determine the best course of action for future stones.",
       "reference": "Bladder stones are common in dogs, while kidney stones are rare The handbook lists struvite, uric acid, calcium oxalate, cystine, and silica stones Struvite stones usually form in alkaline urine and often follow bladder infection Uric acid stones are associated with acid urine and inherited urate metabolism changes in some breeds Stone analysis is important because treatment and prevention depend on the composition Some stone types can be dissolved with diet and medication, while others usually require surgical removal",
       "chapter": "Chapter 14: The Urinary System",
       "section": "Bladder and Urethral Stones",
-      "faithfulness": 1.0,
-      "answer_relevancy": 0.791445299833439,
+      "faithfulness": 0.6666666666666666,
+      "answer_relevancy": 0.7637030577359164,
       "context_precision": 0.8333333332916666,
-      "context_recall": 0.5
+      "context_recall": 0.6666666666666666
     },
     {
       "question_id": "q_037",
@@ -669,13 +669,13 @@
         "Liver and kidney function tests, thyroid levels, chest X-ray, and electrocardio-\ngram may be needed if specific signs and symptoms appear.\nA new simple urine test called ERD, or early renal disease health screen,\nchecks for protein leakage into the urine—specifically, albumin. This test may\npick up kidney failure very early on, so you can take steps to slow its progression.\nRoutine dental care, including scaling the teeth, may be needed more fre-\nquently than once a year.\nDANGER SIGNS IN THE GERIATRIC DOG\nIf you see any of the following signs, take your dog to the veterinarian for fur-\nther investigation.\n• Loss of appetite or weight\n• Coughing or rapid, labored breathing\n• Weakness or exercise intolerance\n• Increased thirst and/or frequency of urination",
         "that tend to occur in middle-aged and older dogs. You may see these signs in\ndogs with liver problems and other health problems, as well.\nA dog with failing kidneys may be unable to keep from wetting in the\nhouse, especially at night. Take the dog out several times a day and just before\nbedtime. Be sure to keep fresh water available at all times. Do not reduce water\nintake in an attempt to control the incontinence. This may push the dog into\nacute kidney failure.\nThe new ERD health screen is a urine test that looks for an increase in the\nprotein albumin in the urine. This early screening test may detect kidney fail-\nure early on, so steps can be taken to control it. The screening test needs to be\nfollowed up with more specific tests to measure kidney failure.\nHOUSE SOILING"
       ],
-      "response": "The early signs of uremia described in the context include apathy, depression, loss of appetite, and weight loss. Advanced signs of uremia include brownish discoloration to the tongue's surface, an ammonialike odor to the breath, dry haircoat, decreased urine output, and ulcers in the mouth.",
+      "response": "The handbook describes apathy and depression, loss of appetite and weight, a dry haircoat, a brownish discoloration to the surface of the tongue, an ammonialike odor to the breath, and ulcers may arise in the mouth as early signs of uremia. Advanced signs include coma at the end stages of kidney failure.",
       "reference": "One early sign is increased drinking and urination caused by inability to concentrate urine As kidney function declines, toxins accumulate and produce uremia Signs include apathy, depression, loss of appetite, weight loss, a dry haircoat, and ammonialike breath odor Ulcers may arise in the mouth and edema or ascites can occur with nephrotic syndrome Vomiting, diarrhea, and gastrointestinal bleeding may appear in more advanced disease End-stage kidney failure can progress to coma",
       "chapter": "Chapter 14: The Urinary System",
       "section": "Uremia (Kidney Failure)",
-      "faithfulness": 1.0,
-      "answer_relevancy": 0.7886320158100729,
-      "context_precision": 0.999999999975,
+      "faithfulness": 0.8571428571428571,
+      "answer_relevancy": 0.8763973599758508,
+      "context_precision": 0.9999999999666667,
       "context_recall": 1.0
     },
     {
@@ -687,12 +687,12 @@
         "THE ESTROUS (HEAT) CYCLE\nBitches become sexually mature when they have their first heat period, usu-\nally between 6 and 12 months of age, although there is considerable variation.\nToy breeds become sexually mature several months earlier than giant breeds.\nSexual maturity does not correspond to physical maturity—the attainment of\nadult height and weight—which generally happens at about 14 months of age\nin medium-size dogs.\nOvarian activity begins to decline after 6 years of age and ceases in most\nbitches at around 10 years of age. By 8 years of age it is marginal. Most bitches\nare not used for breeding after 7 to 8 years of age.\n436 •D OG OWNER’S HOME VETERINARY HANDBOOK\n18_067857 ch15.qxp  7/17/07  10:55 PM  Page 436",
         "To be absolutely safe, keep your bitch indoors when she’s in heat; take her\nout on a leash only. When outside, do not let her out of your sight for even one\nminute. She should be confined throughout the entire estrous cycle, which\nbegins with the first show of color and continues for at least three weeks.\nChlorophyll tablets, which you can purchase from your veterinarian or at\npet supply stores, may help to mask the odor of a female in heat, but are not\neffective in preventing mating.\nIf you witness a tie or suspect for any reason that your bitch may have been\nbred, take her at once to your veterinarian. The stage of the heat cycle can be\ndetermined by vaginal cytology and a serum progesterone assay. The bitch\nmay not have been in her fertile period, in which case pregnancy is unlikely."
       ],
-      "response": "The estrus cycle typically lasts at least three weeks. Physical signs include vulva softening and discharge becoming watermelon-colored or pink, as well as abdominal distension, enlargement of the mammary glands, and occasional vomiting, diarrhea, and depression. Behavioral signs may include aggression, nest-building, and attachment to small toys.",
+      "response": "The estrous cycle begins with the first show of color, which can be any time during the heat cycle. Signs include vulva softening, discharge becoming watermelon-colored or pink, and behavioral changes such as flirting, raising her tail, and presenting her vulva when touched in the rear. The cycle lasts for at least three weeks, ending when the bitch refuses to stand for the stud.",
       "reference": "Bitches usually reach sexual maturity with their first heat between about 6 and 12 months of age Most females come into heat every five to nine months, though the cycle varies by individual The estrous cycle is divided into four stages The combined heat period of proestrus and estrus lasts about 21 days on average The first outward signs of proestrus are a bloody vulvar discharge and firm swelling of the vulva During early proestrus the female generally does not stand for breeding",
       "chapter": "Chapter 15: Sex and Reproduction",
       "section": "The Estrous (Heat) Cycle",
-      "faithfulness": 0.2727272727272727,
-      "answer_relevancy": 0.687428632898446,
+      "faithfulness": 0.9,
+      "answer_relevancy": 0.7439392691444069,
       "context_precision": 0.6388888888675925,
       "context_recall": 0.16666666666666666
     },
@@ -705,12 +705,12 @@
         "urements can be used to determine estrus and predict the time of ovulation.\nMultiple breedings are more likely than a single breeding to produce preg-\nnancy, and may even have an influence on the size of the litter. Accordingly,\nmost veterinarians recommend breeding a bitch every other day (or every\nthird day) for as long as she remains in standing heat. If, for any reason, a\nbitch cannot be bred more than once, consider timing that breeding using\nprogesterone assays to predict the exact time of ovulation. Using hormonal\nassays to determine the best time to breed is especially important if you are\nusing fresh-shipped semen or frozen semen.\nTHE TIE\nMale dogs differ from humans in that they do not have seminal vesicles in",
         "itary gland. It must be given 30 days before estrous to abort the heat cycle.\nWHEN TO BREED\nThe most common cause of an unsuccessful mating is bad timing. Many dog\nowners do nothing more than count the days in a cycle. They attempt to\nbreed on the 10th through the 14th day of the heat cycle. But, as noted ear-\nlier, each female is an individual with her own breeding timetable—a\ntimetable that can vary according to the lengths of proestrus and estrus.\nOvulation cannot always be predicted just by counting the days of the heat\ncycle. Furthermore, counting will not be accurate if you miss the early signs of\nheat or if your bitch shows very little evidence of being in heat.\nFortunately, nature provides a safety factor: Fresh sperm are able to survive"
       ],
-      "response": "The handbook recommends timing a breeding by using progesterone assays to predict the exact time of ovulation, especially if fresh-shipped or frozen semen is being used. This allows for more accurate breeding timing and increases the chances of conception.",
+      "response": "The handbook recommends timing a breeding by using progesterone assays to predict the exact time of ovulation. This is especially important when using fresh-shipped or frozen semen, and also for bitches with infertility related to abnormal heat cycles or failure to show heat. Alternatively, timing breeding 72 hours after ovulation can increase the probability of conception in a healthy estrous cycle.",
       "reference": "The most common cause of unsuccessful mating is bad timing Counting calendar days alone is described as unreliable because each female has her own timetable Fresh sperm can survive up to seven days in the female reproductive tract Eggs need about three days of maturation before they can be fertilized Peak female fertility is said to occur about three days after ovulation Multiple breedings every other or every third day are recommended while the bitch remains in standing heat",
       "chapter": "Chapter 15: Sex and Reproduction",
       "section": "When to Breed",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.8505866360591721,
+      "answer_relevancy": 0.8406190716940958,
       "context_precision": 0.999999999975,
       "context_recall": 0.5
     },
@@ -723,12 +723,12 @@
         "an X-ray taken after about 45 days of pregnancy will also distinguish one from\nthe other.\nTreatment: Pyometra requires immediate veterinary attention to prevent\nshock and death. Ovariohysterectomy, along with antibiotics, is the treat-\nment of choice. It is best to do this operation before the bitch becomes septic.\nWhen it is important to preserve the reproductive potential of a valuable\nbitch, an alternative to ovariohysterectomy can be considered—provided that\nthe cervix is open and the bitch is not septic. It involves the use of antibiotics\nalong with prostaglandin. Prostaglandin PGF2a (Lutalyse) relaxes the cervix,\nstimulates uterine contractions, and evacuates the pus. Lutalyse is adminis-\ntered by subcutaneous injection daily for three to five days. If evacuation is not",
         "A bitch with endometritis appears to be in good health, has a normal heat\nperiod, and mates successfully, yet fails to become pregnant or is found to be\npregnant but does not deliver puppies. The diagnosis should be considered\nwhenever a bitch is bred at the right time but fails to conceive on two or more\nheat cycles.\nEndometritis is difficult to diagnose. Abdominal palpation or ultrasonogra-\nphy during diestrus or anestrus may reveal a uterus that is somewhat larger or\nthicker than normal. Uterine biopsy confirms the diagnosis, but requires\nlaparoscopic abdominal surgery.\nTreatment: There is no effective treatment for endometritis. Hysterectomy\nis recommended for bitches who are not intended for breeding. This eliminates\nthe risk of pyometra."
       ],
-      "response": "Pyometra requires immediate veterinary attention to prevent shock and death. Warning signs include a depressed and lethargic demeanor, excessive drinking of water, frequent urination, vomiting, diarrhea, and depression. Treatment involves ovariohysterectomy with antibiotics, or as an alternative when preservation of reproductive potential is important, the use of prostaglandin (Lutalyse) to relax the cervix and evacuate pus.",
+      "response": "Warning signs for pyometra include a depressed and lethargic appearance, refusal to eat or drink, frequent urination, vomiting, diarrhea, and excessive water intake. Treatment involves immediate veterinary attention with ovariohysterectomy and antibiotics, which is the treatment of choice. An alternative option can be considered if preserving reproductive potential is important, involving the use of prostaglandin PGF2a (Lutalyse) to evacuate pus.",
       "reference": "Pyometra is described as a life-threatening uterine infection that occurs most often in intact females over 6 years of age Signs usually appear one to two months after the heat period Affected bitches may be depressed, lethargic, anorexic, thirsty, and urinate frequently, and may also vomit or have diarrhea Open-cervix pyometra releases pus through the cervix, while closed-cervix pyometra traps infection in an enlarged uterus Immediate veterinary attention is required to prevent shock and death Ovariohysterectomy together with antibiotics is presented as the treatment of choice",
       "chapter": "Chapter 15: Sex and Reproduction",
       "section": "Pyometra and Cystic Endometrial Hyperplasia",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.8501047439110975,
+      "answer_relevancy": 0.8522944564893539,
       "context_precision": 0.9999999999666667,
       "context_recall": 0.8333333333333334
     },
@@ -741,12 +741,12 @@
         "be stepped or rolled on by their mother. All wood surfaces should be treated so\nthey are safe for the pups and easy to clean and disinfect.\nThere are many commercial whelping boxes available that have safe, easy-\nto-clean surfaces. If you borrow a whelping box, be sure to thoroughly disin-\nfect it.\nLay several sheets of newspaper in the bottom of the box to absorb mois-\nture. If you ask at your local newspaper office, you may be able to get sheets of\nnewsprint without any printing so you won’t get ink on the pups. Because\nnewspapers offer little traction and do not provide a good surface for crawling,\ncover the newspapers with heavy towels, mattress pads, or some other mate-\nrial that gives good traction and is either washable or disposable. Make sure",
         "Additional heat can be supplied by using 250-watt infrared heat bulbs,\neither suspended above the whelping box or mounted in a photographer’s\nfloodlight reflector stand (or by using plant lights). Be sure to leave an area of\nthe box that is out of the direct source of heat, so the mother can rest in a\ncooler area and the pups can crawl out of the light if they feel overheated.\nIn addition to the whelping box and a good heat source, you should keep\nthese supplies on hand in case they are needed:\n• A small box with padding in which to place newborn puppies\n• Sterile disposable latex gloves\n• An eyedropper or small bulb syringe to aspirate mouth and nose secre-\ntions\n• Dental floss or cotton thread to tie the umbilical stumps\n• An antiseptic, such as iodine, to apply to the umbilical stumps"
       ],
-      "response": "A safe whelping area is set up in a warm, dry, and out-of-the-way spot with minimal drafts, noise, and distractions. A wooden box with adequate space (at least 2-3 feet on each side for toy breeds) is recommended, with one side slightly shorter to allow the dam to step over but still keep the puppies from crawling out. The area should be equipped with a heat source, such as infrared bulbs or plant lights, and necessary supplies within reach.",
+      "response": "The recommended setup for a safe whelping area is in a warm, dry, out-of-the-way spot that is free from drafts, noise, and distractions. The box should be large enough to allow the dam to step over but not so tall that the puppies can't crawl back to her. It's also important to keep visitors out for the first few weeks and provide good traction in case of accidents with bedding materials like newspapers or towels.",
       "reference": "The dam should deliver at home in familiar surroundings where she is at ease The whelping box should be in a warm, dry, draft-free, quiet area The box sides should be high enough to contain puppies while allowing the dam to step over them Inside ledges are recommended to reduce the chance that the dam will roll onto the puppies Bedding should provide traction and should not contain loose threads or deep loose material that could smother puppies The room and box floor temperature should be monitored carefully during the first weeks after birth",
       "chapter": "Chapter 16: Pregnancy and Whelping",
       "section": "Preparing for Whelping",
-      "faithfulness": 1.0,
-      "answer_relevancy": 0.8632750466457273,
+      "faithfulness": 0.8571428571428571,
+      "answer_relevancy": 0.9294189884260478,
       "context_precision": 0.999999999975,
       "context_recall": 0.5
     },
@@ -759,11 +759,11 @@
         "or third breeding, so a more accurate determination of the whelping date can\nbe obtained by using serum progesterone assays during estrus to determine\novulation. Ovulation coincides with the LH surge (see The Estrous Cycle,\npage 436). The expected date of whelping is 62 to 64 days after the LH surge.\nWhelping usually occurs earlier in bitches with large litters and later in\nthose with small litters and single pups. Puppies born on the 56th day after\novulation are likely to be of low birth weight and physiologically immature. If\nthey are born on the 55th day or before, they are premature and probably will\nnot survive. Any gestation beyond 65 days from the day of the first breeding\nmay be postmature and require veterinary examination.\n472 •D OG OWNER’S HOME VETERINARY HANDBOOK",
         "WHEN TO CALL THE VETERINARIAN\nIt is better to call your veterinarian with a false alarm, if only to gain reassur-\nance, than to hope the problem will disappear with time. Most whelping\nproblems can be dealt with rather simply when they are attended to at once.\nHowever, the same problem, when neglected, can become complicated—\noften leading to emergency surgery.\nSigns of birthing problems include:\n• Thirty to 60 minutes of active straining without birth of a puppy\n• Four hours between births when more puppies are expected\n• T wo hours of weak, ineffectual labor without the birth of a puppy\n• A purulent or hemorrhagic vaginal discharge\n• Presence of fetal membranes at the vulva for more than 15 minutes\n• Apathy or weakness, with a rectal temperature above 104°F (40°C) or\nbelow 97°F (36°C)"
       ],
-      "response": "The handbook describes two early signs of impending whelping: \n\n1. A decrease in rectal temperature, from normal to below 99.5°F (37.5°C) over 12-18 hours before labor begins.\n2. An increase in appetite loss, restlessness, and activity, such as rummaging or scratching, 12-24 hours before whelping.",
+      "response": "The handbook describes two early signs of impending whelping: \n\n1. A drop in rectal temperature from a normal range of 100° to 102.5°F (37.7° to 39.2°C) to 99.5°F (37.5°C) or below, which may not occur.\n\n2. Loss of appetite, increased activity and restlessness, perhaps rummaging in closets, digging in the garden, or scratching up the owner's bed, occurring twelve to 24 hours before whelping.",
       "reference": "The rectal temperature often drops 12 to 18 hours before labor begins The handbook says the drop is from a normal 100 to 102.5 F range to about 99.5 F or below The dam may lose her appetite 12 to 24 hours before whelping Restlessness, increased activity, rummaging, digging, and scratching at bedding are listed as prelabor behaviors Owners are told not to assume labor is far away just because a temperature drop was missed",
       "chapter": "Chapter 16: Pregnancy and Whelping",
       "section": "Signs of Whelping",
-      "faithfulness": 0.42857142857142855,
+      "faithfulness": 1.0,
       "answer_relevancy": 0.9810615948996568,
       "context_precision": 0.9999999999666667,
       "context_recall": 1.0
@@ -777,12 +777,12 @@
         "either side of the mother’s perineum, just below the anus, and push down gen-\ntly to keep the puppy from slipping back inside. Next, grip the puppy in the\nbirth canal and slide the lips of the vulva back over his head. Once this has\nbeen done, the lips will hold the puppy in place, giving you a chance to get\nanother grip.\nNow grip the skin of the puppy with a clean piece of cloth behind his neck\nor along the back. As the mother strains, apply gentle traction to the skin—\nnot to the legs or head—and draw the puppy out. It may be helpful to rotate\nthe puppy first one way and then the other. If these measures are not success-\nful, see Physical Blockage, page 478.\nHELPING A PUPPY TO BREATHE\nThe amniotic sac that surrounds the newborn puppy should be removed",
         "ping when his nose is pointed toward the floor. This expels water from the\nnostrils. Present the puppy to the mother to lick, sniff, and cuddle.\nAfter a difficult delivery, a puppy may be too weak or too limp to breathe\non his own. Squeeze the puppy’s chest gently from side to side and then from\nfront to back. If the puppy still does not draw a breath, place your mouth over\nhis nose and blow gently until you see his chest expand. Do not blow forcefully\nbecause this can rupture the lungs. Remove your mouth to allow the puppy to\nexhale. Repeat this several times until the puppy breathes on his own.\nThere is an acupuncture site that can stimulate respirations. This is located\non the upper lip, right under the nose. Carefully sticking a sharp, sterile"
       ],
-      "response": "If a newborn puppy is not breathing and the mother does not clear it, gently squeeze the puppy's chest from side to side and then from front to back. If the puppy still doesn't breathe, place your mouth over his nose and blow gently until you see his chest expand. Repeat this process several times until the puppy breathes on his own.",
+      "response": "If a newborn puppy is not breathing and the mother does not clear it, the recommended steps are to grip the skin of the puppy with a clean piece of cloth behind his neck or along the back, apply gentle traction to the skin (not to the legs or head), and then draw the puppy out.",
       "reference": "The amniotic sac should be removed within 30 seconds so the puppy can breathe If the mother does not do so, the sac should be torn open starting at the mouth Secretions should be removed from the puppy's mouth and nose with a cotton swab or suction bulb The puppy should be rubbed briskly with a soft towel If the puppy still does not breathe, gentle mouth-to-nose breaths can be given until the chest expands The handbook warns not to blow forcefully because that can rupture the lungs",
       "chapter": "Chapter 16: Pregnancy and Whelping",
       "section": "Helping a Puppy to Breathe",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.8145563649079937,
+      "answer_relevancy": 0.8655086008776716,
       "context_precision": 0.999999999975,
       "context_recall": 1.0
     },
@@ -791,17 +791,17 @@
       "user_input": "When does the handbook say a veterinarian should be called during whelping?",
       "retrieved_contexts": [
         "WHEN TO CALL THE VETERINARIAN\nIt is better to call your veterinarian with a false alarm, if only to gain reassur-\nance, than to hope the problem will disappear with time. Most whelping\nproblems can be dealt with rather simply when they are attended to at once.\nHowever, the same problem, when neglected, can become complicated—\noften leading to emergency surgery.\nSigns of birthing problems include:\n• Thirty to 60 minutes of active straining without birth of a puppy\n• Four hours between births when more puppies are expected\n• T wo hours of weak, ineffectual labor without the birth of a puppy\n• A purulent or hemorrhagic vaginal discharge\n• Presence of fetal membranes at the vulva for more than 15 minutes\n• Apathy or weakness, with a rectal temperature above 104°F (40°C) or\nbelow 97°F (36°C)",
-        "Signs of Whelping . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 473\nLabor and Delivery . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 473\nAssisting a Normal Delivery . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 476\nHelping a Puppy to Breathe . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 477\nDystocia (Prolonged or Difficult Labor) . . . . . . . . . . . . . . . . . . . . . . 477\nPhysical Blockage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 478\nUterine Inertia . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 479\nWhen to Call the Veterinarian. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 480",
         "or third breeding, so a more accurate determination of the whelping date can\nbe obtained by using serum progesterone assays during estrus to determine\novulation. Ovulation coincides with the LH surge (see The Estrous Cycle,\npage 436). The expected date of whelping is 62 to 64 days after the LH surge.\nWhelping usually occurs earlier in bitches with large litters and later in\nthose with small litters and single pups. Puppies born on the 56th day after\novulation are likely to be of low birth weight and physiologically immature. If\nthey are born on the 55th day or before, they are premature and probably will\nnot survive. Any gestation beyond 65 days from the day of the first breeding\nmay be postmature and require veterinary examination.\n472 •D OG OWNER’S HOME VETERINARY HANDBOOK",
-        "hours after delivery. The veterinarian will give the dam an injection of oxy-\ntocin to clear the uterus, if needed.\nSigns of metritis appear two to seven days after whelping. A dam with\nacute metritis is lethargic, refuses to eat, has a fever of 103°F (39.4°C) to\n105°F (40.5°C), is not attentive to her puppies, and may vomit and have diar-\nrhea. There is a foul-smelling vaginal discharge, which should be distin-\nguished from the normal greenish or bloody discharge common for the first\nfew days. A normal discharge is not accompanied by high fever, excessive\nthirst, and other signs of toxicity, such as vomiting and diarrhea. Abdominal\npalpation and ultrasonography help determine whether there has been a\nretained fetus or placenta. Cultures are taken to determine the pathogens"
+        "hours after delivery. The veterinarian will give the dam an injection of oxy-\ntocin to clear the uterus, if needed.\nSigns of metritis appear two to seven days after whelping. A dam with\nacute metritis is lethargic, refuses to eat, has a fever of 103°F (39.4°C) to\n105°F (40.5°C), is not attentive to her puppies, and may vomit and have diar-\nrhea. There is a foul-smelling vaginal discharge, which should be distin-\nguished from the normal greenish or bloody discharge common for the first\nfew days. A normal discharge is not accompanied by high fever, excessive\nthirst, and other signs of toxicity, such as vomiting and diarrhea. Abdominal\npalpation and ultrasonography help determine whether there has been a\nretained fetus or placenta. Cultures are taken to determine the pathogens",
+        "palpation and ultrasonography help determine whether there has been a\nretained fetus or placenta. Cultures are taken to determine the pathogens\ninvolved and their antibiotic sensitivities.\nBe sure to take the dam’s rectal temperature daily after whelping and notify\nyour veterinarian if she develops fever or any of the signs just described.\nAcute metritis is a life-threatening illness that can rapidly progress to toxemia\nand shock.\nTreatment: Treatment involves administering intravenous fluids and\nantibiotics to support circulation and treat toxemia. Oxytocin or prostaglandin\nPGF\n2 (Lutalyse) is given to empty the uterus. Your veterinarian may insert a\nsmall catheter through the cervix and flush the uterus with sterile saline or\nPREGNANCY AND WHELPING • 483"
       ],
-      "response": "The handbook recommends calling the veterinarian as soon as possible if you notice any signs of birthing problems, such as thirty minutes or more of active straining without birth of a puppy, weak and ineffectual labor, purulent or hemorrhagic vaginal discharge, presence of fetal membranes at the vulva for more than 15 minutes, apathy or weakness with rectal temperature above 104°F (40°C) or below 97°F (36°C), or if you have concerns about the whelping date based on serum progesterone assays.",
+      "response": "According to the handbook, it is better to call your veterinarian \"with a false alarm, if only to gain reassurance\" when dealing with whelping problems. However, it also states that signs of birthing problems require immediate attention, such as thirty minutes or more of active straining without birth, four hours between births when expected, and presence of fetal membranes at the vulva for an extended period.",
       "reference": "Thirty to 60 minutes of active straining without a puppy being born is a warning sign Four hours between births is concerning when more puppies are expected Two hours of weak ineffectual labor without a birth is also listed as abnormal Purulent or hemorrhagic vaginal discharge warrants veterinary attention Apathy or weakness with rectal temperature above 104 F or below 97 F is another reason to call Dark green or bloody fluid before the first puppy is born is treated as an urgent warning sign",
       "chapter": "Chapter 16: Pregnancy and Whelping",
       "section": "When to Call the Veterinarian",
-      "faithfulness": 0.8571428571428571,
-      "answer_relevancy": 0.6690802958593693,
-      "context_precision": 0.9999999999666667,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7297665449581784,
+      "context_precision": 0.999999999975,
       "context_recall": 0.8333333333333334
     },
     {
@@ -811,14 +811,14 @@
         "back on the dam’s nipples. Their sucking action stimulates uterine contrac-\ntions and helps bring on the colostrum, or first milk of the dam. This\ncolostrum contains maternal antibodies that protect the pups against infec-\ntious diseases.\n474 •D OG OWNER’S HOME VETERINARY HANDBOOK\n19_067857 ch16.qxp  7/6/07  10:45 PM  Page 474",
         "gradually so that it is 70°F (21°C) when the litter is 6 weeks old. (Remember that\nthe puppies still get heat from the mother dog, one another, blankets, and, often,\na heat lamp over one corner of the whelping box.) Keep a constant check on the\ntemperature using a thermometer placed on the floor of the whelping box.\nTHE IMPORTANCE OF NURSING\nDuring the first 36 hours after whelping, mothers produce a special type of\nmilk that is high in vitamins, minerals, and protein. This is the colostrum, or\nfirst milk of the dam. Colostrum also contains antibodies and other immune\nsubstances (primarily IgG) that provide protection against infectious diseases.\nDams vaccinated one month before breeding have antibody levels high\nenough to protect puppies from distemper, parvovirus, and other infectious",
         "his littermates. It is far better to intervene early and start hand feeding a bor-\nderline case than to wait until a puppy is in obvious distress.\nIn some cases it may be possible to supplement two or three times a day and\nlet the pup remain in the nest and continue to nurse. Other pups must be\nraised entirely by their breeder.\nWhenever possible, puppies should nurse from the mother for the first 24\nto 36 hours of life. During this period they receive antibodies in the colostrum\nthat provide temporary immunity to the common canine infectious diseases.\nIf the puppies do not get colostrum for whatever reason, you can use clear\nserum from the dam or order fresh frozen plasma to help provide immunity.\nSuch puppies may need to be actively immunized starting at a young age.",
-        "Chapter 17: PEDIATRICS. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 489\nCaring for Newborns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 490\nGeneral Appearance and Vitality. . . . . . . . . . . . . . . . . . . . . . . . . . . 490\nBody Temperature. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 490\nThe Importance of Nursing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 491\nThe Importance of Weight Gain . . . . . . . . . . . . . . . . . . . . . . . . . . . 492\nDehydration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 493\nWhy Puppies Die . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 494"
+        "hand fed. If possible, allow the pup to\nnurse for the first 24 hours to receive colostrum. Then place him in a home-\nmade incubator and raise him by hand. Alternatively you can supplement his\nnursing with hand feedings, but keep him with the litter—always checking\nthat he is not being shoved away from the dam by larger pups. As soon as his\nweight approaches that of his littermates, he can be returned to the nest.\nMany immature puppies can be saved if supplemental feedings are started\nbefore they begin to fail.\nDEHYDRATION\nKidney function in the newborn is 25 percent of what it will be later in life.\nThese immature kidneys are unable to concentrate urine, and puppies there-\nfore excrete large amounts of dilute urine regardless of whether they take in"
       ],
-      "response": "The handbook considers colostrum and nursing so important because it contains maternal antibodies that provide protection against infectious diseases, helping to protect the puppies from distemper, parvovirus, and other common canine infections.",
+      "response": "The handbook considers colostrum and nursing so important because it provides newborn puppies with maternal antibodies that protect them against infectious diseases, offering temporary immunity to common canine infectious diseases.",
       "reference": "During the first 36 hours after whelping, the dam produces colostrum rather than ordinary milk Colostrum is described as rich in vitamins, minerals, and protein It also contains antibodies and other immune substances that help protect puppies from infectious disease The section links failure of nursing and chilling to serious neonatal risk Maintaining proper warmth in the whelping environment is emphasized as critical to survival in the first weeks",
       "chapter": "Chapter 17: Pediatrics",
       "section": "The Importance of Nursing",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.9796233758422866,
+      "answer_relevancy": 0.9931352377531467,
       "context_precision": 0.999999999975,
       "context_recall": 0.6
     },
@@ -828,16 +828,16 @@
       "retrieved_contexts": [
         "reversible if the cause can be determined and steps taken to correct it, as dis-\ncussed in the section that follows.\nREVIVING A WEAK PUPPY\nIf a puppy is immature, weak, or fading, early treatment is imperative. New pup-\npies are extremely fragile and can die quickly. Treatment involves slow warm-\ning to restore body temperature, oral fluids to correct dehydration, and\nsupplemental feedings to provide calories.\nA chilled puppy should be warmed gradually. Rapid warming using, for\nexample, a heating pad, causes the blood vessels in the skin to dilate, increas-\ning heat loss, expending more calories, and creating a greater need for oxygen.\nThis harms rather than helps. However, if the puppy’s rectal temperature is\nbelow 90°F (32.2°C), rapid warming under veterinary supervision may be",
         "(warm to the wrist). Take the rectal temperature every 10 minutes. Change\nthe warming packs until the rectal temperature reaches 100°F (37.8°C). Do\nnot apply heat directly to the dog, as this may cause burns. For the same rea-\nson, do not use a hair dryer to warm the dog.\nHow to warm a chilled puppy is discussed in Reviving a Weak Puppy, page\n495.\nFROSTBITE\nFrostbite occurs when a part of the body freezes. It often accompanies\nhypothermia. Frostbite tends to involve the tail, ear tips, pads of the feet, and\nscrotum. These parts are the most exposed and least protected by fur. Frostbite\nof the ears is discussed on page 211.\nFrostbitten skin is pale white or blue. As circulation returns, it becomes red\nand swollen and may begin to peel. Eventually it looks black with a line of",
-        "survive and pushes him out of the nest. The situation can sometimes be\nreversed if the puppy is treated and his body temperature is brought back to\nnormal (see Reviving a Weak Puppy, page 495).\nBODY TEMPERATURE\nWhen a puppy is born, his body temperature is the same as his mother’s.\nImmediately thereafter, his core temperature drops several degrees (how much\ndepends upon the temperature of the room). Within 30 minutes, if the puppy\n490 •D OG OWNER’S HOME VETERINARY HANDBOOK\n20_067857 ch17.qxp  7/6/07  10:45 PM  Page 490",
-        "serum from the dam or order fresh frozen plasma to help provide immunity.\nSuch puppies may need to be actively immunized starting at a young age.\nWhen hand raising puppies, it is critically important to:\n• Prevent chilling\n• Prepare and feed the right formula\n• Provide the right management\nTHE INCUBATOR\nYou can make a satisfactory incubator by dividing a cardboard box into sepa-\nrate compartments, one for each puppy. The compartments are important\n496 •D OG OWNER’S HOME VETERINARY HANDBOOK\n20_067857 ch17.qxp  7/6/07  10:45 PM  Page 496"
+        "Why Puppies Die . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 494\nReviving a Weak Puppy. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 495\nRaising Puppies by Hand. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 496\nThe Incubator. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 496\nGeneral Care . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 497\nHand Feeding . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 498\nCalculating How Much Formula. . . . . . . . . . . . . . . . . . . . . . . . . . . 499\nHow to Give Formula. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 500",
+        "survive and pushes him out of the nest. The situation can sometimes be\nreversed if the puppy is treated and his body temperature is brought back to\nnormal (see Reviving a Weak Puppy, page 495).\nBODY TEMPERATURE\nWhen a puppy is born, his body temperature is the same as his mother’s.\nImmediately thereafter, his core temperature drops several degrees (how much\ndepends upon the temperature of the room). Within 30 minutes, if the puppy\n490 •D OG OWNER’S HOME VETERINARY HANDBOOK\n20_067857 ch17.qxp  7/6/07  10:45 PM  Page 490"
       ],
-      "response": "To revive a weak, chilled, or fading puppy, warm it gradually. Rapid warming using a heating pad causes heat loss and increases oxygen needs, which can harm the puppy. Instead, use warming packs to slowly raise the puppy's body temperature, taking rectal temperatures every 10 minutes until it reaches 100°F (37.8°C).",
+      "response": "To revive a weak, chilled, or fading puppy, slow warming is recommended. Rapid warming using a heating pad can cause heat loss, increasing calorie expenditure and oxygen need, harming rather than helping. Instead, warm the puppy gradually to restore body temperature, while monitoring its rectal temperature every 10 minutes until it reaches 100°F (37.8°C).",
       "reference": "Early treatment is described as imperative because weak newborn puppies can die quickly A chilled puppy should be warmed gradually rather than rapidly One recommended warming method is to keep the puppy against the owner's skin under clothing Warm glucose-electrolyte solution may be given by eyedropper or baby nurser to correct dehydration and low blood sugar The handbook specifically says never allow a cold puppy to nurse or receive formula Severely dehydrated or very weak puppies should be treated by a veterinarian",
       "chapter": "Chapter 17: Pediatrics",
       "section": "Reviving a Weak Puppy",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.9012704877487097,
-      "context_precision": 0.9999999999666667,
+      "answer_relevancy": 0.9111656960341561,
+      "context_precision": 0.9166666666361111,
       "context_recall": 0.3333333333333333
     },
     {
@@ -849,12 +849,12 @@
         "Bear in mind, however, that these requirements are approximations based\non the average dog. Your dog’s needs will vary according to his activity level\nand temperament. The amount fed should be adjusted to maintain optimal\nweight and condition.\nThere are now many specialty foods designed for dogs of particular groups,\nsuch as sporting dogs or terriers, or for groups of dogs based on size, such as for\nlarge-breed puppies. Discuss with your veterinarian if one of those diets would\nbe best for your puppy.\nThe Importance of Early Socialization\nThe first 12 weeks of life are extremely important and determine, to a great\nextent, a puppy’s personality and sociability. Studies show that puppies go\nthrough a series of developmental stages. The successful negotiation of each",
         "In summary, it is critical that breeders expose puppies to other dogs starting\nat 3 weeks of age. Successful interactions are those that build confidence, are\nnot stressful, and do not frighten the puppy. Handling puppies younger than 5\nweeks of age is not detrimental, as long as it is not extremely stressful and does\nnot induce fear. After 5 weeks, puppies should be picked up, petted, and han-\ndled in a pleasurable manner with increasing frequency.\nSocialization should continue when a puppy goes to his new home. It is\nbest to expose your puppy to as many positive experiences as possible. Take\nhim with you in the car and go for walks where you will see other people and\ndogs. This allows the pup to get used to the noise and distractions of public"
       ],
-      "response": "Early socialization plays a crucial role in shaping a puppy's personality and sociability, with the first 12 weeks of life being particularly important. Puppies should be exposed to other dogs starting at 3 weeks of age, and handling should increase in frequency after 5 weeks, allowing them to build confidence and overcome fear.",
+      "response": "Early socialization plays a crucial role in determining a puppy's personality and sociability, with the first 12 weeks being particularly important. Puppies should be exposed to other dogs starting at 3 weeks of age to build confidence through successful interactions that are not stressful or frightening. Handling puppies younger than 5 weeks can also be beneficial if done gently and without stress.",
       "reference": "The first 12 weeks of life are described as crucial for personality and sociability Poor exposure during the first three months is linked to later problems such as timidity, phobias, fear-biting, and dominance aggression Puppies should remain with their dam and littermates until about 8 to 10 weeks of age Between 5 and 7 weeks puppies become especially receptive to positive interactions with people At 10 to 12 weeks and again at 16 to 20 weeks puppies are described as especially receptive to safe exploration of new environments",
       "chapter": "Chapter 17: Pediatrics",
       "section": "The Importance of Early Socialization",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.5912319248726075,
+      "answer_relevancy": 0.5872393617972108,
       "context_precision": 0.8055555555287036,
       "context_recall": 0.4
     },
@@ -867,13 +867,13 @@
         "good guess about whether a puppy is of show or breeding quality. But keep in\n514 •D OG OWNER’S HOME VETERINARY HANDBOOK\n20_067857 ch17.qxp  7/6/07  10:45 PM  Page 514",
         "SELECTING A BREEDER\nWhen you know what breed you want, the next step is finding a reputable\nbreeder. The two well-established registries in the United States, the\nAmerican Kennel Club (AKC) and the United Kennel Club (UKC), both\nhave breeder referral information on their websites (see appendix D). You can\nalso search for local clubs devoted to the breed in which you are interested,\nand then call or write the secretary of the club to obtain written information\nand a list of breeders who are members of the club.\nAfter you locate several breeders who have the breed of puppy you are\nlooking for, write or call each one and explain whether you are looking for a\nfamily companion and pet, if you plan to show and/or breed, and if you prefer"
       ],
-      "response": "The context doesn't explicitly state what signs of a responsible breeder to look for. It only mentions that a reputable breeder is concerned about the future welfare of all puppies and will stand behind them, but it doesn't provide specific indicators or behaviors to identify a responsible breeder.",
+      "response": "The context doesn't explicitly state what signs of a responsible breeder the handbook recommends looking for. It mentions that \"a responsible breeder is concerned about the future welfare of all the puppies he or she places\" and should be willing to stand behind their puppies with a 72-hour guarantee, but it does not list specific signs of a responsible breeder.",
       "reference": "The handbook recommends using established registries or breed clubs to identify breeders A responsible breeder asks questions about the buyer and the puppy's future welfare The buyer is encouraged to insist on a veterinary exam with a 72-hour return guarantee if a health problem is found Important paperwork includes registration documents, pedigree, health certificate, diet sheet, and immunization record The text also notes that shelters and breed rescue groups are valid alternatives for acquiring a dog",
       "chapter": "Chapter 17: Pediatrics",
       "section": "Selecting a Breeder",
       "faithfulness": 1.0,
       "answer_relevancy": 0.0,
-      "context_precision": 0.9166666666361111,
+      "context_precision": 0.7499999999625,
       "context_recall": 0.4
     },
     {
@@ -885,12 +885,12 @@
         "not provide needed services. If the cancer grows unchecked, it eventually\nreplaces much of the organ while also metastasizing to other parts of the body.\nIn time, it causes the death of the dog.\nSome cancer-producing genes are inherent in the breed or genetic makeup\nof a dog. Bernese Mountain Dogs, for example, have a high incidence of can-\ncers affecting all body systems. Approximately one in four Bernese Mountain\nDogs will develop cancer; two of the cancer types seen in this breed—histio-\ncytosis and mastocytoma—are known to be inherited as polygenic traits.\nA number of genes have been identified as causing breast, colon, and other\ncancers in people and in some animals. The reason that all individuals with",
         "Other conditions that predispose a dog to ulcers include all forms of liver\ndisease, kidney failure, extreme stress (from severe illness or major surgery),\nchronic gastritis (particularly the eosinophilic type), and shock.\nMast cell tumors of the skin (see page 533) can cause ulcers. This is\nbecause these tumors produce and release histamine, which is a powerful stim-\nulant to acid secretion. In fact, ulcers occur in up to 80 percent of dogs with\nmast cell tumors.\nThe principal sign of an ulcer is sporadic or chronic vomiting. Dogs may\nalso lose weight and be anemic. In dogs with nonspecific signs, such as\nchronic vomiting, the diagnosis is made by gastroscopy.\nOccasionally the vomitus contains old blood (which looks like coffee"
       ],
-      "response": "According to the handbook, some cancer-producing genes are inherent in a dog's breed or genetic makeup. For example, Bernese Mountain Dogs have a high incidence of cancers affecting all body systems due to inherited polygenic traits. Additionally, other conditions that predispose a dog to ulcers, such as liver disease and kidney failure, can also contribute to the development of cancer.",
+      "response": "The handbook explains that some cancer-producing genes are inherent in a dog's breed or genetic makeup. It also mentions that certain conditions, such as liver disease and extreme stress, can predispose a dog to ulcers, which are associated with mast cell tumors. These tumors produce histamine, leading to acid secretion and causing ulcers.",
       "reference": "Cancer is described as abnormal rapid cell division and tissue growth at the expense of the affected organ The handbook says cancer often arises when genes controlling orderly cell duplication are disrupted Inherited cancer susceptibility is described in some breeds Environmental carcinogens such as ultraviolet light, radiation, chemicals, smoke, viruses, and parasites are also discussed The chapter frames cancer as a complex interaction between genetics and environment",
       "chapter": "Chapter 18: Tumors and Cancers",
       "section": "What Causes Cancer?",
-      "faithfulness": 0.8571428571428571,
-      "answer_relevancy": 0.6480433809116519,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8149047008300719,
       "context_precision": 0.8333333332916666,
       "context_recall": 0.6
     },
@@ -903,12 +903,12 @@
         "Other conditions that predispose a dog to ulcers include all forms of liver\ndisease, kidney failure, extreme stress (from severe illness or major surgery),\nchronic gastritis (particularly the eosinophilic type), and shock.\nMast cell tumors of the skin (see page 533) can cause ulcers. This is\nbecause these tumors produce and release histamine, which is a powerful stim-\nulant to acid secretion. In fact, ulcers occur in up to 80 percent of dogs with\nmast cell tumors.\nThe principal sign of an ulcer is sporadic or chronic vomiting. Dogs may\nalso lose weight and be anemic. In dogs with nonspecific signs, such as\nchronic vomiting, the diagnosis is made by gastroscopy.\nOccasionally the vomitus contains old blood (which looks like coffee",
         "it apart from the surrounding skin. The tumor may have been present for\nmonths or years. Cocker Spaniels appear to be at increased risk.\nA small percent of basal cell tumors are malignant, becoming basal cell\ncarcinomas.\nTreatment: Basal cell tumors should be removed by wide surgical excision.\nMASTOCYTOMAS (MAST CELL TUMORS)\nMast cell tumors are common, accounting for 10 to 20 percent of skin tumors\nin dogs. About half of them are malignant. Brachycephalic breeds, such as\nTUMORS AND CANCERS • 533\nA sebaceous adenoma on the body of a\nCocker Spaniel.\n21_067857 ch18.qxp  7/6/07  11:05 PM  Page 533"
       ],
-      "response": "The handbook advises owners to be aware that all new lumps in their dog should be checked by a veterinarian. Additionally, they should recognize the signs of ulcers, such as vomiting, weight loss, and anemia, which can occur in up to 80 percent of dogs with mast cell tumors.",
+      "response": "The handbook advises owners that all new lumps in their dog should be checked by a veterinarian, as mast cell tumors can be present for months or years before suddenly enlarging and metastasizing. Owners should also be aware that mast cell tumors can release histamine, causing stomach and duodenal ulcers in up to 80 percent of dogs with the condition.",
       "reference": "Mast cell tumors account for about 10 to 20 percent of skin tumors in dogs About half are described as malignant They can vary greatly in appearance and may resemble other benign masses such as lipomas The handbook says all new lumps should be checked by a veterinarian Mast cell tumors can release histamine and are associated with stomach and duodenal ulcers Treatment depends on stage and may include surgery, prednisone, radiation therapy, chemotherapy, or immunotherapy",
       "chapter": "Chapter 18: Tumors and Cancers",
       "section": "Mastocytomas (Mast Cell Tumors)",
-      "faithfulness": 0.75,
-      "answer_relevancy": 0.5250828826149403,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.5881153697729564,
       "context_precision": 0.9166666666361111,
       "context_recall": 0.6666666666666666
     },
@@ -921,12 +921,12 @@
         "may be postmature and require veterinary examination.\n472 •D OG OWNER’S HOME VETERINARY HANDBOOK\n19_067857 ch16.qxp  7/6/07  10:45 PM  Page 472",
         "drome, parasites (especially whipworms), or cancer. The dog needs to see a\nveterinarian.\nABNORMAL DISCHARGES\nAbnormal discharges are those that contain pus or blood. They may have an\noffensive odor. Discharges from the eyes, ears, nose, mouth, penis, or vagina\nsuggest infection. In older dogs, cancer must also be considered. If you see any\nsuch discharges, take your dog to the veterinarian.\nGERIATRICS • 553\n22_067857 ch19.qxp  7/6/07  11:06 PM  Page 553"
       ],
-      "response": "The handbook indicates that any of the following danger signs warrant immediate veterinary investigation:\n\n- Coughing or rapid, labored breathing\n- Weakness or exercise intolerance\n- Increased thirst and/or frequency of urination\n- Change in bowel function with constipation or diarrhea\n- Bloody or purulent discharge from a body opening\n- An increase in temperature, pulse, or breathing rate\n- A growth or lump anywhere on the body",
+      "response": "The handbook states that any change in bowel function, constipation or diarrhea, warrants a veterinary visit.",
       "reference": "Loss of appetite or weight is listed as a warning sign Coughing or rapid labored breathing is listed as a warning sign Weakness or exercise intolerance is listed as a warning sign Increased thirst or frequency of urination is listed as a warning sign Constipation, diarrhea, abnormal discharge, fever, pulse or breathing changes, and any new growth are all reasons for veterinary evaluation",
       "chapter": "Chapter 19: Geriatrics",
       "section": "Danger Signs in the Geriatric Dog",
-      "faithfulness": 1.0,
-      "answer_relevancy": 0.838731507216514,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.4056808423610969,
       "context_precision": 0.9166666666361111,
       "context_recall": 0.6
     },
@@ -939,12 +939,12 @@
         "Often, interactions with family members become much less intense. The\ndog seeks less attention, often walks away when being petted, shows less\nenthusiasm when greeted, and may no longer greet his family. Other dogs\nseem to need human contact 24 hours a day.\nSome of these symptoms may be due to age-related physical changes and\nnot to cognitive dysfunction. A medical condition such as cancer, infection,\norgan failure, or drug side effects could be the sole cause of the behavioral\nchanges or could be aggravating the problem. Thus, medical problems must\nbe tested for and eliminated before senile symptoms are attributed to cogni-\ntive dysfunction syndrome.\nResearch on the aging canine brain reveals a number of pathogenic",
         "of symptoms the dog exhibits and the severity of the senile behavior are\nimportant considerations in making the diagnosis. An MRI may show some\ndegree of brain shrinkage, but the test is not likely to be done unless a brain\ntumor is suspected. Awareness of the diagnosis makes it easier to understand\nthe dog’s behavior.\nTreatment: The drug Anipryl (selegiline), used by humans to treat\nParkinson’s disease, has been found to dramatically improve symptoms and\nthe quality of life for many dogs with cognitive dysfunction syndrome. The\ndrug is given once daily as a pill. Because medical treatment is now available,\nit is even more important to seek veterinary consultation for behavior\nchanges in elderly dogs.\nAn additional benefit can come from feeding the therapeutic diet Hill’s"
       ],
-      "response": "The handbook associates a decline in mental faculties associated with thinking, recognition, memory, and learned behavior. This includes disorientation, difficulty finding familiar people or places, failure to respond to verbal cues, and disturbed activity and sleep patterns. Additionally, dogs may exhibit aimless wandering, pacing, compulsive behaviors, and decreased interest in interactions with family members.",
+      "response": "The handbook associates several patterns of behavior changes with canine cognitive dysfunction syndrome, including:\n\n* Disorientation (getting lost in the house or yard)\n* Difficulty finding familiar people and locations\n* Failure to respond to verbal cues or his name\n* Disturbed activity and sleep patterns\n* Decrease in purposeful activity and increase in aimless wandering and pacing\n* Compulsive behaviors such as circling, tremors, stiffness, and weakness.",
       "reference": "Cognitive dysfunction is described as a progressive age-related decline in mental function somewhat similar to Alzheimer's disease Disorientation is a principal symptom, including getting lost in the house or stuck in corners Sleep and activity cycles are disrupted, with more sleeping overall but less at night and more aimless wandering House soiling may occur because the dog signals less often or eliminates indoors Changes in social interaction, such as reduced greeting behavior or altered need for contact, are also described Medical causes must be ruled out before attributing these signs solely to cognitive dysfunction",
       "chapter": "Chapter 19: Geriatrics",
       "section": "Cognitive Dysfunction Syndrome",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.5493960806895668,
+      "answer_relevancy": 0.9006752024742009,
       "context_precision": 0.9999999999666667,
       "context_recall": 0.8333333333333334
     },
@@ -957,12 +957,12 @@
         "much safer than regular aspirin because it is less likely to cause stomach and\nduodenal ulcers.\nAspirin remains effective as a short-term analgesic to control the pain asso-\nciated with musculoskeletal injuries. It is no longer recommended for long-\nterm control of osteoarthritis, because of its destructive effects on joint\ncartilage. There are better analgesics available that do not have this disadvan-\ntage. Aspirin should not be given to dogs with any bleeding or clotting disor-\nders. Aspirin should be stopped at least one week before any surgery and should\nnot be used during pregnancy, due to its effects on clotting mechanisms.\nNote that individual dogs metabolize aspirin at very different rates. This\ninconsistency can lead to an unexpected accumulation of dangerous break-",
         "care in the recommended dosage for dogs. (Aspirin has a very low margin of\nsafety for cats and should not be used.) Buffered or enteric-coated aspirin is\n560 •D OG OWNER’S HOME VETERINARY HANDBOOK\n23_067857 ch20.qxp  7/17/07  10:55 PM  Page 560"
       ],
-      "response": "Aspirin should not be given to dogs with any bleeding or clotting disorders. Aspirin should also be stopped at least one week before any surgery. Additionally, it should not be used during pregnancy due to its effects on clotting mechanisms. The dosage of aspirin for dogs may vary depending on individual metabolism rates, and buffered or enteric-coated aspirin is recommended to reduce stomach irritation.",
+      "response": "The handbook advises against using regular aspirin due to its potential to cause stomach ulcers. Buffered or enteric-coated aspirin is recommended instead, but with caution due to individual variability in metabolism. Dogs should not use more than one NSAID at a time and have bloodwork done before starting medication, especially if they will be on it long-term.",
       "reference": "Buffered or enteric-coated aspirin is described as safer than regular aspirin for short-term use in dogs Aspirin should not be used in cats Aspirin is no longer recommended for long-term osteoarthritis control because of destructive effects on joint cartilage Aspirin should not be given to dogs with bleeding or clotting disorders and should be stopped before surgery The handbook warns never to combine one NSAID with another NSAID or with corticosteroids Dogs on long-term NSAIDs should have periodic bloodwork monitoring",
       "chapter": "Chapter 20: Medications",
       "section": "Analgesics",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.8184934489355132,
+      "answer_relevancy": 0.8445765973362145,
       "context_precision": 0.999999999975,
       "context_recall": 1.0
     },
@@ -975,12 +975,12 @@
         "Chapter\nMEDICATIONS\nBefore discussing the specifics of the most common medications used in vet-\nerinary medicine, it’s important to review some basic rules that apply to all\nmedications you give your dog.\n• The label should list the name of the drug, its strength, how much there\nis in the container, the expiration date, and how to give it.\n• Be sure you understand the dose. For example, is it two pills once a day\nor one pill twice a day?\n• Make sure you know how the medication is to be given. For example,\nare the drops to go in the mouth or in the ears?\n• Make sure you know whether the medication can be given with food.\n• Ask your veterinarian about side effects to be aware of.\n• Make sure you know how the medication is to be stored and if it needs\nto be refrigerated or shaken.",
         "given to dogs in any amount.\nCommon pain relievers such as ibuprofen (Advil) and acetaminophen\n(Tylenol) are a particular problem. Dogs and cats do not have the necessary\nenzymes to detoxify and eliminate these drugs. This can lead to the accumu-\nlation of dangerous substances in the animal that are left behind when the\ndrugs are metabolized. As few as two Tylenol tablets can produce severe organ\ndamage in a medium-size dog. Symptoms develop quickly and include abdom-\ninal pain, salivation, vomiting, and weakness.\n26 •D OG OWNER’S HOME VETERINARY HANDBOOK\n04_067857 ch01.qxp  7/9/07  5:36 PM  Page 26"
       ],
-      "response": "The handbook recommends giving a dog a pill by pressing upward on the roof of the mouth with one thumb, then down on the lower jaw with the opposite thumb. Alternatively, it can be given by pressing in on both lips from above the muzzle until the skin pushes in behind the canine teeth. The pill should then be inserted well to the back of the tongue in the middle of the mouth.",
+      "response": "According to the handbook, the correct way to give a dog a pill is in the middle and well at the back of the tongue. To administer it, slip your thumb into the space behind one of the canine teeth and press upward on the roof of the mouth. Then, press down on the lower jaw with the opposite thumb, or press in on both lips from above the muzzle.",
       "reference": "The mouth can be opened by placing a thumb behind a canine tooth and pressing upward on the roof of the mouth The pill should be placed well back in the middle of the tongue The mouth is then closed and the throat massaged until the dog swallows Nose licking is given as a sign that the pill has been swallowed The handbook says pills should not be crushed into powder unless a veterinarian specifically advises it Some pills can be hidden in small food treats if approved for administration with food",
       "chapter": "Chapter 20: Medications",
       "section": "Pills, Capsules, and Tablets",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.9249531051124696,
+      "answer_relevancy": 0.9125188803150515,
       "context_precision": 0.99999999995,
       "context_recall": 0.6666666666666666
     },
@@ -993,12 +993,12 @@
         "Chapter\nMEDICATIONS\nBefore discussing the specifics of the most common medications used in vet-\nerinary medicine, it’s important to review some basic rules that apply to all\nmedications you give your dog.\n• The label should list the name of the drug, its strength, how much there\nis in the container, the expiration date, and how to give it.\n• Be sure you understand the dose. For example, is it two pills once a day\nor one pill twice a day?\n• Make sure you know how the medication is to be given. For example,\nare the drops to go in the mouth or in the ears?\n• Make sure you know whether the medication can be given with food.\n• Ask your veterinarian about side effects to be aware of.\n• Make sure you know how the medication is to be stored and if it needs\nto be refrigerated or shaken.",
         "contact and take him as quickly as possible to the nearest veterinary clinic. If\nyou can’t get to the vet very quickly, give the dog water or milk (30 ml per 6\n34 •D OG OWNER’S HOME VETERINARY HANDBOOK\n04_067857 ch01.qxp  7/9/07  5:36 PM  Page 34"
       ],
-      "response": "To administer liquid medications, use an eyedropper or plastic syringe without the needle. Pinch the dog's lips together, insert the dispenser into the cheek pouch, and tilt the chin upward to dispense the liquid slowly, allowing the dog to swallow automatically. Do not push a full syringe of liquid down the throat quickly.",
+      "response": "According to the handbook, liquids should be administered into the cheek pouch between the molars and the cheek using an eyedropper or plastic syringe without the needle. To do this, pinch the dog's lips together, insert the dispenser into the cheek pouch, seal with fingers, tilt the chin up, and slowly dispense the liquid as the dog swallows automatically.",
       "reference": "Liquids should be administered into the cheek pouch between the molars and cheek A medicine bottle, eyedropper, or plastic syringe without a needle can be used The dog's lips should be sealed around the dispenser while the chin is tilted upward The liquid should be dispensed slowly so the dog can swallow automatically Large amounts should be given with pauses rather than forced quickly down the throat",
       "chapter": "Chapter 20: Medications",
       "section": "Liquids",
       "faithfulness": 1.0,
-      "answer_relevancy": 0.785518419903007,
+      "answer_relevancy": 0.8419297190748899,
       "context_precision": 0.9999999999666667,
       "context_recall": 1.0
     }

@@ -43,8 +43,10 @@ class HistoryMaterial:
     @property
     def rewrite_context(self) -> list[str]:
         context: list[str] = []
-        for idx, summary in enumerate(self.summary_items, start=1):
-            context.append(f"Conversation summary {idx}: {summary}")
+        for summary in self.summary_items:
+            normalized_summary = _normalize_text(summary)
+            if normalized_summary:
+                context.append(normalized_summary)
         context.extend(self.recent_turns)
         return context
 

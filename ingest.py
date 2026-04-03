@@ -1,7 +1,6 @@
 import os
 from pathlib import Path
 
-from app.core.device import get_torch_device
 from app.core.settings import settings
 
 os.environ.setdefault("HF_HOME", str(settings.HF_CACHE_DIR))
@@ -16,11 +15,14 @@ os.environ.setdefault(
     str(settings.HF_HUB_DOWNLOAD_TIMEOUT),
 )
 
-from langchain_community.document_loaders import WebBaseLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_milvus import Milvus
-from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.document_loaders import PyPDFLoader, Docx2txtLoader, TextLoader
+
+from app.deps.milvus_hybrid import (
+    get_vectorstore_embedding_function,
+    get_vectorstore_kwargs,
+)
 
 SUPPORTED_EXTS = {".pdf", ".docx", ".txt", ".md"}
 
@@ -323,20 +325,14 @@ def ingest(drop_old: bool = False):
     docs = load_and_split(settings.DATA_DIR)
     print(f"[ingest] loaded & split into {len(docs)} chunks")
 
-    embeddings = HuggingFaceEmbeddings(
-        model_name=settings.HF_EMBED_MODEL,
-        cache_folder=str(settings.HF_CACHE_DIR / "sentence_transformers"),
-        model_kwargs={"device": get_torch_device()},
-        encode_kwargs={"normalize_embeddings": True},
-    )
-
     # 写入 Milvus（docker service）
     vectorstore = Milvus.from_documents(
         documents=docs,
-        embedding=embeddings,
+        embedding=get_vectorstore_embedding_function(),
         connection_args={"uri": settings.MILVUS_URI},
         collection_name=settings.COLLECTION_NAME,
         drop_old=drop_old,
+        **get_vectorstore_kwargs(),
     )
 
     print(

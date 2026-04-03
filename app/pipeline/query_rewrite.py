@@ -16,6 +16,7 @@ logger = logging.getLogger(__name__)
 
 _LATIN_TOKEN_RE = re.compile(r"[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*")
 _PUNCT_RE = re.compile(r"[^\w]+", re.UNICODE)
+_USER_TURN_RE = re.compile(r"User:\s*(.+?)(?:\s*Assistant:|$)", re.IGNORECASE)
 
 _EN_STOPWORDS = {
     "a",
@@ -64,6 +65,7 @@ _EN_STOPWORDS = {
     "this",
     "those",
     "to",
+    "too",
     "us",
     "was",
     "we",
@@ -123,13 +125,17 @@ _DOMAIN_HINTS = {
     "wound",
 }
 
-_IRREGULAR_TOKEN_MAP = {
-    "ate": "eat",
-    "eaten": "eat",
-    "drank": "drink",
-    "drunk": "drink",
-    "worse": "bad",
-    "worsened": "worsen",
+_PET_REFERENCE_TOKENS = {
+    "dog",
+    "dogs",
+    "cat",
+    "cats",
+    "pet",
+    "pets",
+    "puppy",
+    "puppies",
+    "kitten",
+    "kittens",
 }
 
 _STRONG_PRONOUN_PATTERNS = (
@@ -151,7 +157,8 @@ _FOLLOW_UP_PATTERNS = (
     r"\bwhat if\b",
     r"\bhow come\b",
     r"\bas well\b",
-    r"\btoo\b",
+    r"\bme too\b",
+    r"\btoo[?.!,\s]*$",
     r"\binstead\b",
     r"\banother one\b",
     r"\bthe other one\b",
@@ -169,7 +176,16 @@ You rewrite a user question into a retrieval-friendly search query for a pet-hea
 
 Rules:
 - Preserve the user's original meaning.
-- Use conversation history only when it explicitly identifies the referent in the current question.
+- Use conversation history when the current question depends on earlier turns to identify the pet, symptom, event, timeline, or referent.
+- Reuse the exact animal, symptom, food, medication, and timeline terms from the question or history whenever possible.
+- Prefer a concise standalone query that still reads like natural English.
+- Remove filler phrases such as "yeah", "I think", and "it seems like" when they do not change the meaning.
+- Do not output awkward keyword bags or inverted phrases such as "weak and sleepy dog"; prefer short natural rewrites such as "dog is weak and sleepy".
+- If the current question is a follow-up about the same pet or ongoing issue, carry forward the relevant prior issue, event, or timeline needed to make the query self-contained.
+- When the follow-up adds a new symptom, status update, severity change, or time update to an existing case, keep both the prior issue and the new update in the rewrite.
+- When a pronoun like "it", "he", "she", or "them" can be resolved from history, replace it with the resolved pet, symptom, event, or item instead of leaving the reference vague.
+- Do not drop important context from history if that context is necessary for retrieval, such as the animal type, an ongoing symptom, or an explicit timeline.
+- Preserve the user's actual intent or question, not just the background facts. The rewrite should still sound like a question when the user is asking a question.
 - Do not guess missing entities, symptoms, timelines, diagnoses, or treatments.
 - Do not add facts that are not explicitly present in the current question or the conversation history.
 - If the history is insufficient to resolve the reference, return the current question unchanged.
@@ -183,7 +199,20 @@ Examples:
 - History:
   1. My dog has diarrhea.
   Question: What about vomiting?
-  Output: dog diarrhea and vomiting
+  Output: dog with diarrhea and vomiting
+- History:
+  1. My dog has not eaten since yesterday.
+  Question: yeah it seems like he is quite weak and sleepy
+  Output: dog has not eaten since yesterday and is weak and sleepy
+- History:
+  1. I listed the common symptoms of parasites in dogs.
+  Question: Please list them as bullet points
+  Output: common symptoms of parasites in dogs
+- History:
+  1. My dog ate a chocolate bar.
+  2. I said to induce vomiting if it happened within the past six hours.
+  Question: I think it's over six hours, so does that mean it's ok right now?
+  Output: is my dog okay after eating a chocolate bar more than 6 hours ago
 
 Conversation history:
 {history}
@@ -213,6 +242,21 @@ class QueryRewriteResult:
     history_available: bool = False
     llm_used: bool = False
     rewrite_applied: bool = False
+
+
+def _print_rewrite_result(result: QueryRewriteResult) -> None:
+    print(
+        "[QUERY REWRITE] "
+        f"needed={result.rewrite_needed} "
+        f"applied={result.rewrite_applied} "
+        f"history={result.history_available} "
+        f"llm={result.llm_used} "
+        f"score={result.rule_score} "
+        f"reasons={','.join(result.reasons) or '-'} "
+        f"original={result.original_query!r} "
+        f"rewrite={result.rewrite_query!r}",
+        flush=True,
+    )
 
 
 def _normalize_query(text: str) -> str:
@@ -248,29 +292,48 @@ def _content_tokens(query: str) -> list[str]:
     ]
 
 
-def _normalize_token(token: str) -> str:
-    token = token.lower()
-    token = _IRREGULAR_TOKEN_MAP.get(token, token)
-
-    if token.endswith("ies") and len(token) > 4:
-        return token[:-3] + "y"
-
-    for suffix in ("ing", "ed", "es", "s"):
-        if token.endswith(suffix) and len(token) - len(suffix) >= 4:
-            return token[: -len(suffix)]
-
-    if token.endswith("ous") and len(token) > 5:
-        return token[:-3]
-
-    return token
+def _latest_user_issue(conversation_context: Sequence[str] | None) -> str:
+    for item in reversed(_clean_conversation_context(conversation_context)):
+        match = _USER_TURN_RE.search(item)
+        if match:
+            return _normalize_query(match.group(1))
+    return ""
 
 
-def _normalized_content_token_set(texts: Sequence[str]) -> set[str]:
-    tokens: set[str] = set()
-    for text in texts:
-        for token in _content_tokens(text):
-            tokens.add(_normalize_token(token))
-    return tokens
+def _candidate_uses_recent_issue(candidate_query: str, recent_issue: str) -> bool:
+    recent_tokens = {
+        token for token in _content_tokens(recent_issue) if token not in _PET_REFERENCE_TOKENS
+    }
+    if not recent_tokens:
+        return True
+
+    candidate_tokens = set(_content_tokens(candidate_query))
+    return bool(candidate_tokens & recent_tokens)
+
+
+def _merge_recent_issue_into_rewrite(recent_issue: str, candidate_query: str) -> str:
+    recent_issue = re.sub(r"^(?:my|our)\s+", "", recent_issue.strip(), flags=re.IGNORECASE)
+    recent_issue = recent_issue.rstrip(".?! ")
+    candidate_query = candidate_query.strip().rstrip(".?! ")
+    if not recent_issue or not candidate_query:
+        return candidate_query or recent_issue
+
+    if candidate_query.casefold().startswith(recent_issue.casefold()):
+        return candidate_query
+
+    recent_tokens = _latin_tokens(recent_issue)
+    candidate_tokens = _latin_tokens(candidate_query)
+    if recent_tokens and candidate_tokens and recent_tokens[0] == candidate_tokens[0]:
+        candidate_tail = re.sub(
+            r"^[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*\s+",
+            "",
+            candidate_query,
+            count=1,
+        )
+        if candidate_tail:
+            return f"{recent_issue} and {candidate_tail}"
+
+    return f"{recent_issue} and {candidate_query}"
 
 
 def _compact_text(query: str) -> str:
@@ -426,20 +489,17 @@ def _is_safe_rewrite(
     candidate_query: str,
     conversation_context: Sequence[str] | None,
 ) -> bool:
+    candidate_query = _normalize_query(candidate_query)
+    if not candidate_query:
+        return False
+
     if candidate_query.casefold() == original_query.casefold():
         return True
 
-    allowed_tokens = _normalized_content_token_set(
-        [original_query, *_clean_conversation_context(conversation_context)]
-    )
-    candidate_tokens = _normalized_content_token_set([candidate_query])
-    if candidate_tokens - allowed_tokens:
+    if len(_compact_text(candidate_query)) <= 4:
         return False
 
-    if _has_domain_hint(candidate_query) and not any(
-        _has_domain_hint(text)
-        for text in [original_query, *_clean_conversation_context(conversation_context)]
-    ):
+    if not _content_tokens(candidate_query) and not _has_domain_hint(candidate_query):
         return False
 
     return True
@@ -465,6 +525,17 @@ def _try_llm_rewrite(
         return query
 
     candidate = _sanitize_rewrite(str(raw), query)
+    recent_issue = _latest_user_issue(cleaned_history)
+    if (
+        recent_issue
+        and (_has_ambiguous_reference(query) or _has_follow_up_marker(query))
+        and not _candidate_uses_recent_issue(candidate, recent_issue)
+    ):
+        candidate = _sanitize_rewrite(
+            _merge_recent_issue_into_rewrite(recent_issue, candidate),
+            query,
+        )
+
     if not _is_safe_rewrite(query, candidate, cleaned_history):
         logger.info(
             "Reject unsafe query rewrite original=%r candidate=%r",
@@ -490,16 +561,18 @@ def rewrite_query_for_retrieval(
     rewrite_needed = decision.rewrite_needed
 
     if not original_query:
-        return QueryRewriteResult(
+        result = QueryRewriteResult(
             original_query="",
             rewrite_query="",
             rewrite_needed=False,
             rule_score=0,
             history_available=history_available,
         )
+        _print_rewrite_result(result)
+        return result
 
     if not settings.QUERY_REWRITE_ENABLED or not rewrite_needed or not history_available:
-        return QueryRewriteResult(
+        result = QueryRewriteResult(
             original_query=original_query,
             rewrite_query=original_query,
             rewrite_needed=rewrite_needed,
@@ -507,6 +580,8 @@ def rewrite_query_for_retrieval(
             reasons=reasons,
             history_available=history_available,
         )
+        _print_rewrite_result(result)
+        return result
 
     rewrite_query = _try_llm_rewrite(
         original_query,
@@ -514,7 +589,7 @@ def rewrite_query_for_retrieval(
     )
     rewrite_applied = rewrite_query.casefold() != original_query.casefold()
 
-    return QueryRewriteResult(
+    result = QueryRewriteResult(
         original_query=original_query,
         rewrite_query=rewrite_query,
         rewrite_needed=rewrite_needed,
@@ -524,3 +599,5 @@ def rewrite_query_for_retrieval(
         llm_used=True,
         rewrite_applied=rewrite_applied,
     )
+    _print_rewrite_result(result)
+    return result

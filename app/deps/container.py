@@ -17,26 +17,27 @@ os.environ.setdefault(
 )
 os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
 
-from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_milvus import Milvus
 from langchain_ollama import ChatOllama
 from sentence_transformers import CrossEncoder
 
+from app.deps.milvus_hybrid import (
+    get_dense_embeddings,
+    get_vectorstore_embedding_function,
+    get_vectorstore_kwargs,
+)
+
 @lru_cache
 def get_embeddings():
-    return HuggingFaceEmbeddings(
-        model_name=settings.HF_EMBED_MODEL,
-        cache_folder=str(settings.HF_CACHE_DIR / "sentence_transformers"),
-        model_kwargs={"device": get_torch_device()},
-        encode_kwargs={"normalize_embeddings": True},
-    )
+    return get_dense_embeddings()
 
 @lru_cache
 def get_vectorstore():
     return Milvus(
-        embedding_function=get_embeddings(),
+        embedding_function=get_vectorstore_embedding_function(),
         connection_args={"uri": settings.MILVUS_URI},
         collection_name=settings.COLLECTION_NAME,
+        **get_vectorstore_kwargs(),
     )
 
 @lru_cache

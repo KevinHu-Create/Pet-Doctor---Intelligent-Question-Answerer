@@ -29,8 +29,9 @@ def ask(req: AskRequest, user: User = Depends(require_current_user)):
         conversation_context=rewrite_context,
         rewrite_decision=rewrite_decision,
     )
+    answer_query = rewrite_result.rewrite_query if rewrite_result.rewrite_applied else q
     ans = answer_question(
-        question=q,
+        question=answer_query,
         rewrite_query=rewrite_result.rewrite_query,
     )
     append_conversation_turn(user.id, q, ans)
