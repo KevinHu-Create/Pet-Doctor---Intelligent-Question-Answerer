@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import logging
 import re
 from dataclasses import dataclass, field
@@ -138,81 +139,45 @@ _PET_REFERENCE_TOKENS = {
     "kittens",
 }
 
-_STRONG_PRONOUN_PATTERNS = (
-    r"\bit\b",
-    r"\bits\b",
-    r"\bthey\b",
-    r"\bthem\b",
-    r"\btheir\b",
-    r"\bhe\b",
-    r"\bhim\b",
-    r"\bhis\b",
-    r"\bshe\b",
-    r"\bher\b",
-)
+_LLM_REWRITE_PROMPT_TEMPLATE = """
+You decide whether a user question for a pet-health retrieval system should be rewritten, and you provide the rewritten query when needed.
 
-_FOLLOW_UP_PATTERNS = (
-    r"\bwhat about\b",
-    r"\bhow about\b",
-    r"\bwhat if\b",
-    r"\bhow come\b",
-    r"\bas well\b",
-    r"\bme too\b",
-    r"\btoo[?.!,\s]*$",
-    r"\binstead\b",
-    r"\banother one\b",
-    r"\bthe other one\b",
-    r"\bthat one\b",
-)
+Output exactly one valid JSON object with these keys:
+- rewrite_needed: true or false
+- reason: a short snake_case label
+- rewritten_query: string
 
-_GENERIC_REFERENCE_PATTERNS = (
-    r"\b(this|that|these|those)\s+(one|ones|thing|issue|problem|case|situation)\b",
-    r"\b(is|was)\s+(this|that)\s+(ok|okay|normal|safe|serious|dangerous)\b",
-    r"\b(can|could|should)\s+(it|this|that)\b",
-)
-
-_REWRITE_PROMPT_TEMPLATE = """
-You rewrite a user question into a retrieval-friendly search query for a pet-health RAG system.
-
-Rules:
+Decision rules:
+- Set rewrite_needed to true when the question is not retrieval-ready on its own.
+- Questions usually need rewrite when they contain ambiguous references, missing subject/topic, missing concrete noun details, shorthand follow-up wording, or status updates that must be merged with prior context.
+- Examples that usually need rewrite: "Is it dangerous?", "What about vomiting?", "And now he seems weak", "Is that okay right now?", "What dosage for this?".
+- Set rewrite_needed to false when the question is already standalone, explicit, and specific enough for retrieval.
+- If history is insufficient to resolve an ambiguous reference, set rewrite_needed to false and keep the original question unchanged.
+- Prefer tracked topic-state lines first, then structured memory lines, then recent turns.
 - Preserve the user's original meaning.
-- Use conversation history when the current question depends on earlier turns to identify the pet, symptom, event, timeline, or referent.
-- Reuse the exact animal, symptom, food, medication, and timeline terms from the question or history whenever possible.
+- Reuse the exact animal, symptom, event, food, medication, and timeline terms from the question or history whenever possible.
 - Prefer a concise standalone query that still reads like natural English.
 - Remove filler phrases such as "yeah", "I think", and "it seems like" when they do not change the meaning.
-- Do not output awkward keyword bags or inverted phrases such as "weak and sleepy dog"; prefer short natural rewrites such as "dog is weak and sleepy".
-- If the current question is a follow-up about the same pet or ongoing issue, carry forward the relevant prior issue, event, or timeline needed to make the query self-contained.
-- When the follow-up adds a new symptom, status update, severity change, or time update to an existing case, keep both the prior issue and the new update in the rewrite.
-- When a pronoun like "it", "he", "she", or "them" can be resolved from history, replace it with the resolved pet, symptom, event, or item instead of leaving the reference vague.
-- Do not drop important context from history if that context is necessary for retrieval, such as the animal type, an ongoing symptom, or an explicit timeline.
-- Preserve the user's actual intent or question, not just the background facts. The rewrite should still sound like a question when the user is asking a question.
-- Do not guess missing entities, symptoms, timelines, diagnoses, or treatments.
-- Do not add facts that are not explicitly present in the current question or the conversation history.
-- If the history is insufficient to resolve the reference, return the current question unchanged.
-- Output only the rewritten query, with no explanation or quotation marks.
+- If rewrite_needed is false, rewritten_query must equal the original question.
+- Do not invent facts or missing entities.
+- Output JSON only.
 
 Examples:
 - History:
-  1. My dog ate chocolate this morning.
+  1. pet_type=dog
+  2. event=ate chocolate
+  3. User: My dog ate chocolate this morning.
   Question: Is it dangerous?
-  Output: Is eating chocolate dangerous for a dog?
+  Output: {{"rewrite_needed": true, "reason": "ambiguous_reference", "rewritten_query": "Is eating chocolate dangerous for a dog?"}}
 - History:
-  1. My dog has diarrhea.
+  1. pet_type=dog
+  2. symptom=diarrhea
   Question: What about vomiting?
-  Output: dog with diarrhea and vomiting
+  Output: {{"rewrite_needed": true, "reason": "follow_up_missing_topic", "rewritten_query": "dog with diarrhea and vomiting"}}
 - History:
-  1. My dog has not eaten since yesterday.
-  Question: yeah it seems like he is quite weak and sleepy
-  Output: dog has not eaten since yesterday and is weak and sleepy
-- History:
-  1. I listed the common symptoms of parasites in dogs.
-  Question: Please list them as bullet points
-  Output: common symptoms of parasites in dogs
-- History:
-  1. My dog ate a chocolate bar.
-  2. I said to induce vomiting if it happened within the past six hours.
-  Question: I think it's over six hours, so does that mean it's ok right now?
-  Output: is my dog okay after eating a chocolate bar more than 6 hours ago
+  1. (none)
+  Question: What are signs of dehydration in dogs?
+  Output: {{"rewrite_needed": false, "reason": "already_specific", "rewritten_query": "What are signs of dehydration in dogs?"}}
 
 Conversation history:
 {history}
@@ -220,7 +185,7 @@ Conversation history:
 Current question:
 {question}
 
-Rewritten query:
+JSON:
 """.strip()
 
 
@@ -345,94 +310,6 @@ def _has_domain_hint(query: str) -> bool:
     return any(token in lowered for token in _DOMAIN_HINTS)
 
 
-def _has_ambiguous_reference(query: str) -> bool:
-    lowered = query.lower()
-    if any(re.search(pattern, lowered) for pattern in _STRONG_PRONOUN_PATTERNS):
-        return True
-    return any(re.search(pattern, lowered) for pattern in _GENERIC_REFERENCE_PATTERNS)
-
-
-def _has_follow_up_marker(query: str) -> bool:
-    lowered = query.lower()
-    return any(re.search(pattern, lowered) for pattern in _FOLLOW_UP_PATTERNS)
-
-
-def _looks_short_or_fragmentary(query: str) -> bool:
-    compact_len = len(_compact_text(query))
-    content_count = len(_content_tokens(query))
-    latin_count = len(_latin_tokens(query))
-
-    if compact_len <= 8:
-        return True
-
-    return latin_count <= 3 and content_count <= 2
-
-
-def _lacks_keyword_like_terms(query: str) -> bool:
-    if _has_domain_hint(query):
-        return False
-
-    return len(_content_tokens(query)) < 2
-
-
-def _looks_overlong_or_multi_intent(query: str) -> bool:
-    lowered = query.lower()
-    separators = sum(
-        lowered.count(token)
-        for token in (",", ";", " and ", " but ", " because ", " then ", " also ")
-    )
-    return len(query) >= 120 or separators >= 2 or lowered.count("?") >= 2
-
-
-def score_query_rewrite_need(query: str) -> tuple[int, list[str]]:
-    normalized = _normalize_query(query)
-    if not normalized:
-        return 0, []
-
-    score = 0
-    reasons: list[str] = []
-
-    if _has_ambiguous_reference(normalized):
-        score += 2
-        reasons.append("ambiguous_reference")
-
-    if _has_follow_up_marker(normalized):
-        score += 2
-        reasons.append("follow_up_marker")
-
-    if _looks_short_or_fragmentary(normalized):
-        score += 1
-        reasons.append("short_or_fragmentary")
-
-    if _lacks_keyword_like_terms(normalized):
-        score += 1
-        reasons.append("keyword_sparse")
-
-    if _looks_overlong_or_multi_intent(normalized):
-        score += 1
-        reasons.append("overlong_or_multi_intent")
-
-    return score, reasons
-
-
-def inspect_query_rewrite(query: str) -> QueryRewriteDecision:
-    original_query = _normalize_query(query)
-    if not original_query:
-        return QueryRewriteDecision(
-            original_query="",
-            rewrite_needed=False,
-            rule_score=0,
-        )
-
-    rule_score, reasons = score_query_rewrite_need(original_query)
-    return QueryRewriteDecision(
-        original_query=original_query,
-        rewrite_needed=rule_score >= settings.QUERY_REWRITE_RULE_THRESHOLD,
-        rule_score=rule_score,
-        reasons=reasons,
-    )
-
-
 def _format_history(conversation_context: Sequence[str] | None) -> str:
     cleaned = _clean_conversation_context(conversation_context)
     if not cleaned:
@@ -446,10 +323,37 @@ def _format_history(conversation_context: Sequence[str] | None) -> str:
 @lru_cache
 def _get_rewrite_chain():
     prompt = PromptTemplate(
-        template=_REWRITE_PROMPT_TEMPLATE,
+        template=_LLM_REWRITE_PROMPT_TEMPLATE,
         input_variables=["history", "question"],
     )
     return prompt | get_llm() | StrOutputParser()
+
+
+def _extract_json_object(raw: str) -> str:
+    cleaned = _normalize_query(raw)
+    if cleaned.startswith("```"):
+        cleaned = cleaned.strip("`")
+        cleaned = cleaned.removeprefix("json").strip()
+
+    start = cleaned.find("{")
+    end = cleaned.rfind("}")
+    if start == -1 or end == -1 or end < start:
+        raise ValueError("query rewrite model did not return a JSON object")
+    return cleaned[start : end + 1]
+
+
+def _sanitize_reason(reason: object) -> str:
+    cleaned = _normalize_query(str(reason or "")).lower().replace(" ", "_")
+    cleaned = re.sub(r"[^a-z0-9_]+", "", cleaned)
+    return cleaned or "unspecified"
+
+
+def _parse_bool(value: object) -> bool:
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str):
+        return value.strip().lower() in {"true", "1", "yes", "on"}
+    return bool(value)
 
 
 def _sanitize_rewrite(candidate: str, original_query: str) -> str:
@@ -489,6 +393,8 @@ def _is_safe_rewrite(
     candidate_query: str,
     conversation_context: Sequence[str] | None,
 ) -> bool:
+    del conversation_context
+
     candidate_query = _normalize_query(candidate_query)
     if not candidate_query:
         return False
@@ -505,46 +411,94 @@ def _is_safe_rewrite(
     return True
 
 
-def _try_llm_rewrite(
+def _should_backfill_recent_issue(reason: str) -> bool:
+    return reason in {
+        "ambiguous_reference",
+        "follow_up_missing_topic",
+        "missing_topic",
+        "missing_specific_detail",
+        "missing_subject_detail",
+    }
+
+
+def _llm_decide_and_rewrite(
     query: str,
     conversation_context: Sequence[str] | None = None,
-) -> str:
+) -> tuple[QueryRewriteDecision, str, bool]:
+    original_query = _normalize_query(query)
     cleaned_history = _clean_conversation_context(conversation_context)
-    if not cleaned_history:
-        return query
+
+    if not original_query:
+        return (
+            QueryRewriteDecision(
+                original_query="",
+                rewrite_needed=False,
+                rule_score=0,
+            ),
+            "",
+            False,
+        )
 
     try:
         raw = _get_rewrite_chain().invoke(
             {
                 "history": _format_history(cleaned_history),
-                "question": query,
+                "question": original_query,
             }
+        )
+        payload = json.loads(_extract_json_object(str(raw)))
+        rewrite_needed = _parse_bool(payload.get("rewrite_needed"))
+        reason = _sanitize_reason(payload.get("reason"))
+        rewritten_query = _sanitize_rewrite(
+            str(payload.get("rewritten_query", original_query)),
+            original_query,
         )
     except Exception:
         logger.exception("Query rewrite LLM call failed")
-        return query
+        return (
+            QueryRewriteDecision(
+                original_query=original_query,
+                rewrite_needed=False,
+                rule_score=0,
+                reasons=["llm_failure"],
+            ),
+            original_query,
+            False,
+        )
 
-    candidate = _sanitize_rewrite(str(raw), query)
+    if not rewrite_needed:
+        rewritten_query = original_query
+
     recent_issue = _latest_user_issue(cleaned_history)
     if (
-        recent_issue
-        and (_has_ambiguous_reference(query) or _has_follow_up_marker(query))
-        and not _candidate_uses_recent_issue(candidate, recent_issue)
+        rewrite_needed
+        and recent_issue
+        and _should_backfill_recent_issue(reason)
+        and not _candidate_uses_recent_issue(rewritten_query, recent_issue)
     ):
-        candidate = _sanitize_rewrite(
-            _merge_recent_issue_into_rewrite(recent_issue, candidate),
-            query,
+        rewritten_query = _sanitize_rewrite(
+            _merge_recent_issue_into_rewrite(recent_issue, rewritten_query),
+            original_query,
         )
 
-    if not _is_safe_rewrite(query, candidate, cleaned_history):
-        logger.info(
-            "Reject unsafe query rewrite original=%r candidate=%r",
-            query,
-            candidate,
-        )
-        return query
+    decision = QueryRewriteDecision(
+        original_query=original_query,
+        rewrite_needed=rewrite_needed,
+        rule_score=1 if rewrite_needed else 0,
+        reasons=[reason],
+    )
+    return decision, rewritten_query, True
 
-    return candidate
+
+def inspect_query_rewrite(
+    query: str,
+    conversation_context: Sequence[str] | None = None,
+) -> QueryRewriteDecision:
+    decision, _, _ = _llm_decide_and_rewrite(
+        query,
+        conversation_context=conversation_context,
+    )
+    return decision
 
 
 def rewrite_query_for_retrieval(
@@ -552,10 +506,28 @@ def rewrite_query_for_retrieval(
     conversation_context: Sequence[str] | None = None,
     rewrite_decision: QueryRewriteDecision | None = None,
 ) -> QueryRewriteResult:
-    decision = rewrite_decision or inspect_query_rewrite(query)
-    original_query = decision.original_query
     cleaned_history = _clean_conversation_context(conversation_context)
     history_available = bool(cleaned_history)
+
+    if rewrite_decision is None:
+        decision, candidate_query, llm_used = _llm_decide_and_rewrite(
+            query,
+            conversation_context=cleaned_history,
+        )
+    else:
+        decision = rewrite_decision
+        llm_used = False
+        if not settings.QUERY_REWRITE_ENABLED:
+            candidate_query = decision.original_query
+        elif decision.rewrite_needed:
+            _, candidate_query, llm_used = _llm_decide_and_rewrite(
+                decision.original_query,
+                conversation_context=cleaned_history,
+            )
+        else:
+            candidate_query = decision.original_query
+
+    original_query = decision.original_query
     rule_score = decision.rule_score
     reasons = list(decision.reasons)
     rewrite_needed = decision.rewrite_needed
@@ -571,23 +543,34 @@ def rewrite_query_for_retrieval(
         _print_rewrite_result(result)
         return result
 
-    if not settings.QUERY_REWRITE_ENABLED or not rewrite_needed or not history_available:
+    if not settings.QUERY_REWRITE_ENABLED:
         result = QueryRewriteResult(
             original_query=original_query,
             rewrite_query=original_query,
-            rewrite_needed=rewrite_needed,
-            rule_score=rule_score,
-            reasons=reasons,
+            rewrite_needed=False,
+            rule_score=0,
+            reasons=["rewrite_disabled"],
             history_available=history_available,
+            llm_used=llm_used,
         )
         _print_rewrite_result(result)
         return result
 
-    rewrite_query = _try_llm_rewrite(
-        original_query,
-        conversation_context=cleaned_history,
-    )
-    rewrite_applied = rewrite_query.casefold() != original_query.casefold()
+    rewrite_query = original_query
+    rewrite_applied = False
+
+    if rewrite_needed and _is_safe_rewrite(original_query, candidate_query, cleaned_history):
+        rewrite_query = candidate_query
+        rewrite_applied = rewrite_query.casefold() != original_query.casefold()
+    elif rewrite_needed and not _is_safe_rewrite(original_query, candidate_query, cleaned_history):
+        logger.info(
+            "Reject unsafe query rewrite original=%r candidate=%r",
+            original_query,
+            candidate_query,
+        )
+        rewrite_needed = False
+        reasons = reasons + ["unsafe_rewrite_rejected"]
+        rule_score = 0
 
     result = QueryRewriteResult(
         original_query=original_query,
@@ -596,7 +579,7 @@ def rewrite_query_for_retrieval(
         rule_score=rule_score,
         reasons=reasons,
         history_available=history_available,
-        llm_used=True,
+        llm_used=llm_used,
         rewrite_applied=rewrite_applied,
     )
     _print_rewrite_result(result)
